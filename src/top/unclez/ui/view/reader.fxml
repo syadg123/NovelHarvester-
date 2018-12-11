@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="main" prefHeight="557.0" prefWidth="415.0" style="-fx-background-color: #FFF;" stylesheets="@../model/reader.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.unclez.ui.model.Reader_Control">
+   <children>
+      <Button fx:id="setting" layoutX="364.0" layoutY="535.0" mnemonicParsing="false" onAction="#onCreate" prefHeight="23.0" prefWidth="55.0" style="-fx-background-color: #FFF;" text="设置" />
+      <Label fx:id="add" layoutX="35.0" layoutY="539.0" prefHeight="16.0" prefWidth="27.0" text="Aa+">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+       <Label fx:id="dark" layoutX="264.0" layoutY="539.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-image: url('image/dark.png');" />
+      <Label fx:id="gray" layoutX="244.0" layoutY="539.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-image: url('image/gray.png');" />
+      <Label fx:id="graydark" layoutX="224.0" layoutY="539.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-image: url('image/graydark.png');" />
+      <Label fx:id="defaults" layoutX="204.0" layoutY="539.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-image: url('image/default.png');" />
+      <Label fx:id="green" layoutX="184.0" layoutY="539.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-image: url('image/green.png');" />
+      <Label fx:id="white" layoutX="164.0" layoutY="539.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-image: url('image/white.png');" />
+      <Label fx:id="yellow" layoutX="144.0" layoutY="539.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-image: url('image/yellow.png');" />
+      <Label fx:id="less" layoutX="9.0" layoutY="539.0" prefHeight="16.0" prefWidth="27.0" text="Aa-">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <TextArea id="contents" fx:id="contents" focusTraversable="false" prefHeight="535.0" prefWidth="423.0" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font></TextArea>
+      <Button fx:id="chapterbtn" layoutX="321.0" layoutY="535.0" mnemonicParsing="false" onAction="#showChapter" style="-fx-background-color: #FFF;" text="目录" />
+      <ListView fx:id="chapter" prefHeight="535.0" prefWidth="246.0" style="-fx-background-image: url('image/paper.jpg');" visible="false" />
+   </children>
+</Pane>
