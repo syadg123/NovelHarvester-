@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="458.0" prefWidth="521.0" stylesheets="@../css/setting.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.unclez.ui.model.SetControl">
+   <children>
+      <HBox alignment="CENTER" prefHeight="27.0" prefWidth="521.0">
+         <children>
+            <Label prefHeight="15.0" prefWidth="56.0" text="章节头">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="cheader" prefHeight="23.0" prefWidth="197.0" promptText="源码里面章节开始出现的位置" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="15.0" prefWidth="46.0" text="章节尾">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="ctail" prefHeight="23.0" prefWidth="196.0" promptText="源码里面章节结束的位置" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="23.0" prefWidth="521.0" VBox.vgrow="ALWAYS" />
+      <HBox alignment="CENTER" prefHeight="27.0" prefWidth="521.0">
+         <children>
+            <Label prefHeight="15.0" prefWidth="55.0" text="内容头">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="dheader" prefHeight="23.0" prefWidth="197.0" promptText="源码里面正文开始出现的位置" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Label alignment="BOTTOM_LEFT" prefHeight="15.0" prefWidth="45.0" text="内容尾">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="dtail" alignment="TOP_LEFT" prefHeight="23.0" prefWidth="195.0" promptText="源码里面正文结束的位置" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="31.0" prefWidth="521.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="39.0" prefWidth="521.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="55.0" text="Cookies">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="cookie" alignment="CENTER" prefHeight="23.0" prefWidth="269.0" promptText="如有需要则填写" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="521.0" spacing="15.0" VBox.vgrow="ALWAYS">
+         <children>
+            <JFXRadioButton fx:id="filter" text="章节过滤" />
+            <JFXRadioButton fx:id="sort" text="乱序重排" />
+            <JFXRadioButton fx:id="t2s" text="繁转简" />
+            <JFXRadioButton fx:id="ncr2cn" text="NCR转中文" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="31.0" prefWidth="521.0">
+         <children>
+            <Label prefHeight="46.0" prefWidth="68.0" text="下载位置:">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Label>
+            <JFXTextField fx:id="location" editable="false" prefHeight="23.0" prefWidth="262.0" text="F:/小说下载目录" />
+            <JFXButton fx:id="cloction" text=" " textAlignment="RIGHT" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="1.0" prefWidth="521.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="58.0" text="每个线程章数" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <JFXComboBox fx:id="pagenum" prefHeight="23.0" prefWidth="75.0" />
+            <Label prefHeight="39.0" prefWidth="50.0" text="每章延时ms" wrapText="true" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <JFXComboBox fx:id="delay" prefHeight="23.0" prefWidth="80.0" />
+            <Label fx:id="settip" prefHeight="31.0" prefWidth="121.0" text="提示:不要太暴力，免得电脑吃不消和被网站禁ip。" textFill="#298d36" wrapText="true" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="160.0" prefWidth="521.0" VBox.vgrow="ALWAYS">
+         <children>
+            <JFXButton fx:id="save" onAction="#save" prefHeight="36.0" prefWidth="113.0" style="-fx-background-color: #F7F7F7;" text="保存">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

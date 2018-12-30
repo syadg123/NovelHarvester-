@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="MainPane" prefHeight="500" prefWidth="700" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.unclez.ui.model.MainControl">
+   <children>
+      <HBox fx:id="mainBox" prefHeight="500" prefWidth="700" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane id="menu" fx:id="menu" prefHeight="448.0" prefWidth="104.0">
+               <children>
+                  <JFXButton fx:id="bookmark" buttonType="RAISED" layoutX="1.0" prefHeight="36.0" prefWidth="104.0" ripplerFill="#171717" text="书架" textAlignment="RIGHT" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="download" buttonType="RAISED" layoutX="1.0" layoutY="64.0" prefHeight="36.0" prefWidth="104.0" text="下载" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="set" buttonType="RAISED" layoutX="1.0" layoutY="128.0" prefHeight="36.0" prefWidth="104.0" text="设置" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="about" buttonType="RAISED" layoutX="1.0" layoutY="194.0" prefHeight="36.0" prefWidth="104.0" text="关于" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Pane>
+            <Pane id="content" fx:id="content" prefHeight="500.0" prefWidth="591.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="3.0" right="3.0" />
+               </HBox.margin></Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
