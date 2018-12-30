@@ -1,4 +1,7 @@
 一个小说爬虫，通过正则实现了通用性，绝大部分网站通用，用javaFx实现了GUI<br>
+<h2>更新V2.0版本</h2>
+重新设计UI
+
 <h3>实现了一些我觉得有用的功能</h3><br>
 1.过滤无用章节<br>
 2.简体转繁体。<br>
@@ -14,8 +17,9 @@
 4.章节自动缓存功能，实现无延迟阅读<br>
 效果图<br />
 
-![image](https://github.com/1585503310/ReadnovelOnWin/blob/master/screenshot/zhuye.png)
-![image](https://github.com/1585503310/ReadnovelOnWin/blob/master/screenshot/yuedu.png)
-![image](https://github.com/1585503310/ReadnovelOnWin/blob/master/screenshot/mulu.png)
+![image](https://github.com/1585503310/ReadnovelOnWin/blob/master/screenshot/书架1.jpg)
+![image](https://github.com/1585503310/ReadnovelOnWin/blob/master/screenshot/书架.jpg)
+![image](https://github.com/1585503310/ReadnovelOnWin/blob/master/screenshot/阅读.jpg)
+![image](https://github.com/1585503310/ReadnovelOnWin/blob/master/screenshot/下载页.jpg)
 
 博客https://unclez.top 欢迎来一起学习java
