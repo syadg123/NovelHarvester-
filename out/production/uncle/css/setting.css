@@ -1,0 +1,10 @@
+.text-field{
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+.text-field:focused{
+    -fx-border-color: #FFF;
+ }
+.check-box{
+    -fx-background-color: red;
+}
