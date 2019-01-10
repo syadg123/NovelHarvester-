@@ -33,7 +33,7 @@ public class UrlFileter {
         Map<String,Integer> f=new HashMap<>();
         for (String url:urls){
 //            System.out.println(url);
-            url=url.substring(0,url.length()-2);//去除末尾时/的url的影响
+            //url=url.substring(0,url.length()-2);//去除末尾时/的url的影响
             url=url.substring(0,url.lastIndexOf("/"));//获取除去末尾的url地址
             if(!f.containsKey(url)){
                 f.put(url,1);

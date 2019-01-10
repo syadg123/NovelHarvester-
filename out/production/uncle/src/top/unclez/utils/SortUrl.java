@@ -27,7 +27,7 @@ public class SortUrl implements Comparator<String> {
 			num2=new BigInteger(o2);
 		}catch (Exception e){
 //			System.out.println("非数字结尾类型"+o1);
-			return 0;
+			return o1.compareTo(o2);
 		}
 		num1=num1.subtract(num2);
 //		System.out.println(o1+"--"+num1);

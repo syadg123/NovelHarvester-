@@ -32,50 +32,6 @@
       <change afterPath="$PROJECT_DIR$/../HelloStruts2/web/WEB-INF/lib/log4j-core-2.11.1.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../HelloStruts2/web/WEB-INF/lib/mysql-connector-java-5.1.38.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Hibernate/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jfoenix-8.0.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/css/bookmark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/css/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/css/setting.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fxml/about.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fxml/bookmark.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fxml/download.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fxml/main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fxml/reader.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fxml/setting.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/bookmark.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/bookmark_no.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/close_on.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/down_no.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/help_no.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/max.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/readIcon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/readchapter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/readset.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/reward.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/save.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/set.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/set_no.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/top.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/top_no.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/wx.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/image/zfb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/unclez/bean/ReaderConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/unclez/ui/model/AboutControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/unclez/ui/model/MainControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/unclez/ui/util/ResourceLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/unclez/ui/view/MAlert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/unclez/ui/view/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/unclez/utils/ObjUtil.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../wallpaperSpider/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../wallpaperSpider/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../wallpaperSpider/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
@@ -94,141 +50,12 @@
       <change afterPath="$PROJECT_DIR$/../wallpaperSpider/wallpaperSpider.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyMiGong" beforeDir="false" afterPath="$PROJECT_DIR$/../MyMiGong" afterDir="false" />
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/uncle_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/uncle_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uncle_jar/bookRead/修真田园生活在线阅读.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uncle_jar/bookRead/修真田园生活在线阅读.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uncle_jar/bookRead/灵植巨匠.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uncle_jar/bookRead/灵植巨匠.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uncle_jar/uncle.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/uncle_jar/uncle.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uncle_jar/user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/META-INF/Spidero.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/graydark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/paper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/title.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/image/yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/model/reader.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/bookmark.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/graydark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/paper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/title.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/image/yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Spidero/top/unclez/ui/view/reader.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/META-INF12/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/META-INF12/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/BloomFileter$MisjudgmentRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/BloomFileter$MisjudgmentRate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/BloomFileter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/BloomFileter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/FileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/SortUrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/SortUrl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/UrlFileter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/UrlFileter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/Utils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/Utils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/Utils$FileSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/Utils$FileSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/Utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/bean/GlobalValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/bean/GlobalValue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/downloader/CallDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/downloader/CallDownloader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/downloader/DownloadConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/downloader/Downloder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/downloader/Downloder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/spider/MainSpider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/spider/MainSpider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/uncle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/uncle/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/uncle/src/top/unclez/test/TestSpider.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/src/top/unclez/test/TestSpider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/test/TestSpider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/test/TestSpider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Book_Control$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Book_Control$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Book_Control$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Book_Control$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Book_Control.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Book_Control.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$2$1$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$2$1$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$2$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$3$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$4$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Control.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$3$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/Reader_Control.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/model/reader.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/BookMark.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/BookMark.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/Reader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/bookmark.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/graydark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/paper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/title.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/image/yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/uncle/top/unclez/ui/view/reader.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF12/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF12/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/default.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/default.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/gray.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/graydark.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/graydark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/green.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/green.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/paper.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/paper.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/title.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/title.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/white.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/white.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/image/yellow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/Utils/BloomFileter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/utils/BloomFileter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/Utils/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/utils/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/Utils/SortUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/utils/SortUrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/Utils/UrlFileter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/utils/UrlFileter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/bean/GlobalValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/bean/GlobalValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/downloader/CallDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/downloader/CallDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/downloader/DownloadConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/bean/DownloadConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/downloader/Downloder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/downloader/Downloder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/spider/MainSpider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/spider/MainSpider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/top/unclez/test/TestSpider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/test/TestSpider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/model/Book_Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/ui/model/Book_Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/model/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/ui/model/DownloadControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/model/Reader_Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/ui/model/Reader_Control.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/model/SetControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/ui/model/SetControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/model/reader.css" beforeDir="false" afterPath="$PROJECT_DIR$/res/css/reader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/util/StageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/ui/util/StageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/BookMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/ui/view/BookMark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/ui/view/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/unclez/ui/view/Reward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/bookmark.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/graydark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/paper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/title.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/image/yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/reader.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/unclez/ui/view/setting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/res/fxml/reward.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/uncle.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/测试.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../novelspider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../novelspider/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -241,89 +68,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/top/unclez/test/TestSpider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
+              <folding>
+                <element signature="method#test4#0;class#TestSpider#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/top/unclez/spider/MainSpider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+              <folding>
+                <element signature="method#getContent#0;class#MainSpider#0" />
+                <element signature="method#getConfig#0;class#MainSpider#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/Reader_Control.java">
+        <entry file="file://$PROJECT_DIR$/src/top/unclez/utils/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="207" column="24" lean-forward="true" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/unclez/bean/GlobalValue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/SetControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/unclez/utils/ObjUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1714#1715#0" expanded="true" />
-                <element signature="e#1771#1772#0" expanded="true" />
-                <element signature="e#2078#2079#0" expanded="true" />
-                <element signature="e#2134#2135#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/AboutControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/unclez/utils/FileUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/DownloadControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="174" column="80" selection-start-line="174" selection-start-column="80" selection-end-line="174" selection-end-column="80" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#8227#8228#0" expanded="true" />
-                <element signature="e#8308#8309#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="675">
+              <caret line="221" column="46" lean-forward="true" selection-start-line="221" selection-start-column="46" selection-end-line="221" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -335,8 +121,8 @@
       <list>
         <option value="package-info" />
         <option value="JavaFXApplication" />
-        <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -354,9 +140,29 @@
       <find>delay</find>
       <find>CheckBox</find>
       <find>getImage</find>
+      <find>Obj</find>
+      <find>seall</find>
+      <find>taskurl</find>
+      <find>public static</find>
+      <find>pprivate</find>
+      <find>GlobalValue.</find>
+      <find>config</find>
+      <find>#</find>
+      <find>bookmarkPane</find>
+      <find>GlobalValue.bookMarkPane</find>
+      <find>`</find>
     </findStrings>
     <replaceStrings>
       <replace>JFXCheckBox</replace>
+      <replace>readerConfig.getReadList()</replace>
+      <replace>readerConfig.getReadlist()</replace>
+      <replace>private</replace>
+      <replace>GlobalValue.config.get</replace>
+      <replace>readerConfig</replace>
+      <replace>.</replace>
+      <replace>.GlobalValue.bookMarkPane</replace>
+      <replace>GlobalValue.bookMarkPane</replace>
+      <replace>bookMarkPane</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -372,17 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/ControlAuto.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/css/global.css" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/fxml/image/about.fxml" />
-        <option value="$PROJECT_DIR$/src/top/unclez/downloader/DownloadConfig.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/stage/Alert.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/stage/MAlert.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/css/bookmark.css" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/fxml/test.fxml" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/fxml/reader.fxml" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/css/setting.css" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/css/test.css" />
         <option value="$PROJECT_DIR$/src/top/unclez/ui/view/fxml/setting.fxml" />
         <option value="$PROJECT_DIR$/src/top/unclez/ui/model/Control.java" />
         <option value="$PROJECT_DIR$/src/top/unclez/ui/view/css/test1.css" />
@@ -401,28 +196,39 @@
         <option value="$PROJECT_DIR$/src/top/unclez/ui/util/ResourceLoader.java" />
         <option value="$PROJECT_DIR$/res/fxml/about.fxml" />
         <option value="$PROJECT_DIR$/res/fxml/bookmark.fxml" />
-        <option value="$PROJECT_DIR$/res/fxml/main.fxml" />
         <option value="$PROJECT_DIR$/res/fxml/reader.fxml" />
-        <option value="$PROJECT_DIR$/res/fxml/setting.fxml" />
         <option value="$PROJECT_DIR$/res/fxml/reward.fxml" />
         <option value="$PROJECT_DIR$/src/top/unclez/ui/model/AboutControl.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/Main.java" />
         <option value="$PROJECT_DIR$/res/css/default.css" />
         <option value="$PROJECT_DIR$/src/top/unclez/Utils/ReadUtil.java" />
         <option value="$PROJECT_DIR$/src/top/unclez/Utils/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/MainControl.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/SetControl.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/bean/GlobalValue.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/utils/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/top/unclez/ui/util/StageUtil.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/spider/MainSpider.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/utils/ObjUtil.java" />
+        <option value="$PROJECT_DIR$/res/fxml/alert.fxml" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/AlertControl.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/Reader.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/Main.java" />
         <option value="$PROJECT_DIR$/src/top/unclez/ui/view/MAlert.java" />
         <option value="$PROJECT_DIR$/src/top/unclez/ui/view/Reward.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/utils/ObjUtil.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/DownloadControl.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/utils/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/Book_Control.java" />
         <option value="$PROJECT_DIR$/src/top/unclez/bean/ReaderConfig.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/spider/MainSpider.java" />
         <option value="$PROJECT_DIR$/src/top/unclez/ui/model/Reader_Control.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/BookMark2.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/util/BMUtil.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/Book_Control.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/bean/GlobalValue.java" />
+        <option value="$PROJECT_DIR$/res/fxml/setting.fxml" />
+        <option value="$PROJECT_DIR$/src/top/unclez/bean/DownloadConfig.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/SetControl.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/view/BookMark.java" />
+        <option value="$PROJECT_DIR$/res/fxml/main.fxml" />
+        <option value="$PROJECT_DIR$/res/fxml/bookmark2.fxml" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/MyBookMark.java" />
+        <option value="$PROJECT_DIR$/res/css/mybookMark.css" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/MainControl.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/ui/model/DownloadControl.java" />
+        <option value="$PROJECT_DIR$/src/top/unclez/test/TestSpider.java" />
       </list>
     </option>
   </component>
@@ -440,6 +246,54 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="unclez" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="unclez" type="462c0819:PsiDirectoryNode" />
+              <item name="downloader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="unclez" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="unclez" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -457,63 +311,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unclez" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unclez" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unclez" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unclez" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spidero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spidero" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unclez" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -524,7 +321,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546070764385" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546353326536" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -549,10 +346,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\java\Spidero\res\image" />
+      <recent name="G:\java\Spidero\conf" />
       <recent name="G:\java\Spidero\res\fxml\image" />
       <recent name="G:\java\Spidero\src\top\unclez\ui\model" />
       <recent name="G:\java\Spidero\src\image" />
-      <recent name="G:\java\Spidero\src\top\unclez\ui\view\fxml\image" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -567,7 +364,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.TestSpider.test5">
+    <configuration name="BookMark" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.unclez.ui.view.BookMark" />
+      <module name="uncle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.unclez.ui.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MAlert" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.unclez.ui.view.MAlert" />
+      <module name="uncle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.unclez.ui.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.unclez.ui.view.Main" />
       <module name="uncle" />
@@ -581,20 +404,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Reward" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="top.unclez.ui.view.Reward" />
-      <module name="uncle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.unclez.ui.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestSpider.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpider" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="top.unclez.test.TestSpider" />
       <module name="uncle" />
       <extension name="coverage">
         <pattern>
@@ -602,26 +413,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="top.unclez.test" />
-      <option name="MAIN_CLASS_NAME" value="top.unclez.test.TestSpider" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestSpider.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="uncle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.unclez.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="top.unclez.test" />
-      <option name="MAIN_CLASS_NAME" value="top.unclez.test.TestSpider" />
-      <option name="METHOD_NAME" value="test2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -644,11 +435,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Reward" />
-        <item itemvalue="JUnit.TestSpider.test2" />
-        <item itemvalue="JUnit.TestSpider.test1" />
         <item itemvalue="JUnit.TestSpider.test5" />
+        <item itemvalue="Application.TestSpider" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BookMark" />
+        <item itemvalue="Application.MAlert" />
       </list>
     </recent_temporary>
   </component>
@@ -692,7 +483,11 @@
       <workItem from="1545939255202" duration="11274000" />
       <workItem from="1545964375834" duration="43605000" />
       <workItem from="1546017204200" duration="458000" />
-      <workItem from="1546055165711" duration="15393000" />
+      <workItem from="1546055165711" duration="49654000" />
+      <workItem from="1546176194489" duration="193000" />
+      <workItem from="1546262134959" duration="6195000" />
+      <workItem from="1546331472520" duration="5226000" />
+      <workItem from="1546348108609" duration="1399000" />
     </task>
     <task id="LOCAL-00001" summary="第一版">
       <created>1544530884180</created>
@@ -719,39 +514,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 18h 48m 48s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2018.12.31 at 22h 28m 25s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 18h 49m 23s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2018.12.31 at 22h 30m 57s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 18h 50m 25s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2018.12.31 at 22h 33m 47s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 18h 53m 53s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2018.12.31 at 22h 44m 08s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 18h 54m 43s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2018.12.31 at 23h 05m 38s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 19h 03m 38s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2019.01.01 at 17h 17m 31s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 19h 06m 17s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2019.01.01 at 17h 32m 02s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 19h 09m 03s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2019.01.01 at 17h 38m 32s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.24 at 19h 09m 41s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2019.01.01 at 17h 50m 35s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestSpider_test2 - 2018.12.27 at 21h 25m 29s.xml">
-      <configuration name="TestSpider.test2" configurationId="JUnit" />
+    <history-entry file="TestSpider_test5 - 2019.01.01 at 17h 53m 28s.xml">
+      <configuration name="TestSpider.test5" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313604000" />
+    <option name="totallyTimeSpent" value="360878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,8 +561,8 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5334207" visible="true" weight="0.20575693" />
-      <window_info id="Structure" order="1" sideWeight="0.4665793" side_tool="true" visible="true" weight="0.20575693" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.52575105" visible="true" weight="0.21428572" />
+      <window_info id="Structure" order="1" sideWeight="0.47424892" side_tool="true" visible="true" weight="0.21428572" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -775,7 +570,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.18133047" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.4495708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -810,7 +605,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/top/unclez/ui/model/Reader_Control.java</url>
-          <line>246</line>
+          <line>245</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -822,91 +617,51 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/utils/FileUtil.java" />
+    <entry file="file://$PROJECT_DIR$/res/image/icon.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/util/StageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/input/MouseButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-98">
+          <caret line="543" column="6" selection-start-line="543" selection-start-column="6" selection-end-line="543" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/jfoenix-8.0.8.jar!/com/jfoenix/controls/JFXDialog.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/util/DragListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/util/DragUtil.java" />
-    <entry file="file://$PROJECT_DIR$/res/fxml/images/icon.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/util/DrawUtil.java" />
-    <entry file="file://$PROJECT_DIR$/res/fxml/images/title.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/css/title.css" />
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/css/test1.css" />
-    <entry file="file://$PROJECT_DIR$/res/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/css/bookmark.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/css/reader.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/css/setting.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources.properties" />
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/util/ResourceLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="512">
+          <caret line="167" column="16" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2497#2498#0" expanded="true" />
+            <element signature="e#2583#2584#0" expanded="true" />
+            <element signature="e#6657#6658#0" expanded="true" />
+            <element signature="e#6700#6701#0" expanded="true" />
+            <element signature="e#7163#7164#0" expanded="true" />
+            <element signature="e#7198#7199#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/fxml/about.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="158" selection-start-line="12" selection-start-column="158" selection-end-line="12" selection-end-column="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/fxml/bookmark.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="142" selection-start-line="7" selection-start-column="142" selection-end-line="7" selection-end-column="142" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/fxml/download.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/fxml/main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+    <entry file="file://$PROJECT_DIR$/res/fxml/alert.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -918,232 +673,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/fxml/setting.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+        <state relative-caret-position="358">
+          <caret line="6999" column="50" selection-start-line="6999" selection-start-column="50" selection-end-line="6999" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/image/wx.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/fxml/reward.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/AlertControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/image/top.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/image/top.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/image/readIcon.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/image/min.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2121">
-          <caret line="99" column="56" selection-start-line="99" selection-start-column="56" selection-end-line="99" selection-end-column="56" />
+        <state relative-caret-position="285">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/bean/DownloadConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/Utils/ReadUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/MainControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/util/StageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#793#794#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/spider/MainSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1349">
-          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/stage/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="551" column="76" lean-forward="true" selection-start-line="551" selection-start-column="76" selection-end-line="551" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/MAlert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+        <state relative-caret-position="349">
+          <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1232#1233#0" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/Reward.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="644" column="17" lean-forward="true" selection-start-line="644" selection-start-column="17" selection-end-line="644" selection-end-column="17" />
-          <folding>
-            <element signature="e#26565#26566#0" expanded="true" />
-            <element signature="e#26601#26602#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/set.dat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/bean/GlobalValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/DownloadControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="174" column="80" selection-start-line="174" selection-start-column="80" selection-end-line="174" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8227#8228#0" expanded="true" />
-            <element signature="e#8308#8309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/utils/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/SetControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/无敌血脉全集下载逍">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/BookMark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="190">
+          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/top/unclez/utils/ObjUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+        <state relative-caret-position="244">
+          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2134#2135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/Book_Control.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="50" column="69" lean-forward="true" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/AboutControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2161#2162#0" expanded="true" />
+            <element signature="e#2208#2209#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/top/unclez/bean/ReaderConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state relative-caret-position="-8">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1152,11 +731,246 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/Reader_Control.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="207" column="24" lean-forward="true" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
+        <state relative-caret-position="238">
+          <caret line="81" column="42" lean-forward="true" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4497#4498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/layout/Border.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="333" column="50" lean-forward="true" selection-start-line="333" selection-start-column="50" selection-end-line="333" selection-end-column="50" />
+          <folding>
+            <element signature="e#10662#10663#0" expanded="true" />
+            <element signature="e#10696#10697#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/layout/BorderImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="141" column="11" selection-start-line="141" selection-start-column="11" selection-end-line="141" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/beans/property/SimpleObjectProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="89" column="53" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/123.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/342.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/sdfsdf.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/dsa.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/dassda.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/fdfwe.conf" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/control/ListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="388" column="22" selection-start-line="388" selection-start-column="22" selection-end-line="388" selection-end-column="22" />
+          <folding>
+            <element signature="e#17232#17233#0" expanded="true" />
+            <element signature="e#17274#17275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/fxml/bookmark.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="142" selection-start-line="7" selection-start-column="142" selection-end-line="7" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/ds.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/fsdfsd.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/fsdfsdf.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/sefgse.conf" />
+    <entry file="file://$PROJECT_DIR$/conf/sdvfsd.conf" />
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/util/BMUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/Book_Control.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/bean/GlobalValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/fxml/setting.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/SetControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/util/ResourceLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/BookMark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/layout/GridPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="259" column="13" selection-start-line="259" selection-start-column="13" selection-end-line="259" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/fxml/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="39" column="102" selection-start-line="39" selection-start-column="102" selection-end-line="39" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/bean/DownloadConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/fxml/bookmark2.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/DownloadControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="251" column="66" lean-forward="true" selection-start-line="251" selection-start-column="66" selection-end-line="251" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4315#4316#0" expanded="true" />
+            <element signature="e#4396#4397#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/css/mybookMark.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/MyBookMark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/model/MainControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="995">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/ui/view/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/test/TestSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
+          <folding>
+            <element signature="method#test4#0;class#TestSpider#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/spider/MainSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <element signature="method#getContent#0;class#MainSpider#0" />
+            <element signature="method#getConfig#0;class#MainSpider#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/unclez/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="221" column="46" lean-forward="true" selection-start-line="221" selection-start-column="46" selection-end-line="221" selection-end-column="46" />
         </state>
       </provider>
     </entry>
