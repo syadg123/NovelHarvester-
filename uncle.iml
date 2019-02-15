@@ -28,5 +28,6 @@
     <orderEntry type="library" name="htmlunit-driver-2.33.3" level="project" />
     <orderEntry type="library" name="htmlunit-driver-2.33.3-jar-with-dependencies" level="project" />
     <orderEntry type="library" name="jfoenix-8.0.8" level="project" />
+    <orderEntry type="library" name="httpmime-4.5.7" level="project" />
   </component>
 </module>
