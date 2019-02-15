@@ -1,5 +1,5 @@
 一个小说爬虫，通过正则实现了通用性，绝大部分网站通用，用javaFx实现了GUI<br>
-<h2>更新V2.0版本</h2>
+<h2>更新V2.1版本</h2>
 重新设计UI<br>
 <a href="https://www.lanzous.com/b517134/">Uncle小说V2.0</a>测试地址
 
