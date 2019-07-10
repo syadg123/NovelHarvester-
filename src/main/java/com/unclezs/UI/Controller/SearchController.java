@@ -62,12 +62,15 @@ public class SearchController implements Initializable {
         search.setOnMouseClicked(e ->searchNovelByName());
         //列表菜单
         list.setOnMouseClicked(e -> {
-           if(e.getButton()== MouseButton.SECONDARY){//右键菜单
+            int index = list.getSelectionModel().getSelectedIndex();
+            if (e.getButton()==MouseButton.PRIMARY){//单机打开
+                copyLink(index);
+                ContentUtil.setContent("/fxml/analysis.fxml");
+            }else if(e.getButton()== MouseButton.SECONDARY){//右键菜单
                //右键菜单跟随鼠标
                menu.setX(e.getScreenX());
                menu.setY(e.getScreenY());
                //获取选中索引
-               int index = list.getSelectionModel().getSelectedIndex();
                MenuItem copy = menu.getItems().get(1);//复制链接
                MenuItem analysis = menu.getItems().get(0);//解析书籍
                MenuItem browse = menu.getItems().get(2);//浏览器打开

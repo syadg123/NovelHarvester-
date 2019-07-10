@@ -360,7 +360,7 @@ public class AnalysisController implements Initializable {
         SettingMapper mapper = MybatisUtils.getMapper(SettingMapper.class);
         DownloadConfig config = mapper.querySetting();
         if ("".equals(config.getPath()) || config.getPath() == null) {//路径不为空的时候使用当前路径
-            config.setPath(Class.class.getResource("/").getPath().substring(1));
+            config.setPath(new File("./").getAbsolutePath().replace(".",""));
             mapper.updateSetting(config);
         } else if (!new File(config.getPath()).exists()) {
             ToastUtil.toast("保存路径不存在！");

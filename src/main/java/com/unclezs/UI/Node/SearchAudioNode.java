@@ -42,8 +42,11 @@ public class SearchAudioNode extends HBox {
         }
         ImageView imgView = new ImageView(image);
         src = new Label();
-        if(info.getId()!=0){
-            src.setText("上次听到："+info.getLastChapter()==null?"未开始":info.getLastChapter());
+        if(info.getId()!=-1){
+            if(info.getLastChapter()!=null&&!info.getLastChapter().equals(""))
+                src.setText("上次听到："+info.getLastChapter());
+            else
+                src.setText("上次听到：未开始");
         }else {
             src.setText("来源：" + info.getUrl());
         }

@@ -16,7 +16,7 @@ public class AudioBook {
     private int lastIndex;//上次听到的章节
     private double lastLocation;//上次听到的位置
     private List<AudioChapter> chapters;//章节列表
-    private int id;
+    private int id=-1;
     private String lastChapter;//上次听到的一章节名字
     public AudioBook() {
     }

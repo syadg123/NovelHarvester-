@@ -26,6 +26,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.DataFormat;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -86,6 +87,7 @@ public class AudioBookSelfController implements Initializable {
         initEventHandler();//初始化事件监听
         catalogList.setItems(listNameData);
         bookList.setItems(bookListData);
+        pb.setValue(0);
         loadBooks();//加载数据库
     }
 
@@ -113,57 +115,42 @@ public class AudioBookSelfController implements Initializable {
     //初始化事件
     private void initEventHandler() {
         //播放暂停
-        play.setOnMouseClicked(e -> {
-            if (book == null) {//未加载书籍
-                return;
-            }
-            if (mediaPlayer == null) {//有媒体的时候
-                addPlay(playIndex);
-            }
-            if (mediaPlayer != null) {//没有媒体的时候
-                if (play.getGraphic().equals(playImg)) {
-                    if (loadError) {
-                        addPlay(playIndex);
-                    } else {
-                        mediaPlayer.play();
-                    }
-                    play.setGraphic(pauseImg);
-                } else {
-                    mediaPlayer.pause();
-                    play.setGraphic(playImg);
-                }
+        play.setOnMouseClicked(e -> playAudio());
+        play.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.SPACE) {
+                playAudio();//空格播放暂停
             }
         });
         //上一章
         pre.setOnMouseClicked(e -> preChapter());
+        pre.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.LEFT) {
+                preChapter();
+            }
+        });
         //下一章
         next.setOnMouseClicked(e -> nextChapter());
+        next.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.RIGHT) {
+                nextChapter();
+            }
+        });
         //目录
         catalog.setOnMouseClicked(e -> catalogList.setVisible(!catalogList.isVisible()));
         //播放一本书
         bookList.setOnMouseClicked(e -> {
-            if (e.getButton() == MouseButton.SECONDARY) {
+            AudioBook selectedBook = bookList.getSelectionModel().getSelectedItem().getInfo();
+            if (e.getButton() == MouseButton.PRIMARY && e.getClickCount() == 2) {//双击播放
+                startPlay(selectedBook);
+            } else if (e.getButton() == MouseButton.SECONDARY) {//右键菜单
                 //跟随鼠标
                 menu.setY(e.getScreenY());
                 menu.setX(e.getScreenX());
-                AudioBook selectedBook = bookList.getSelectionModel().getSelectedItem().getInfo();
+
                 menu.show(DataManager.mainStage);
                 //播放
                 menu.getItems().get(0).setOnAction(ev -> {
-                    if (mediaPlayer != null)//在播放则停止
-                        stopPlay();
-                    //更新书架
-                    if (book != null && book.getChapters() != null) {
-                        book.setLastChapter(book.getChapters().get(book.getLastIndex()).getTitle());
-                        preBookNode.setInfo(book);
-                        preBookNode.getSrc().setText("上次听到：" + book.getLastChapter());//更新标签信息
-                        saveInfo();//更新数据库
-                    }
-                    preBookNode = bookList.getSelectionModel().getSelectedItem();
-                    setBook(selectedBook);//更新当书籍
-                    firstLoad = true;//换书则标记第一次加载
-                    playIndex = selectedBook.getLastIndex();//获取上次播放到的章节
-                    addPlay(playIndex);
+                    startPlay(selectedBook);
                 });
                 //移除书架
                 menu.getItems().get(1).setOnAction(ev -> {
@@ -236,6 +223,7 @@ public class AudioBookSelfController implements Initializable {
                 catalogMenu.show(DataManager.mainStage);
             }
         });
+
     }
 
     //停止播放
@@ -243,6 +231,7 @@ public class AudioBookSelfController implements Initializable {
         book.setLastLocation(pb.getValue());
         mediaPlayer.stop();
     }
+
     //设置播放的书
     public static void setBook(AudioBook book) {
         AudioBookSelfController.book = book;
@@ -289,6 +278,10 @@ public class AudioBookSelfController implements Initializable {
         new Thread(task).start();
         //音频地址拿到之后开始播放
         task.setOnSucceeded(e -> {
+            if (task.getValue().equals("")) {
+                ToastUtil.toast("播放失败");
+                return;
+            }
             playTitle.setText(book.getTitle() + " " + listNameData.get(playIndex));
             mediaPlayer = new MediaPlayer(new Media(task.getValue()));
             mediaPlayer.setOnReady(() -> {
@@ -383,11 +376,11 @@ public class AudioBookSelfController implements Initializable {
         new Thread(() -> {
             SqlSession sqlSession = MybatisUtils.openSqlSession(true);
             AudioBookMapper mapper = sqlSession.getMapper(AudioBookMapper.class);
+            book.setLastChapter(book.getChapters().get(book.getLastIndex()).getTitle());
             mapper.saveBook(book);
             Integer id = mapper.findLastKey();
             sqlSession.close();
             book.setId(id);
-            book.setLastChapter("上次听到："+book.getChapters().get(book.getLastIndex()).getTitle());
             SearchAudioNode node = new SearchAudioNode(book);
             bookListData.add(node);
         }).start();
@@ -407,14 +400,16 @@ public class AudioBookSelfController implements Initializable {
 
     //保存信息入库
     public static void saveInfo() {
-        new Thread(() -> {
-            if (book == null) {
-                return;
-            }
-            AudioBookMapper mapper = MybatisUtils.getMapper(AudioBookMapper.class);
-            mapper.updateBook(book);
-            MybatisUtils.getCurrentSqlSession().close();
-        }).start();
+//        new Thread(() -> {
+        System.out.println(book);
+        if (book == null) {
+            return;
+        }
+        book.setLastChapter(book.getChapters().get(book.getLastIndex()).getTitle());
+        AudioBookMapper mapper = MybatisUtils.getMapper(AudioBookMapper.class);
+        mapper.updateBook(book);
+        MybatisUtils.getCurrentSqlSession().close();
+//        }).start();
     }
 
     //加载书架的书
@@ -441,4 +436,44 @@ public class AudioBookSelfController implements Initializable {
         });
     }
 
+    //播放一本书
+    private void startPlay(AudioBook selectedBook) {
+        if (mediaPlayer != null)//在播放则停止
+            stopPlay();
+        //更新书架
+        if (book != null && book.getChapters() != null) {
+            book.setLastChapter(book.getChapters().get(book.getLastIndex()).getTitle());
+            preBookNode.setInfo(book);
+            preBookNode.getSrc().setText("上次听到：" + book.getLastChapter());//更新标签信息
+            saveInfo();//更新数据库
+        }
+        preBookNode = bookList.getSelectionModel().getSelectedItem();
+        setBook(selectedBook);//更新当书籍
+        firstLoad = true;//换书则标记第一次加载
+        playIndex = selectedBook.getLastIndex();//获取上次播放到的章节
+        addPlay(playIndex);
+    }
+
+    //播放按钮
+    private void playAudio() {
+        if (book == null) {//未加载书籍
+            return;
+        }
+        if (mediaPlayer == null) {//有媒体的时候
+            addPlay(playIndex);
+        }
+        if (mediaPlayer != null) {//没有媒体的时候
+            if (play.getGraphic().equals(playImg)) {
+                if (loadError) {
+                    addPlay(playIndex);
+                } else {
+                    mediaPlayer.play();
+                }
+                play.setGraphic(pauseImg);
+            } else {
+                mediaPlayer.pause();
+                play.setGraphic(playImg);
+            }
+        }
+    }
 }

@@ -49,7 +49,7 @@ public class SettingMenuController implements Initializable {
         //git源码
         github.setOnMouseClicked(e -> {
             try {
-                Desktop.getDesktop().browse(new URI("https://github.com/unclezs/BookCity"));
+                Desktop.getDesktop().browse(new URI("https://github.com/unclezs/NovelHarvester"));
             } catch (Exception ex) {
                 ex.printStackTrace();
             }

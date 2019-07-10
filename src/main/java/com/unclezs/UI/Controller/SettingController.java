@@ -50,7 +50,6 @@ public class SettingController implements Initializable {
         chapterNum.setValue(config.getPerThreadDownNum());
         delay.setValue(config.getSleepTime());
         pathLabel.setText(config.getPath());
-
     }
 
     //初始化事件监听
@@ -78,7 +77,7 @@ public class SettingController implements Initializable {
                 return;
             }
             //更新
-            String path = (file.getAbsolutePath()+"\\").replace("\\","/");
+            String path = file.getAbsolutePath()+"\\";
             pathLabel.setText(path);
             config.setPath(path);
         });

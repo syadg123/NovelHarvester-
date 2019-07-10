@@ -306,11 +306,12 @@ public class AudioNovelSpider {
     //恋听网
     private String getTING55(String url) {
         String html = HtmlUtil.getHtml(url, "utf-8");
-        Pattern p = Pattern.compile("var a=[{].+?:\"(.+?)\"");
+        Pattern p = Pattern.compile("var a=[{].+?\"(.+?)\"");
         Matcher m = p.matcher(html);
-        m.find();
-        String realURL = m.group(1);
-        return realURL;
+        if(m.find()){
+            return m.group(1);
+        }
+        return "";
     }
 
     //静听网
