@@ -1,0 +1,24 @@
+.bookmark{
+    -fx-background-color: white ;
+    -fx-padding: 10 ;
+}
+.bookmark{
+    -fx-background-color: black, white ;
+    -fx-background-insets: 0, 0 1 1 0 ;
+}
+.bookmark.first-row {
+    -fx-background-insets: 0, 1 1 1 0 ;
+}
+.bookmark.first-column {
+    -fx-background-insets: 0, 0 1 1 1 ;
+}
+.bookmark.first-row.first-column {
+    -fx-background-insets: 0, 1 ;
+}
+.stackpaneA{
+    -fx-background-color: #FFF;
+}
+.stackpaneB{
+    -fx-background-color: #F0FFF0	;
+
+}

@@ -1,0 +1,16 @@
+.root{
+    -fx-accent:#6CA6CD;
+    -fx-focus-color:#A3A3A3;
+}
+#btnMin{
+    -fx-background-color: #707070;
+}
+#btnMax{
+    -fx-background-color: #707070;
+}
+#btnClose{
+    -fx-background-color: #707070;
+}
+#btnTop{
+    -fx-background-color: #707070;
+}

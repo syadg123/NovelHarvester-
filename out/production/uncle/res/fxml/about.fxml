@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.unclez.ui.model.AboutControl">
+   <children>
+      <Label prefHeight="89.0" prefWidth="447.0" text=" Uncle小说下载器支持绝大多数章节目录匹配正文匹配，不支持vip章节，可以自己找免费的网站源，几乎都能找到。" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="-100.0" />
+         </VBox.margin>
+      </Label>
+      <Label prefHeight="27.0" prefWidth="447.0" text=" 章节如果没有匹配到的话可以取消章节过滤试试。" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <Label prefHeight="51.0" prefWidth="447.0" text="正文如果匹配的不准确可以试试换一个正文规则，规则1匹配的比较准确，规则2匹配的更完全，支持网站数更多。" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label prefHeight="46.0" prefWidth="447.0" text="支持繁体转简体，和把NCR(&amp;#dddd;)格式的正文转化成汉字，一般网站使用的繁体字才会有这种NCR的正文，比如嘛就不说了😂。" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label prefHeight="46.0" prefWidth="447.0" text="如果有下载失败的章节，就增加每个线程的下载章节数量，也可以适当调整延迟，下载过慢的话可以根据情况调整延迟和每个线程的任务量。" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label prefHeight="34.0" prefWidth="276.0" text="乱序重排功能没必要的就不用勾选，匹配更加快速。" VBox.vgrow="ALWAYS" />
+      <HBox alignment="CENTER" prefHeight="19.0" prefWidth="447.0">
+         <children>
+            <Label text="源码：" />
+            <Hyperlink fx:id="source" prefHeight="7.0" prefWidth="298.0" text="https://github.com/1585503310/ReadnovelOnWin" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="18.0" prefWidth="447.0">
+         <children>
+            <Label text="blog：" />
+            <Hyperlink fx:id="blog" text="https://unclez.top" />
+         </children>
+      </HBox>
+      <Label text="Power by Uncle" />
+      <JFXButton fx:id="reward" text="打赏作者" />
+   </children>
+</VBox>

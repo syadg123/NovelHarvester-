@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="153.0" prefWidth="264.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.unclez.ui.model.AlertControl">
+   <children>
+      <JFXButton fx:id="ok" buttonType="RAISED" layoutX="53.0" layoutY="104.0" style="-fx-background-color: #00ccff;" text="确认" />
+      <JFXButton fx:id="no" buttonType="RAISED" layoutX="163.0" layoutY="104.0" style="-fx-background-color: #00ccff;" text="取消" />
+      <Label fx:id="messages" layoutX="88.0" layoutY="23.0" prefHeight="66.0" prefWidth="148.0" text="message" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="57.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

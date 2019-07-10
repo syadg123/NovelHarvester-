@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact name="uncle:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/uncle_jar</output-path>
+    <root id="root">
+      <element id="archive" name="uncle.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="uncle" />
+      </element>
+      <element id="library" level="project" name="jfoenix-8.0.8" />
+      <element id="library" level="project" name="commons-logging-1.2" />
+      <element id="library" level="project" name="selenium-server-standalone-2.53.0" />
+      <element id="library" level="project" name="htmlunit-driver-2.33.3" />
+      <element id="library" level="module" name="JUnit5.3" module-name="uncle" />
+      <element id="library" level="project" name="htmlunit-driver-2.33.3-jar-with-dependencies" />
+      <element id="library" level="project" name="chinese-utils-1.0" />
+      <element id="library" level="project" name="commons-lang3-3.6" />
+    </root>
+  </artifact>
+</component>
