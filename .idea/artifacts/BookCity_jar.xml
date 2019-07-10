@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BookCity:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BookCity_jar</output-path>
+    <root id="archive" name="BookCity.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="BookCity" />
+      <element id="extracted-dir" path="G:/java/Repository/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/com/alibaba/fastjson/1.2.56/fastjson-1.2.56.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jacob.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Spring MVC-4.3.18.RELEASE" />
+      <element id="extracted-dir" path="G:/java/Repository/org/xerial/sqlite-jdbc/3.27.2.1/sqlite-jdbc-3.27.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/org/apache/httpcomponents/httpclient/4.5.7/httpclient-4.5.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/org/mozilla/intl/chardet/1.0/chardet-1.0.jar" path-in-jar="/" />
+      <element id="library" level="project" name="cpdetector_1.0.10" />
+      <element id="extracted-dir" path="G:/java/Repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="G:/java/Repository/lennart/cpdetector/1.0.4/cpdetector-1.0.4.jar" path-in-jar="/" />
+      <element id="library" level="project" name="chardet-1.0" />
+      <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
+      <element id="extracted-dir" path="G:/java/Repository/com/jfoenix/jfoenix/8.0.8/jfoenix-8.0.8.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

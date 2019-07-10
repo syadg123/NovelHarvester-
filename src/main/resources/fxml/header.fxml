@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="40" fx:id="header" fx:controller="com.unclezs.UI.Controller.HeaderController" prefHeight="45.0" prefWidth="934.0" maxHeight="45" style="-fx-background-color: #393D49;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <right>
+        <Pane fx:id="testPane" prefHeight="40.0" prefWidth="328.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane layoutX="205.0" layoutY="13.0" prefHeight="20.0" prefWidth="2.0" style="-fx-background-color: #707070;" />
+                <Label fx:id="max" layoutX="255.0" layoutY="13.0" prefHeight="16" prefWidth="16" style="-fx-background-image: url('images/窗口顶部/最大化.png');" textFill="WHITE" />
+                <Label fx:id="exit" layoutX="283.0" layoutY="13.0" prefHeight="16" prefWidth="16" style="-fx-background-image: url('images/窗口顶部/退出.png');" textFill="WHITE" />
+                <Label fx:id="min" layoutX="228.0" layoutY="13.0" prefHeight="16" prefWidth="16" style="-fx-background-image: url('images/窗口顶部/最小化.png');" textFill="WHITE" />
+                <Label fx:id="setting" layoutX="170.0" layoutY="13.0" prefHeight="16" prefWidth="16" style="-fx-background-image: url('images/窗口顶部/设置.png');" textFill="WHITE" />
+            </children>
+        </Pane>
+    </right>
+    <left>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="10.0" layoutY="9.0" prefWidth="100" prefHeight="30" style="-fx-background-image: url('images/窗口顶部/title.png'); -fx-background-radius: 20px; -fx-border-radius: 20px" />
+<!--                <Label layoutX="2.0" layoutY="6.0" prefWidth="32" prefHeight="32" style="-fx-background-image: url('images/窗口顶部/logo.png'); -fx-background-radius: 20px; -fx-border-radius: 20px" />-->
+            </children>
+        </Pane>
+    </left>
+</BorderPane>

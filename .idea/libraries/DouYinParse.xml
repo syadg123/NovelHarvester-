@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DouYinParse">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/DouYinParse.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

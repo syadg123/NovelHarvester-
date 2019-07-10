@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="BookCity:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SearchAudioController.java" line="75" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c051f1a-e794-4401-ac81-e5a4a7315261" name="Default Changelist" comment="完成书架及书籍导入" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="BookCity" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/App/TestAPp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/AnalysisController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="75" column="2" selection-start-line="75" selection-start-column="2" selection-end-line="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SearchAudioController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="144" column="13" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="JavaFXApplication" />
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>table-v</find>
+      <find>表中屋内突然</find>
+      <find>contextMen</find>
+      <find>a</find>
+      <find>audio</find>
+      <find>audio699</find>
+      <find>ting56_charset</find>
+      <find>ting56</find>
+      <find>ting89</find>
+      <find>ysts8</find>
+      <find>ting55</find>
+      <find>520tingshu</find>
+      <find>&quot;完美世界&quot;</find>
+      <find>JFXRadioButton</find>
+      <find>cacheList</find>
+      <find>booListData</find>
+      <find>retrieveJfxLocator</find>
+      <find>AudioClip</find>
+      <find>audioClip</find>
+      <find>javafx.scene.media.Media</find>
+      <find>createConnectionHolder</find>
+      <find>com.sun.media.jfxmedia.</find>
+      <find>Locator</find>
+      <find>javafx.scene.media.</find>
+      <find>get</find>
+      <find>mainStage.setOnCloseRequest</find>
+      <find>lastC</find>
+      <find>pb.setv</find>
+      <find>stop</find>
+      <find>\</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>mainStage</replace>
+      <replace>DataManager.mainStage</replace>
+      <replace>sb</replace>
+      <replace>analysisRoot</replace>
+      <replace>ting56</replace>
+      <replace>ting89</replace>
+      <replace>ysts8</replace>
+      <replace>ting55</replace>
+      <replace>520tingshu</replace>
+      <replace>ysxs8</replace>
+      <replace>name</replace>
+      <replace>bookListData</replace>
+      <replace>MyMedia</replace>
+      <replace>com.unclezs.UI.Media.Locator</replace>
+      <replace>/</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Uncle" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/medias/NGMediaView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/medias/SubtitleTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/medias/Track.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/medias/VideoTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MLocator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/HLSConnectionHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/ConnectionHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/Locator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/media/Media.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/AudioClip.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/AudioClipBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/AudioEqualizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/AudioSpectrumListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/AudioTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/EqualizerBand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaErrorEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaMarkerEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaPlayerBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/MediaViewBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/NGMediaView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/SubtitleTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/Track.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/VideoTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/Media.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/HeaderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/Model/AudioBook.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/Mapper/ChapterMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/Mapper/SettingMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/Mapper/AudioBookMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/conf/SqlMapConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Node/DownloadedNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/Test/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/Downloader/AudioDownloader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SettingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/Mapper/DownHistoryMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/DownloadController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/conf/db.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Node/SearchAudioNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Node/BookNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/AudioBookSelfController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/AnalysisController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/App/TestAPp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SearchAudioController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="BookCity/invalid/Web" />
+    </ignored-facets>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="G:\java\Repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\java\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="BookCity" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="BookCity" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="BookCity" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="clean" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-146" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="BookCity_jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="unclezs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="unclezs" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="unclezs" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="unclezs" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookCity" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookCity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity\src\main\resources\images\setting" />
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity" />
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity\src\main\java" />
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity\src\main\java\com\unclezs\Test" />
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity\src\main\resources\images\menu" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.unclezs.UI.Media" />
+      <recent name="com.unclezs.UI.Node" />
+      <recent name="com.unclezs.UI.Controller" />
+      <recent name="com.unclezs.Utils" />
+      <recent name="com.unclezs.Downloader" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity" />
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity\src\main\resources\images\搜索页" />
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity\src\main\resources\images\播放器" />
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity\src\main\java\com\unclezs\UI" />
+      <recent name="D:\java\IDEA_WORKSPACE\BookCity\src\main\java\com\unclezs\UI\Media" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.unclezs.UI.App.Main" />
+      <module name="BookCity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unclezs.UI.App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reader" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.unclezs.UI.App.Reader" />
+      <module name="BookCity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unclezs.UI.App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAPp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.unclezs.UI.App.TestAPp" />
+      <module name="BookCity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unclezs.UI.App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testDymaic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookCity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unclezs.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.unclezs.Test" />
+      <option name="MAIN_CLASS_NAME" value="com.unclezs.Test.AppTest" />
+      <option name="METHOD_NAME" value="testDymaic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testLocalFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookCity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unclezs.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.unclezs.Test" />
+      <option name="MAIN_CLASS_NAME" value="com.unclezs.Test.AppTest" />
+      <option name="METHOD_NAME" value="testLocalFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testUrl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookCity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unclezs.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.unclezs.Test" />
+      <option name="MAIN_CLASS_NAME" value="com.unclezs.Test.AppTest" />
+      <option name="METHOD_NAME" value="testUrl" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Reader" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.TestAPp" />
+      <item itemvalue="JUnit.AppTest.testDymaic" />
+      <item itemvalue="JUnit.AppTest.testLocalFile" />
+      <item itemvalue="JUnit.AppTest.testUrl" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TestAPp" />
+        <item itemvalue="JUnit.AppTest.testDymaic" />
+        <item itemvalue="JUnit.AppTest.testLocalFile" />
+        <item itemvalue="JUnit.AppTest.testUrl" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\uncle\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c051f1a-e794-4401-ac81-e5a4a7315261" name="Default Changelist" comment="" />
+      <created>1559441359391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559441359391</updated>
+      <workItem from="1559441361112" duration="696000" />
+      <workItem from="1561021067657" duration="2481000" />
+      <workItem from="1561034320191" duration="436000" />
+      <workItem from="1561035532269" duration="5583000" />
+      <workItem from="1561041391609" duration="864000" />
+      <workItem from="1561044321782" duration="2142000" />
+      <workItem from="1561079436154" duration="9390000" />
+      <workItem from="1561090503963" duration="3273000" />
+      <workItem from="1561114719350" duration="7671000" />
+      <workItem from="1561126325100" duration="9773000" />
+      <workItem from="1561165048363" duration="52240000" />
+      <workItem from="1561249287956" duration="12074000" />
+      <workItem from="1561263745550" duration="10000" />
+      <workItem from="1561277175225" duration="1080000" />
+      <workItem from="1561287046929" duration="19048000" />
+      <workItem from="1561338603970" duration="46777000" />
+      <workItem from="1561428861513" duration="2731000" />
+      <workItem from="1561432320830" duration="40000" />
+      <workItem from="1561432363201" duration="60000" />
+      <workItem from="1561433815556" duration="30253000" />
+      <workItem from="1561468806932" duration="6803000" />
+      <workItem from="1561525708345" duration="9000" />
+      <workItem from="1561528938260" duration="3634000" />
+      <workItem from="1561532687446" duration="7277000" />
+      <workItem from="1561542248898" duration="17884000" />
+      <workItem from="1561597464221" duration="2775000" />
+      <workItem from="1561630307320" duration="273000" />
+      <workItem from="1561638615518" duration="336000" />
+      <workItem from="1561685676620" duration="22364000" />
+      <workItem from="1561814894592" duration="999000" />
+      <workItem from="1561880347346" duration="5000" />
+      <workItem from="1562053263670" duration="28247000" />
+      <workItem from="1562110007338" duration="25783000" />
+      <workItem from="1562298353797" duration="33798000" />
+      <workItem from="1562374290767" duration="8521000" />
+      <workItem from="1562385422145" duration="14744000" />
+      <workItem from="1562401750116" duration="5627000" />
+      <workItem from="1562410752147" duration="26610000" />
+      <workItem from="1562464219071" duration="5244000" />
+      <workItem from="1562469510957" duration="5915000" />
+      <workItem from="1562477494428" duration="3260000" />
+      <workItem from="1562481770916" duration="11669000" />
+      <workItem from="1562497326042" duration="19113000" />
+      <workItem from="1562547368809" duration="49359000" />
+      <workItem from="1562629473240" duration="18664000" />
+      <workItem from="1562648980633" duration="1377000" />
+      <workItem from="1562650383152" duration="15554000" />
+      <workItem from="1562666593345" duration="20623000" />
+      <workItem from="1562718777809" duration="18001000" />
+      <workItem from="1562738518702" duration="9000" />
+    </task>
+    <task id="LOCAL-00001" summary="完成书架及书籍导入">
+      <created>1562300141594</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1562300141594</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 09h 17m 57s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 09h 18m 17s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 09h 22m 12s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 09h 26m 44s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 10h 16m 02s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 10h 16m 13s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 10h 17m 28s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 10h 19m 32s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 10h 20m 58s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testDymaic - 2019.07.10 at 10h 21m 44s.xml">
+      <configuration name="AppTest.testDymaic" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="581099000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85048753" visible="true" weight="0.29211086" />
+      <window_info id="Structure" order="1" sideWeight="0.14951245" side_tool="true" visible="true" weight="0.29211086" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.39711192" side_tool="true" weight="0.2889126" />
+      <window_info id="Web" order="7" sideWeight="0.5063291" side_tool="true" weight="0.34861407" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.45227766" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5021322" side_tool="true" weight="0.45227766" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3286334" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32995737" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32995737" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="完成书架及书籍导入" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成书架及书籍导入" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Media/Media.java</url>
+          <line>568</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BookCity$AppTest_testLocalFile.ic" NAME="AppTest.testLocalFile Coverage Results" MODIFIED="1561135257076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.unclezs.Test.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Mapper/SettingMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Mapper/ChapterMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/HeaderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/control/MenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="462" selection-start-line="462" selection-end-line="462" />
+          <folding>
+            <element signature="e#15741#15742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Mapper/AudioBookMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Model/AudioBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="112" column="18" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/设置页/目录.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/菜单页/下载.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/菜单页/有声下载.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/菜单页/解析.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/菜单页/书架.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/搜索页/解析此书.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/builder/xml/mybatis-3-config.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/SqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/session/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="315" selection-start-line="315" selection-end-line="315" />
+          <folding>
+            <element signature="e#12989#12990#0" expanded="true" />
+            <element signature="e#15098#15099#0" expanded="true" />
+            <element signature="e#15134#15135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="1610" selection-start-line="1610" selection-end-line="1610" />
+          <folding>
+            <element signature="e#62916#62917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/Launcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Utils/MybatisUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/transaction/jdbc/JdbcTransactionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/mapping/Environment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#2286#2287#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+            <element signature="e#2397#2398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/java/Repository/org/xerial/sqlite-jdbc/3.27.2.1/sqlite-jdbc-3.27.2.1.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="356" selection-start-line="356" selection-end-line="356" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#2896#2897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/datasource/unpooled/UnpooledDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/datasource/pooled/PooledConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="e#2832#2833#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/datasource/pooled/PooledDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/java/Repository/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/transaction/jdbc/JdbcTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/sql/DriverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/BookSelfController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Node/DownloadedNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Adapter/DownloadAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Downloader/NovelDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-273">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Downloader/AudioDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+          <folding>
+            <element signature="e#5575#5576#0" expanded="true" />
+            <element signature="e#5614#5615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SettingMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SettingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Crawl/AudioNovelSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="311" column="27" selection-start-line="311" selection-start-column="27" selection-end-line="311" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2222">
+          <caret line="139" selection-start-line="139" selection-start-column="2" selection-end-line="143" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Utils/ContentUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/DownloadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="191" column="43" selection-start-line="191" selection-start-column="43" selection-end-line="191" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Mapper/DownHistoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Node/BookNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="147" column="21" selection-start-line="147" selection-start-column="21" selection-end-line="147" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Node/SearchAudioNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <element signature="e#2194#2195#0" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/AudioBookSelfController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="390" column="61" selection-start-line="390" selection-start-column="61" selection-end-line="390" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/Test/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding>
+            <element signature="method#testDymaic#0;class#AppTest#0" />
+            <element signature="method#testUrl#0;class#AppTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/App/TestAPp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/AnalysisController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="75" column="2" selection-start-line="75" selection-start-column="2" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unclezs/UI/Controller/SearchAudioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="144" column="13" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>BookCity:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Invalid</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|BookCity</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>chardet-1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
