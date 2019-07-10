@@ -129,6 +129,5 @@
 ![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E4%B8%8B%E8%BD%BD%E5%AE%8C%E6%88%90.png)
 
 ## 给点动力呗
-
-
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/wx.png)![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/zfb.jpg)
+<img src="https://github.com/unclezs/NovelHarvester/blob/master/screenshot/zfb.jpg" alt="Sample"  width="250" height="140">
+<img src="https://github.com/unclezs/NovelHarvester/blob/master/screenshot/zfb.jpg" alt="Sample"  width="250" height="140">
