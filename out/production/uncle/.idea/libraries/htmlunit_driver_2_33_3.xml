@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="htmlunit-driver-2.33.3">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/htmlunit-driver-2.33.3.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
