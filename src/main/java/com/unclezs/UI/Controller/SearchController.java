@@ -62,6 +62,9 @@ public class SearchController implements Initializable {
         search.setOnMouseClicked(e ->searchNovelByName());
         //列表菜单
         list.setOnMouseClicked(e -> {
+            if(list.getItems().size()==0){
+                return;
+            }
             int index = list.getSelectionModel().getSelectedIndex();
             if (e.getButton()==MouseButton.PRIMARY){//单机打开
                 copyLink(index);

@@ -107,6 +107,7 @@ public class AudioDownloader implements DownloadAdapter {
                             System.out.println("下载失败"+src);
                         }
                         overNum.add(j);
+                        Thread.sleep(config.getSleepTime());
                     }
                     return null;
                 }
