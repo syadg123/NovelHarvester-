@@ -102,31 +102,31 @@
 ## 预览图
 #### 1.小说搜索页
 
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E5%B0%8F%E8%AF%B4%E6%90%9C%E7%B4%A2.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E5%B0%8F%E8%AF%B4%E6%90%9C%E7%B4%A2.png)
 
 #### 2.解析小说
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E8%A7%A3%E6%9E%90%E5%B0%8F%E8%AF%B4.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E8%A7%A3%E6%9E%90%E5%B0%8F%E8%AF%B4.png)
 
 #### 3.解析设置
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E8%A7%A3%E6%9E%90%E8%AE%BE%E7%BD%AE.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E8%A7%A3%E6%9E%90%E8%AE%BE%E7%BD%AE.png)
 
 #### 4.文本书架
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E6%96%87%E6%9C%AC%E4%B9%A6%E6%9E%B6.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E6%96%87%E6%9C%AC%E4%B9%A6%E6%9E%B6.png)
 
 #### 5.阅读器
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E9%98%85%E8%AF%BB%E5%99%A8.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E9%98%85%E8%AF%BB%E5%99%A8.png)
 
 #### 6.有声搜索
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E6%9C%89%E5%A3%B0%E6%90%9C%E7%B4%A2.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E6%9C%89%E5%A3%B0%E6%90%9C%E7%B4%A2.png)
 
 #### 7.有声书架
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E6%9C%89%E5%A3%B0%E4%B9%A6%E6%9E%B6.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E6%9C%89%E5%A3%B0%E4%B9%A6%E6%9E%B6.png)
 
 #### 8.正在下载
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E6%AD%A3%E5%9C%A8%E4%B8%8B%E8%BD%BD.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E6%AD%A3%E5%9C%A8%E4%B8%8B%E8%BD%BD.png)
 
 #### 9.下载完成
-![Image text](https://github.com/unclezs/NovelHarvester/blob/master/screenshot/%E4%B8%8B%E8%BD%BD%E5%AE%8C%E6%88%90.png)
+![Image text](https://github.com/unclezs/NovelHarvester/raw/master/screenshot/%E4%B8%8B%E8%BD%BD%E5%AE%8C%E6%88%90.png)
 
 # 动力动力
-<img src="https://github.com/unclezs/NovelHarvester/blob/master/screenshot/zfb.jpg" alt="Sample"  width="400" height="526">  <img src="https://github.com/unclezs/NovelHarvester/blob/master/screenshot/wx.png" alt="Sample"  width="400" height="526">
+<img src="https://github.com/unclezs/NovelHarvester/raw/master/screenshot/zfb.jpg" alt="Sample"  width="400" height="526">  <img src="https://github.com/unclezs/NovelHarvester/raw/master/screenshot/wx.png" alt="Sample"  width="400" height="526">
