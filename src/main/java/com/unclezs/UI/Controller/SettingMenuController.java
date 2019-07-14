@@ -26,7 +26,7 @@ import java.util.ResourceBundle;
  */
 public class SettingMenuController implements Initializable {
     @FXML
-    Label github, help, setting, about, safe;
+    Label github, help, setting, about, safe,update;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -41,7 +41,8 @@ public class SettingMenuController implements Initializable {
         safe.setGraphic(new ImageView("images/设置页/免责.jpg"));
         about.setGraphic(new ImageView("images/设置页/关于.jpg"));
         help.setGraphic(new ImageView("images/设置页/打赏.jpg"));
-        changeBackColor(github, setting, safe, about, help);
+        update.setGraphic(new ImageView("images/菜单页/更新.jpg"));
+        changeBackColor(github, setting, safe, about, help,update);
     }
 
     //事件初始化
@@ -92,6 +93,13 @@ public class SettingMenuController implements Initializable {
         //免责声明
         safe.setOnMouseClicked(e -> {
             AlertUtil.getAlert("免责声明", "软件仅供技术交流，请勿用于商业及非法用途，\r\n如产生法律纠纷与本人无关，如有侵权请联系我删除.").show();
+        });
+        update.setOnMouseClicked(e->{
+            try {
+                Desktop.getDesktop().browse(new URI("https://www.lanzous.com/b833477"));
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         });
     }
 

@@ -25,7 +25,7 @@
          </padding>
         </JFXTextArea>
         <JFXListView fx:id="list" prefWidth="300.0" visible="false" />
-        <Pane fx:id="setPane" layoutX="688.0" layoutY="234.0" prefHeight="281.0" prefWidth="230.0" style="-fx-background-color: rgba(221,221,221,0.9);" visible="false">
+        <Pane fx:id="setPane" layoutX="688.0" layoutY="188.0" prefHeight="327.0" prefWidth="230.0" style="-fx-background-color: rgba(221,221,221,0.9);" visible="false">
             <children>
                 <!--             字体大小-->
                 <Label fx:id="fontText" layoutX="16.0" layoutY="62" text="字体大小" wrapText="true" />
@@ -37,8 +37,8 @@
                 <JFXToggleButton fx:id="voice" layoutX="128.0" layoutY="182.0" prefHeight="58.0" prefWidth="59.0" text=" " />
                 <Pane layoutX="20.0" layoutY="235.0" prefHeight="1" prefWidth="190.0" style="-fx-background-color: #c2c2c2;" />
                 <!--            底部菜单-->
-                <Label fx:id="chapter" layoutX="44.0" layoutY="245.0" prefHeight="15.0" prefWidth="0.0" wrapText="true" />
-                <Label fx:id="hideSet" layoutX="177.0" layoutY="246.0" wrapText="true" />
+                <Label fx:id="chapter" layoutX="40.0" layoutY="293.0" prefHeight="15.0" prefWidth="0.0" wrapText="true" />
+                <Label fx:id="hideSet" layoutX="173.0" layoutY="293.0" wrapText="true" />
                 <!--             颜色选择-->
                 <Label fx:id="huyan" layoutX="28.0" layoutY="14.0" prefHeight="25.0" prefWidth="24.0" style="-fx-border-radius: 33px; -fx-background-radius: 33px; -fx-background-color: #CEEBCE;" />
                 <Label fx:id="anse" layoutX="58.0" layoutY="14.0" prefHeight="25.0" prefWidth="24.0" style="-fx-background-color: #808A87; -fx-border-radius: 33px; -fx-background-radius: 33px;" textFill="#c2c2c2" />
@@ -59,8 +59,13 @@
                 <Label fx:id="pageLess" layoutX="100.0" layoutY="147.0" prefHeight="32.0" prefWidth="32.0" textFill="WHITE" wrapText="true" />
                 <Label fx:id="pageSize" layoutX="138.0" layoutY="147.0" prefHeight="32.0" prefWidth="32.0" text="800" wrapText="true" />
                 <Pane layoutX="20.0" layoutY="188.0" prefHeight="1" prefWidth="190.0" style="-fx-background-color: #c2c2c2;" />
+            <Pane layoutX="20.0" layoutY="282.0" prefHeight="1" prefWidth="190.0" style="-fx-background-color: #c2c2c2;" />
+            <JFXToggleButton fx:id="changePage" layoutX="128.0" layoutY="229.0" prefHeight="48.0" prefWidth="74.0" text=" " />
+            <Label fx:id="changePageLabel" layoutX="16.0" layoutY="247.0" text="显示翻页按钮" wrapText="true" />
             </children>
         </Pane>
-        <Label fx:id="setting" layoutX="866.0" layoutY="515.0" maxHeight="40.0" maxWidth="45.0" prefHeight="40.0" prefWidth="45.0" style="-fx-background-image: url('images/设置页/设置.jpg')" />
+        <Label fx:id="setting" layoutX="866.0" layoutY="515.0" maxHeight="30.0" maxWidth="30.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-image: url('images/设置页/设置.jpg')" />
+      <Label fx:id="nextBtn" layoutX="803.0" layoutY="572.0" />
+      <Label fx:id="preBtn" layoutX="803.0" layoutY="548.0" />
     </children>
 </Pane>
