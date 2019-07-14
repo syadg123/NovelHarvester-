@@ -38,9 +38,11 @@ public class ReaderController implements Initializable {
     @FXML
     Label title;//标题
     @FXML
-    JFXToggleButton voice;//朗读
+    JFXToggleButton voice,changePage;//朗读
     @FXML
-    Label readLabel, fontAdd, fontless, fontText, chapter, hideSet, setting, pageAdd, pageLess, song, yahei, kaiti, pageWidth, fontStyle, pageSize;//设置页
+    Label readLabel, fontAdd, fontless, fontText, chapter, hideSet,
+            setting, pageAdd, pageLess, song, yahei, kaiti, pageWidth,
+            fontStyle, pageSize,changePageLabel,preBtn,nextBtn;//设置页
     @FXML
     Label huyan, yangpi, heise, molv, anse, baise;//背景色
     @FXML
@@ -300,6 +302,18 @@ public class ReaderController implements Initializable {
                 scrollNum = 0;
             }
         });
+
+        //按钮翻页
+        preBtn.setOnMouseClicked(event -> {
+            loadChapter(--index);
+            sp.setVvalue(0);
+            return;
+        });
+        nextBtn.setOnMouseClicked(e->{
+            loadChapter(++index);
+            sp.setVvalue(0);
+            return;
+        });
     }
 
     //语音朗读
@@ -318,9 +332,13 @@ public class ReaderController implements Initializable {
     //设置
     void initSetting() {
         //绑定位置在右下角
-        setting.layoutYProperty().bind(root.layoutYProperty().add(root.heightProperty()).subtract(60));
-        setting.layoutXProperty().bind(root.layoutXProperty().add(root.widthProperty()).subtract(50));
-        setPane.layoutYProperty().bind(setting.layoutYProperty().subtract(291));
+        setting.layoutYProperty().bind(root.layoutYProperty().add(root.heightProperty()).subtract(65));
+        setting.layoutXProperty().bind(root.layoutXProperty().add(root.widthProperty()).subtract(31));
+        nextBtn.layoutXProperty().bind(setting.layoutXProperty().add(2));
+        nextBtn.layoutYProperty().bind(setting.layoutYProperty().add(31));
+        preBtn.layoutYProperty().bind(nextBtn.layoutYProperty());
+        preBtn.layoutXProperty().bind(nextBtn.layoutXProperty().subtract(30));
+        setPane.layoutYProperty().bind(setting.layoutYProperty().subtract(330));
         setPane.layoutXProperty().bind(root.layoutXProperty().add(root.widthProperty()).subtract(230));
         //背景色更换
         molv.setOnMouseClicked(e -> changeColor(" #5e8e87", "#F0F0F0"));
@@ -378,6 +396,9 @@ public class ReaderController implements Initializable {
         yahei.setOnMouseClicked(e -> {
             content.setFont(Font.font("Microsoft YaHei", content.getFont().getSize()));
         });
+        //显示翻页按钮
+        preBtn.visibleProperty().bind(changePage.selectedProperty());
+        nextBtn.visibleProperty().bind(changePage.selectedProperty());
         //图标设置
         fontText.setGraphic(new ImageView("images/设置页/字体.png"));
         fontAdd.setGraphic(new ImageView("images/设置页/字体放大.png"));
@@ -389,6 +410,9 @@ public class ReaderController implements Initializable {
         pageLess.setGraphic(new ImageView("images/设置页/阅读页_页面缩小.jpg"));
         pageWidth.setGraphic(new ImageView("images/设置页/页面大小.jpg"));
         fontStyle.setGraphic(new ImageView("images/设置页/字体样式.jpg"));
+        changePageLabel.setGraphic(new ImageView("images/设置页/显示.png"));
+        preBtn.setGraphic(new ImageView("images/设置页/上一章.jpg"));
+        nextBtn.setGraphic(new ImageView("images/设置页/下一章.jpg"));
     }
 
     /**

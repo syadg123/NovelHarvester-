@@ -122,7 +122,40 @@ public class HtmlUtil {
         return getHtml(url, charset, null, ua);
     }
 
-
+    /**
+     * 获取静态网页源码
+     * @param url     网页url地址
+     * @param charset 网页编码
+     * @return 网页源码
+     */
+    public static String getHtml(String url, String charset,String referer) {
+        String ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36";
+        String content = null;
+        //重试5次
+        HttpRequestRetryHandler retry = new StandardHttpRequestRetryHandler(5, true);
+        //请求头
+        List<Header> headers = new ArrayList<>();
+        headers.add(new BasicHeader("User-Agent", ua));
+        headers.add(new BasicHeader("Referer",referer));
+        //延迟
+        RequestConfig config = RequestConfig.custom()
+                .setConnectTimeout(10000)
+                .setSocketTimeout(10000)
+                .setConnectionRequestTimeout(10000)
+                .build();
+        try (CloseableHttpClient httpClient = HttpClientBuilder.create()
+                .setDefaultHeaders(headers)
+                .setRetryHandler(retry)
+                .setDefaultRequestConfig(config)
+                .build()) {
+            HttpGet get = new HttpGet(url);
+            HttpEntity entity = httpClient.execute(get).getEntity();
+            return EntityUtils.toString(entity, charset);
+        } catch (Exception e) {
+            System.out.println("源码抓取失败" + url);
+        }
+        return "";
+    }
 
 
 

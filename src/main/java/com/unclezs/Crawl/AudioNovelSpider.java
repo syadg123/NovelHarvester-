@@ -209,7 +209,7 @@ public class AudioNovelSpider {
     //520听书网和有声小说吧
     private String get520TINGSHU(String curl) {
         String host = curl.substring(0, curl.indexOf("com") + 4);
-        String html = HtmlUtil.getHtml(curl, "gb2312");
+        String html = HtmlUtil.getHtml(curl, "gb2312",curl);
         Pattern pattern = Pattern.compile("\"(/playdata/.+?js.*?)\"");
         Matcher m = pattern.matcher(html);
         m.find();
@@ -229,7 +229,7 @@ public class AudioNovelSpider {
 
     //幻听网
     private String getTING89(String url) {
-        String html = HtmlUtil.getHtml(url, "gb2312");
+        String html = HtmlUtil.getHtml(url, "gb2312",url);
         String realUrl = Jsoup.parse(html).select("iframe").attr("src");
         realUrl = realUrl.substring(realUrl.lastIndexOf("http"));
         return realUrl;
@@ -238,7 +238,7 @@ public class AudioNovelSpider {
     //有声听书吧
     private String getYSTS8(String curl) {
         //章节源码爬取
-        String chtml = HtmlUtil.getHtml(curl, "gbk");
+        String chtml = HtmlUtil.getHtml(curl, "gbk",curl);
         Pattern p = Pattern.compile("<iframe src=\"(.+?)\"");
         Matcher m = p.matcher(chtml);
         m.find();
@@ -265,7 +265,7 @@ public class AudioNovelSpider {
 
     //56听书网
     private String getTING56(String url) {
-        String html = HtmlUtil.getHtml(url, "gbk");
+        String html = HtmlUtil.getHtml(url, "gbk",url);
         Pattern pattern = Pattern.compile("FonHen_JieMa[(]'([\\s\\S]+?)'");
         Matcher m = pattern.matcher(html);
         m.find();
@@ -305,7 +305,7 @@ public class AudioNovelSpider {
 
     //恋听网
     private String getTING55(String url) {
-        String html = HtmlUtil.getHtml(url, "utf-8");
+        String html = HtmlUtil.getHtml(url, "utf-8",url);
         Pattern p = Pattern.compile("var a=[{].+?\"(.+?)\"");
         Matcher m = p.matcher(html);
         if(m.find()){
@@ -316,7 +316,7 @@ public class AudioNovelSpider {
 
     //静听网
     private String getAUDIO699(String url) {
-        String html = HtmlUtil.getHtml(url, "utf-8");
+        String html = HtmlUtil.getHtml(url, "utf-8",url);
         Document document = Jsoup.parse(html);
         String readUrl = document.select("source").attr("src");
         return readUrl;
