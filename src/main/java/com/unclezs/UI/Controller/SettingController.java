@@ -41,14 +41,14 @@ public class SettingController implements Initializable {
 
     void initData() {//初始化数据
         chapterNum.getItems().addAll(50, 100, 200, 400, 800, 1000, 1600, 3200, 6400);
-        delay.getItems().addAll(0, 50, 500, 1000, 2000, 3000, 5000, 8000, 10000);
+        delay.getItems().addAll(0,1, 2, 3, 5, 10, 15,30, 60,120,180,240,600,900);
         SettingMapper mapper = MybatisUtils.getMapper(SettingMapper.class);
         config = mapper.querySetting();
         MybatisUtils.getCurrentSqlSession().close();
         merge.setSelected(config.isMergeFile());
         merge.setDisableVisualFocus(true);//禁用焦点过渡
         chapterNum.setValue(config.getPerThreadDownNum());
-        delay.setValue(config.getSleepTime());
+        delay.setValue(config.getSleepTime()/1000);
         pathLabel.setText(config.getPath());
     }
 
@@ -62,7 +62,7 @@ public class SettingController implements Initializable {
             config.setPerThreadDownNum(chapterNum.getValue());
         });
         delay.valueProperty().addListener(e -> {
-            config.setSleepTime(delay.getValue());
+            config.setSleepTime(delay.getValue()*1000);
         });
         changePath.setOnMouseClicked(e -> {
             //文件选择

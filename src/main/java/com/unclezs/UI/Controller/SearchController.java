@@ -9,6 +9,7 @@ import com.unclezs.UI.Node.ProgressFrom;
 import com.unclezs.UI.Node.SearchNode;
 import com.unclezs.UI.Utils.ContentUtil;
 import com.unclezs.UI.Utils.DataManager;
+import com.unclezs.UI.Utils.ToastUtil;
 import com.unclezs.Utils.HttpUtil;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
@@ -132,7 +133,7 @@ public class SearchController implements Initializable {
             Task<List<SearchNode>> task = new Task<List<SearchNode>>() {
                 @Override
                 protected List<SearchNode> call() throws Exception {
-                    String responce = HttpUtil.request("http://unclezs.com:8081/novel/info?name=" + name + "&site=" + sites[index]);
+                    String responce = HttpUtil.request("https://unclezs.com:8443/novel/novel/info?name=" + name + "&site=" + sites[index]);
                     List<NovelInfo> novelInfos = JSON.parseArray(responce, NovelInfo.class);
                     List<SearchNode> nodeList = new ArrayList<>();
                     for (NovelInfo info : novelInfos) {
@@ -151,6 +152,8 @@ public class SearchController implements Initializable {
                         Label label = new Label("哎！没有找到这本书，可以试试目录解析！");
                         label.setFont(new Font(16));
                         list.getItems().add(label);
+                    }else {
+                        ToastUtil.toast("搜索完毕");
                     }
                     search.setDisable(false);//释放搜索按钮
                 }

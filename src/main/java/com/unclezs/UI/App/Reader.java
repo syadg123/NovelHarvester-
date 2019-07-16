@@ -23,7 +23,7 @@ public class Reader extends Application{
     @Override
     public void start(Stage readerStage) throws IOException {
         DataManager.readerStage=readerStage;
-        readerStage.getIcons().add(new Image("/images/阅读页/阅读.jpg"));
+        readerStage.getIcons().add(new Image("images/图标/圆角图标.png"));
         readerStage.setMinHeight(600);
         readerStage.setMinWidth(500);
         FXMLLoader loader=new FXMLLoader();

@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
-<?import javafx.scene.canvas.*?>
 <?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600" minWidth="500" prefHeight="607.0" prefWidth="918.0" style="-fx-background-color: #CEEBCE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unclezs.UI.Controller.ReaderController">
     <children>
-        <!--      <JFXListView fx:id="list" minWidth="300" prefHeight="600.0" prefWidth="300" visible="false" />-->
         <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="36.0" text="">
             <font>
                 <Font name="System Bold" size="30.0" />
@@ -24,6 +21,9 @@
             <Insets left="20.0" />
          </padding>
         </JFXTextArea>
+        <!--翻页区域点击-->
+        <Label fx:id="leftLabel" layoutX="0.0" layoutY="0" prefHeight="559.0" prefWidth="165.0" />
+        <Label fx:id="rightLabel" layoutX="0.0" layoutY="0" prefHeight="559.0" prefWidth="165.0"/>
         <JFXListView fx:id="list" prefWidth="300.0" visible="false" />
         <Pane fx:id="setPane" layoutX="688.0" layoutY="188.0" prefHeight="327.0" prefWidth="230.0" style="-fx-background-color: rgba(221,221,221,0.9);" visible="false">
             <children>

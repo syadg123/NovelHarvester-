@@ -18,7 +18,7 @@
       <JFXComboBox fx:id="chapterNum" layoutX="168.0" layoutY="65.0" prefHeight="23.0" prefWidth="75.0" promptText="1000" />
       <Text layoutX="14.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="每个线程下载章节数量" />
       <Pane layoutY="100.0" prefHeight="1.0" prefWidth="257.0" style="-fx-background-color: rgb(189,189,189);" />
-      <Text layoutX="14.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="每个章节下载延迟毫秒" />
+      <Text layoutX="14.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="每个章节下载延迟秒数" />
       <JFXComboBox fx:id="delay" layoutX="168.0" layoutY="115.0" prefHeight="23.0" prefWidth="75.0" promptText="1000ms" />
       <Pane layoutY="150.0" prefHeight="1.0" prefWidth="257.0" style="-fx-background-color: rgb(189,189,189);" />
       <Pane layoutY="224.0" prefHeight="1.0" prefWidth="257.0" style="-fx-background-color: rgb(189,189,189);" />

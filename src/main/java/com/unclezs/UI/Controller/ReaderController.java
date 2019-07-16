@@ -42,7 +42,7 @@ public class ReaderController implements Initializable {
     @FXML
     Label readLabel, fontAdd, fontless, fontText, chapter, hideSet,
             setting, pageAdd, pageLess, song, yahei, kaiti, pageWidth,
-            fontStyle, pageSize,changePageLabel,preBtn,nextBtn;//设置页
+            fontStyle, pageSize,changePageLabel,preBtn,nextBtn,leftLabel,rightLabel;//设置页
     @FXML
     Label huyan, yangpi, heise, molv, anse, baise;//背景色
     @FXML
@@ -63,6 +63,8 @@ public class ReaderController implements Initializable {
     String text;//正文
     String novelTitle;//标题
     boolean firstLoading=true;//第一次加载标志
+    boolean isPageTopOver=false;//一章节顶部标志
+    boolean isPageDownOver=false;//一章节尾部标志
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //加载小说
@@ -121,6 +123,12 @@ public class ReaderController implements Initializable {
                 title.maxWidthProperty().bind(root.maxWidthProperty());
                 title.layoutYProperty().bind(content.scrollTopProperty().multiply(-1));//标题位置随滚动条内容变化
                 content.layoutXProperty().bind((root.layoutXProperty().add(root.widthProperty().subtract(content.widthProperty()))).divide(2));
+                //翻页区域绑定
+                leftLabel.prefWidthProperty().bind(root.widthProperty().multiply(0.2));
+                leftLabel.prefHeightProperty().bind(root.heightProperty());
+                rightLabel.prefWidthProperty().bind(root.widthProperty().multiply(0.2));
+                rightLabel.prefHeightProperty().bind(root.heightProperty());
+                rightLabel.layoutXProperty().bind(root.layoutXProperty().add(root.widthProperty().subtract(rightLabel.widthProperty())));
                 autoSize();
                 //获取scrollPane
                 sp = (ScrollPane) content.lookup(".scroll-pane");//获取textarea的scrollPane;
@@ -219,6 +227,13 @@ public class ReaderController implements Initializable {
                     pf.cancelProgressBar();
                     this.content.setText(text);
                     this.title.setText(novelTitle);
+                    //翻页顶部标志，因为需要loading与到底部共存，不得已放在这里，等待内容加载完毕，跳转底部，与changePage(false)对应
+                    if(isPageTopOver){
+                        content.selectEnd();
+                        content.deselect();
+                        isPageDownOver=true;
+                        isPageTopOver=false;
+                    }
                 });
                 pf.activateProgressBar();
             }
@@ -293,10 +308,10 @@ public class ReaderController implements Initializable {
         content.setOnScroll((ScrollEvent event) -> {
             event.consume();
             scrollNum++;
-            if (event.getDeltaY() == 13 && scrollNum > 10) {//顶部（滚动次数大于10防止误触）
+            if (event.getDeltaY() == 13 && scrollNum > 5) {//顶部（滚动次数大于10防止误触）
                 loadChapter(--index);
                 scrollNum = 0;
-            } else if (event.getDeltaY() == -13 && scrollNum > 10) {//底部
+            } else if (event.getDeltaY() == -13 && scrollNum > 5) {//底部
                 loadChapter(++index);
                 content.setScrollTop(0);
                 scrollNum = 0;
@@ -347,6 +362,15 @@ public class ReaderController implements Initializable {
         heise.setOnMouseClicked(e -> changeColor("#393D49", "#c2c2c2"));
         yangpi.setOnMouseClicked(e -> changeColor("#e6dbbf", "#333333"));
         baise.setOnMouseClicked(e -> changeColor("#F0F0F0", "#333333"));
+        //翻页区域点击
+        rightLabel.setOnMouseClicked(e->{
+            e.consume();
+            changePage(true);
+        });
+        leftLabel.setOnMouseClicked(e->{
+            e.consume();
+            changePage(false);
+        });
         //显示隐藏目录
         chapter.setOnMouseClicked(e -> {
             e.consume();
@@ -428,5 +452,29 @@ public class ReaderController implements Initializable {
         //更新配置
         DataManager.readerConfig.setBgColor(color);
         DataManager.readerConfig.setFontColor(fontcolor);
+    }
+    //左右点击按键翻页
+    private void changePage(boolean isRight){
+        if(isRight){//向右边翻页，向到底部自动翻页到下一节
+            content.setScrollTop(content.getScrollTop()+content.getHeight()-20);
+            if(sp.getVvalue()==1.0){
+                if(!isPageDownOver){
+                    isPageDownOver=true;
+                }else {
+                    loadChapter(++index);
+                    sp.setVvalue(0);
+                    isPageDownOver=false;
+                }
+            }
+        }else {//向左翻页，到底部自动加载上一页
+            content.setScrollTop(content.getScrollTop()-content.getHeight()+20);
+            if(sp.getVvalue()==0){
+                if(!isPageTopOver){
+                    isPageTopOver=true;
+                }else {
+                    loadChapter(--index);
+                }
+            }
+        }
     }
 }
