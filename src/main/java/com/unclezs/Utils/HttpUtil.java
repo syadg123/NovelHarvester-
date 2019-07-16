@@ -99,4 +99,16 @@ public class HttpUtil {
             return null;
         }
     }
+
+    //get/post请求静态网页
+    public static String request(String url,List<Header> headers){
+        try(CloseableHttpClient client= HttpClients.custom().setDefaultHeaders(headers).build()){
+            HttpEntity entity = client.execute(new HttpGet(url)).getEntity();
+            String responce = EntityUtils.toString(entity, "UTF-8");
+            return responce;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 }

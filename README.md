@@ -1,4 +1,4 @@
-# Uncle小说 V3.2
+# Uncle小说 V3.2.3
 一个PC端（win、mac、linux）文本小说下载、阅读；有声小说下载
 
 由javaFX+Mybatis+SqLite+Maven搭建环境编写
