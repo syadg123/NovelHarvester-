@@ -91,6 +91,8 @@ public class AudioDownloader implements DownloadAdapter {
                             }
                             URL url = new URL(src);
                             HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+                            connection.setConnectTimeout(10000);
+                            connection.setReadTimeout(10000);
                             connection.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36");
                             BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(path));
                             BufferedInputStream in = new BufferedInputStream(connection.getInputStream());

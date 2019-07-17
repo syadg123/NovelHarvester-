@@ -58,6 +58,8 @@ public class FileUtil {
             URL url = new URL(uri);/*将网络资源地址传给,即赋值给url*/
             /*此为联系获得网络资源的固定格式用法，以便后面的in变量获得url截取网络资源的输入流*/
             HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+            connection.setReadTimeout(10000);
+            connection.setConnectTimeout(10000);
             BufferedInputStream in = new BufferedInputStream(connection.getInputStream());
             /*此处也可用BufferedInputStream与BufferedOutputStream*/
             BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(path));
