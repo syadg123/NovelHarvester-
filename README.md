@@ -1,7 +1,7 @@
 # Uncle小说 V3.4
 一个PC端（win、mac、linux）文本小说下载、阅读；有声小说下载
 
-由javaFX+Mybatis+SqLite+Maven搭建环境编写
+由javaFX+Mybatis+SqLite+Maven搭建环境编写，fxlauncher实现自动更新
 
 ## 更新说明
 [查看更新介绍](https://unclezs.gitee.io/service/%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.html "更新说明")
@@ -21,6 +21,8 @@
 1.6 支持去广告，一行一条，让阅读在无广告
 
 1.7 章节过滤、乱序重排、多种正文规则，繁体转简体、NRC字体转中文
+
+1.8 支持导出为txt，epub,mobi格式
 
 **友情提示，有时候没有匹配到或者乱序了，可以关闭章节过滤和乱序重排说不定会有奇效哈**
 
