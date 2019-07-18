@@ -4,7 +4,7 @@
 由javaFX+Mybatis+SqLite+Maven搭建环境编写
 
 ## 更新说明
-[查看更新介绍]("https://unclezs.gitee.io/service/%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.html")
+[查看更新介绍](https://unclezs.gitee.io/service/%E6%9B%B4%E6%96%B0%E8%AF%B4%E6%98%8E.html "更新说明")
 
 ## 功能简介：
 ### 一、.TXT小说下载
