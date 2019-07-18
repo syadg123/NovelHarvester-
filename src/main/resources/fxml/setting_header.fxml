@@ -31,7 +31,7 @@
             <Insets top="5.0" />
          </VBox.margin>
       </Label>
-      <Label fx:id="update" alignment="CENTER" layoutX="10.0" layoutY="61.0" maxHeight="25" minHeight="25" prefHeight="17.0" prefWidth="137.0" text="更新地址     ">
+      <Label fx:id="update" alignment="CENTER" layoutX="10.0" layoutY="61.0" maxHeight="25" minHeight="25" prefHeight="17.0" prefWidth="137.0" text="更新说明     ">
          <VBox.margin>
             <Insets bottom="5.0" top="5.0" />
          </VBox.margin>

@@ -5,6 +5,7 @@ import com.unclezs.Adapter.DownloadAdapter;
 import com.unclezs.Crawl.NovelSpider;
 import com.unclezs.Model.DownloadConfig;
 import com.unclezs.Utils.CharacterUtil;
+import com.unclezs.Utils.EpubUtil;
 import com.unclezs.Utils.FileUtil;
 import com.unclezs.Utils.HtmlUtil;
 
@@ -122,11 +123,20 @@ public class NovelDownloader implements DownloadAdapter {
                             out.println(nameList.get(i));
                             out.println(content.toString());
                             out.flush();
+                            //文本转码
+                            if(overNum.size()+1==getMaxNum()){
+                                //下载完成合并
+                                FileUtil.mergeFiles(spider.getConfig().get("title"), config.getPath(), tempPath, true, spider.getConfig().get("charset"));
+                                //合并完成转码
+                                if(!config.getFormat().equals("txt")){
+                                    EpubUtil.Txt2Epub(config.getPath()+spider.getConfig().get("title"),spider.getConfig().get("title")," ",config.getFormat());
+                                }
+                            }
                             overNum.add(i);
                             Thread.sleep(config.getSleepTime());
                         }
                     } catch (Exception e) {
-                        overNum.add("");
+                        System.out.println(e.getMessage());
                     }
                     return null;
                 }
@@ -140,7 +150,6 @@ public class NovelDownloader implements DownloadAdapter {
                 System.out.println("线程异常终止");
             }
         }
-        FileUtil.mergeFiles(spider.getConfig().get("title"), config.getPath(), tempPath, true, spider.getConfig().get("charset"));
     }
 
     //已经下载数量

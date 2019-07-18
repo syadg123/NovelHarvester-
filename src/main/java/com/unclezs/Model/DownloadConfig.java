@@ -9,6 +9,15 @@ public class DownloadConfig {
     private int perThreadDownNum;//每个西线程多少章节
     private Integer sleepTime;//每章节延迟
     private boolean mergeFile;//下载完成后是否合并
+    private String format;//下载格式
+
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
 
     public String getPath() {
         return path;

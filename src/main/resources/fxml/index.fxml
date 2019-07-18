@@ -35,7 +35,7 @@
                         </Label>
                         <!--下书-->
                         <Label layoutX="6.0" layoutY="181.0" text="下载书" textFill="GREY" />
-                        <Label fx:id="analysis" alignment="CENTER" layoutY="199.0" prefHeight="36.0" prefWidth="150.0" text="小说下载" textFill="#555555">
+                        <Label fx:id="analysis" alignment="CENTER" layoutY="199.0" prefHeight="36.0" prefWidth="150.0" text="解析下载" textFill="#555555">
                            <font>
                               <Font size="13.0" />
                            </font>

@@ -12,7 +12,7 @@ import org.apache.ibatis.annotations.Update;
  */
 @Mapper
 public interface SettingMapper {
-    @Update("update setting set path=#{path},perThreadDownNum=#{perThreadDownNum},sleepTime=#{sleepTime},mergeFile=#{mergeFile} where id=1")
+    @Update("update setting set path=#{path},perThreadDownNum=#{perThreadDownNum},sleepTime=#{sleepTime},mergeFile=#{mergeFile},format=#{format} where id=1")
     void updateSetting(DownloadConfig config);
 
     @Select("select * from setting")

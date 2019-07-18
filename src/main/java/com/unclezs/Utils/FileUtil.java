@@ -47,6 +47,44 @@ public class FileUtil {
         }
         is.close();
     }
+    // { 通用文本读取，写入
+    // 优先使用这个读取文本，快点，变量大小可以调整一下以达到最好的速度
+    public static String readText(String filePath, String inFileEnCoding) {
+        // 为了线程安全，可以替换StringBuilder 为 StringBuffer
+        StringBuilder retStr = new StringBuilder(174080);
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), inFileEnCoding));
+
+            char[] chars = new char[4096]; // 这个大小不影响读取速度
+            int length = 0;
+            while ((length = br.read(chars)) > 0) {
+                retStr.append(chars, 0, length);
+            }
+/*
+			// 下面这个效率稍低，但可以控制换行符
+			String line = null;
+			while ((line = br.readLine()) != null) {
+			retStr.append(line).append("\n");
+			}
+*/
+            br.close();
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        }
+        return retStr.toString();
+    }
+    // 写入指定编码，速度快点
+    public static void writeText(String iStr, String filePath, String oFileEncoding) {
+        boolean bAppend = false;
+        try {
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filePath, bAppend), oFileEncoding));
+            bw.write(iStr);
+            bw.flush();
+            bw.close();
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        }
+    }
     //下载文件
     public static String uploadFile(String path,String uri,int size){
         try {
@@ -128,6 +166,24 @@ public class FileUtil {
         } catch (Exception e) {
             throw new RuntimeException("文件合并失败");
         }
+    }
+
+    public static boolean deleteDir(File dir) {
+        if (dir.isDirectory()) {
+            String[] children = dir.list(); // 递归删除目录中的子目录下
+            for (int i = 0; i < children.length; i++) {
+                if (! deleteDir(new File(dir, children[i])) ) {
+                    return false;
+                }
+            }
+        } // 目录此时为空，可以删除
+        boolean bDeleted = false ;
+        try {
+            bDeleted = dir.delete();
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        }
+        return bDeleted;
     }
 
     // 排序合并文件的序列
