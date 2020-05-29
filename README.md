@@ -55,7 +55,6 @@ github地址：欢迎star ***https://github.com/unclezs/NovelHarvester***
 
 下载地址: https://uncle.lanzous.com/b0ibxcpe
 
-欢迎关注公众号【书虫无书荒】获取最新资讯及使用教程
 
 # 五、如果你觉得软件不错 欢迎star
 ![](http://uncle-dev.unclezs.com/blog/1590252920.jpg?blog)
