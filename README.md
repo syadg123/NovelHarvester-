@@ -3,7 +3,6 @@
 但是我自己想做的就是一个能长期使用并且可以无Server的PC软件，所以我一直坚持着这个理念。为什么不做安卓，因为安卓这类软件太多了。
 1.0 到 4.0已经快两年了。完全是个兴趣作品，兴致来了就更新一下。到现在大三快结束了，碰上了2019-nCoV，所以又多了点时间更新了一下，也就是4.0了。
 # 二、用到的东西
-Java码农用到的东西。
 1. JavaFX2
 2. [Mybatis](https://mybatis.org/mybatis-3/) and [plus](https://github.com/baomidou/mybatis-plus) and sqlite
 3. UI组件 [Jfoenix](https://github.com/jfoenixadmin/JFoenix)、[ControlsFX](https://github.com/controlsfx/controlsfx)
