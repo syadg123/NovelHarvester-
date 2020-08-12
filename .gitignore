@@ -1,0 +1,15 @@
+/lib/JIntellitype.dll
+/lib/JIntellitype64.dll
+/lib/kindlegen.exe
+/lib/jacob-1.19-x64.dll
+/lib/jacob-1.19-x86.dll
+target
+/*.iml
+/cache
+.idea
+/*.bat
+/*.sh
+theme
+tmp
+images
+logs
