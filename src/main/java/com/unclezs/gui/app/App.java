@@ -58,7 +58,6 @@ public class App extends Application {
     public void init() {
         //加载字体图标
         ThreadUtil.execute(() -> Font.loadFont(App.class.getResourceAsStream("/font/fontawesome-webfont.ttf"), 14));
-        ThreadUtil.execute(() -> Font.loadFont(App.class.getResourceAsStream("/font/YuanTi SC.ttc"), 14));
         //热键注册
         ThreadUtil.execute(HotKeyUtil::bindListener);
         //加载设置
