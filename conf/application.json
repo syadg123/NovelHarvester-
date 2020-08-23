@@ -86,10 +86,12 @@
 			"value":true
 		},
 		"proxyHost":{
-			"name":""
+			"name":"",
+			"value":"127.0.0.1"
 		},
 		"proxyPort":{
-			"name":""
+			"name":"",
+			"value":"1080"
 		},
 		"savePath":{
 			"name":"",
@@ -106,7 +108,7 @@
 		},
 		"useProxy":{
 			"name":"",
-			"value":false
+			"value":true
 		}
 	}
 }

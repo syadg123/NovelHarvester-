@@ -13,21 +13,30 @@ import com.unclezs.crawl.LocalNovelLoader;
 import com.unclezs.crawl.TextNovelSpider;
 import com.unclezs.enmu.SearchKeyType;
 import com.unclezs.mapper.SearchTextRuleMapper;
+import com.unclezs.model.AnalysisConfig;
 import com.unclezs.model.NovelInfo;
 import com.unclezs.model.rule.SearchTextRule;
 import com.unclezs.utils.MybatisUtil;
 import com.unclezs.utils.RequestUtil;
 import com.unclezs.utils.XpathUtil;
+import javafx.beans.property.SimpleStringProperty;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import us.codecraft.xsoup.Xsoup;
 
+import javax.net.ssl.*;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,6 +46,10 @@ import java.util.stream.Collectors;
  * @date 2019.06.20 21:27
  */
 public class AppTest {
+    @BeforeAll
+    public static void init() {
+        RequestUtil.initSSL();
+    }
 
     public static void main(String[] args) throws IOException {
         boolean a = true;
@@ -101,7 +114,21 @@ public class AppTest {
         Elements items = html.select(".t a");
         for (Element item : items) {
 //            System.out.println(Re);
-            System.out.println(item.text()+"     "+ item.absUrl("href"));
+            System.out.println(item.text() + "     " + item.absUrl("href"));
         }
     }
+
+
+    @Test
+    public void testTextNovel() throws IOException {
+        AnalysisConfig config = new AnalysisConfig();
+        config.setCookies(new SimpleStringProperty("_ga=GA1.2.1817444373.1594970578; authtoken1=eGlhb2h1YTEyMTM4; authtoken6=1; bgcolor=bg-default; word=select-m; _paabbcc=ftq545k2em94ce3g5bfvt7dsa0; _po18rf-tk001=1f7bbff881fe2f367b9ff1f2ccfd7737f6fc63beacaa462eabb25ffc8c26e682a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_po18rf-tk001%22%3Bi%3A1%3Bs%3A32%3A%22mjXs4qJgLGJd_NnlQnJU7xBZsmIaVBzw%22%3B%7D; _gid=GA1.2.704400469.1598143190; url=https%3A%2F%2Fwww.po18.tw%2Fsite%2Falarm; authtoken2=N2NlY2IyODUwNDhiNDkxMTRkNGRhNDg4MDBmZmE0ZWI%3D; authtoken3=2392904587; authtoken4=1200103161; authtoken5=1598143247"));
+        TextNovelSpider spider = new TextNovelSpider(config);
+        System.out.println(RequestUtil.get("http://myip.ipip.net/"));
+        System.setProperty("proxyHost", "127.0.0.1");
+        System.setProperty("proxyPort", "1080");
+        System.out.println(spider.chapters("https://www.po18.tw/books/699327/articles"));
+    }
+
+
 }

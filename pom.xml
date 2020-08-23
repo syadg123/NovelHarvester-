@@ -6,7 +6,7 @@
     <groupId>com.unclezs</groupId>
     <artifactId>NovelHarvester</artifactId>
     <packaging>jar</packaging>
-    <version>4.10</version>
+    <version>4.11</version>
     <name>NovelHarvester</name>
 
     <dependencies>
@@ -110,10 +110,7 @@
         <app.dir>${project.build.directory}/app</app.dir>
         <app.updateText>正在更新中...</app.updateText>
         <app.whatNew>
-            1.修复解析章节内容时候误删正文的非标题内容||
-            2.去除阅读界面边框阴影||
-            3.增加全网搜书功能||
-            4.修复阅读界面退出时程序未正常退出导致无法再次打开
+            1.修复部分网站SSL证书错误无法解析问题
         </app.whatNew>
         <!--是否接受版本降级-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

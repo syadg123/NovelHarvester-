@@ -67,7 +67,7 @@
                        GridPane.columnIndex="0"/>
                 <TextField fx:id="proxyHost" styleClass="system-proxy-input" promptText="127.0.0.1"
                            GridPane.columnIndex="1"/>
-                <TextField fx:id="proxyPort" styleClass="system-proxy-input" promptText="80" GridPane.columnIndex="2"/>
+                <TextField fx:id="proxyPort" styleClass="system-proxy-input" promptText="1080" GridPane.columnIndex="2"/>
                 <JFXButton onMouseClicked="#testProxy" styleClass="btn,info-btn,btn-sm" GridPane.columnIndex="3"
                            text="%proxy_test"/>
                 <JFXButton fx:id="useProxy" styleClass="btn,success-btn,btn-sm" GridPane.columnIndex="4"

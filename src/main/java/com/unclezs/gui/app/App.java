@@ -9,6 +9,7 @@ import com.unclezs.gui.controller.components.SettingMenuController;
 import com.unclezs.gui.controller.components.ThemeController;
 import com.unclezs.gui.utils.*;
 import com.unclezs.utils.ApiUtil;
+import com.unclezs.utils.RequestUtil;
 import fxlauncher.UpdateInfo;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -56,10 +57,14 @@ public class App extends Application {
 
     @Override
     public void init() {
-        //加载字体图标
-        ThreadUtil.execute(() -> Font.loadFont(App.class.getResourceAsStream("/font/fontawesome-webfont.ttf"), 14));
-        //热键注册
-        ThreadUtil.execute(HotKeyUtil::bindListener);
+        ThreadUtil.execute(() -> {
+            //加载字体图标
+            Font.loadFont(App.class.getResourceAsStream("/font/fontawesome-webfont.ttf"), 14);
+            //热键注册
+            ThreadUtil.execute(HotKeyUtil::bindListener);
+            //忽略SSL
+            RequestUtil.initSSL();
+        });
         //加载设置
         ApplicationUtil.initConfig();
         ToolTipUtil.init();

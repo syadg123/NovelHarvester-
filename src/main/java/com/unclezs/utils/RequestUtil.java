@@ -13,9 +13,15 @@ import com.unclezs.config.SpiderConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.junit.jupiter.api.BeforeAll;
 
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.SecureRandom;
+import java.security.cert.X509Certificate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
@@ -31,6 +37,35 @@ import java.util.function.Function;
 public class RequestUtil {
     public static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36";
     public static final String USER_AGENT_CLIENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36";
+
+    /**
+     * 忽略SSL验证错误
+     */
+    public static void initSSL() {
+        try {
+            HttpsURLConnection.setDefaultHostnameVerifier((hostname, session) -> true);
+            SSLContext context = SSLContext.getInstance("SSL");
+            context.init(null, new X509TrustManager[]{new X509TrustManager() {
+                @Override
+                public void checkClientTrusted(
+                        X509Certificate[] chain, String authType) {
+                }
+
+                @Override
+                public void checkServerTrusted(
+                        X509Certificate[] chain,
+                        String authType) {
+                }
+
+                @Override
+                public X509Certificate[] getAcceptedIssuers() {
+                    return new X509Certificate[0];
+                }
+            }}, new SecureRandom());
+            HttpsURLConnection.setDefaultSSLSocketFactory(context.getSocketFactory());
+        } catch (Exception ignore) {
+        }
+    }
 
     public static String get(String url) throws IOException {
         return get(url, null, USER_AGENT, null);
