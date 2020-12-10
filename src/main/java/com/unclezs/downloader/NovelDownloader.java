@@ -7,7 +7,6 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.unclezs.crawl.TextNovelSpider;
 import com.unclezs.downloader.config.DownloadConfig;
 import com.unclezs.downloader.config.DownloaderState;
-import com.unclezs.gui.utils.ThemeUtil;
 import com.unclezs.model.AnalysisConfig;
 import com.unclezs.model.Article;
 import com.unclezs.model.Chapter;

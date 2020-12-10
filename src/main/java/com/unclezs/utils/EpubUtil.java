@@ -55,15 +55,15 @@ public class EpubUtil {
             FileUtil.copy(article.getCover(), savePath.concat("cover.jpeg"), true);
         }
         //创建NCX
-        TemplateUtil.getTemplate(NCX).render(Dict.create().set("article", article), FileUtil.file(savePath.concat(NCX_FILENAME)));
+        TemplateUtil.process(Dict.create().set("article", article), NCX, FileUtil.file(savePath.concat(NCX_FILENAME)));
         //创建OPF
-        TemplateUtil.getTemplate(OPF).render(Dict.create().set("article", article), FileUtil.file(savePath.concat(OPF_FILENAME)));
+        TemplateUtil.process(Dict.create().set("article", article), OPF, FileUtil.file(savePath.concat(OPF_FILENAME)));
         //创建catalog.html
-        TemplateUtil.getTemplate(CATALOG).render(Dict.create().set("article", article), FileUtil.file(savePath.concat(CATALOG_FILENAME)));
+        TemplateUtil.process(Dict.create().set("article", article), CATALOG, FileUtil.file(savePath.concat(CATALOG_FILENAME)));
         for (int i = 0; i < article.getChapters().size(); i++) {
-            String content = loader.getContent(i).replaceAll("\r\n", "<br/>");
+            String content = loader.getContent(i).replace("\r\n", "<br/>");
             String name = article.getChapters().get(i);
-            TemplateUtil.getTemplate(CONTENT).render(Dict.create().set("content", content).set("name", name), FileUtil.file(String.format("%shtml/%d.html", savePath, i)));
+            TemplateUtil.process(Dict.create().set("content", content).set("name", name), CONTENT, FileUtil.file(String.format("%shtml/%d.html", savePath, i)));
         }
     }
 
@@ -92,7 +92,7 @@ public class EpubUtil {
      *
      * @param rename 文件存在是否需要重新命名
      */
-    public static File toEpub(String path, String savePath, Article article, boolean rename){
+    public static File toEpub(String path, String savePath, Article article, boolean rename) {
         String tmpdir = savePath + RandomUtil.randomString(5);
         toeBook(path, tmpdir, article);
         File zip = com.unclezs.utils.FileUtil.checkExistAndRename(savePath + article.getTitle().concat(".epub"), rename);

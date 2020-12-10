@@ -12,7 +12,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -53,6 +52,7 @@ public class Reader extends Application {
         root = new StageDecorator(stage, container, false, true, true, true, false);
         controller.initLater();
         root.header().getStyleClass().add("bg-transparent");
+        root.setOnCloseButtonAction(()-> controller.exit());
         ann = new ScaleLargeTransition(root);
         Scene scene = new Scene(root, DataManager.application.getReaderConfig().getStageWidth().get(), DataManager.application.getReaderConfig().getStageHeight().get());
         scene.setFill(Color.TRANSPARENT);

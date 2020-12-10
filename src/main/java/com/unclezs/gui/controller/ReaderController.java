@@ -210,7 +210,7 @@ public class ReaderController {
         Platform.runLater(() -> lineSpaceSlider.valueProperty().bindBidirectional(DataManager.application.getReaderConfig().getLineSpacing()));
         //中文字体
         String[] strings = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-//        List<String> families = Arrays.stream(strings).filter(f -> f.matches("[\\u4e00-\\u9fa5]+")).collect(Collectors.toList());
+        //List<String> families = Arrays.stream(strings).filter(f -> f.matches("[\\u4e00-\\u9fa5]+")).collect(Collectors.toList());
         List<String> families = Arrays.stream(strings).collect(Collectors.toList());
         fonts.getItems().setAll(families);
         fonts.valueProperty().bindBidirectional(DataManager.application.getReaderConfig().getFontFamily());
@@ -533,17 +533,14 @@ public class ReaderController {
     }
 
     public void exit() {
-        Platform.setImplicitExit(true);
         Reader.stage.hide();
+        App.stage.show();
     }
 
     /**
      * 返回主页
      */
     public void onHidden() {
-        if (!Platform.isImplicitExit()) {
-            return;
-        }
         //取消监听
         currentIndex.removeListener(currentIndexListener);
         //初始化朗读
@@ -575,7 +572,6 @@ public class ReaderController {
         //显示主窗口
         catalogDrawer.close();
         settingDrawer.close();
-        App.stage.show();
     }
 
 
@@ -583,7 +579,7 @@ public class ReaderController {
      * 显示隐藏头部
      */
     public void toggleHeader() {
-        if (Reader.root.header().getChildren().size() == 0) {
+        if (Reader.root.header().getChildren().isEmpty()) {
             hiddenBtn.setText("隐藏状态栏");
             Reader.root.showHeader();
             DataManager.application.getReaderConfig().setHeader(true);

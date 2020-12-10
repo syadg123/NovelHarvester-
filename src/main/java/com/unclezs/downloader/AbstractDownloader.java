@@ -39,7 +39,7 @@ public abstract class AbstractDownloader implements Downloader, Serializable {
     /**
      * 失败数量
      */
-    public AtomicInteger error = new AtomicInteger(0);
+    AtomicInteger error = new AtomicInteger(0);
     boolean startDynamic = false;
     String target = getClass().getName();
 

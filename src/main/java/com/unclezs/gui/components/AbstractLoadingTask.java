@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  * @date 2019.06.25 18:35
  */
 public abstract class AbstractLoadingTask<R> extends Task<R> {
-    private JFXAlert dialog;
+    private JFXAlert<?> dialog;
 
     /**
      * 加载条
@@ -41,7 +41,7 @@ public abstract class AbstractLoadingTask<R> extends Task<R> {
 
     private void initDialog(Stage stage) {
         if (dialog == null) {
-            dialog = new JFXAlert(stage);
+            dialog = new JFXAlert<>(stage);
             dialog.setOverlayClose(false);
             Label cancel = new Label("取消");
             cancel.getStyleClass().addAll("loading-cancel-btn");

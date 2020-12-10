@@ -13,6 +13,7 @@ import java.util.logging.LogManager;
 /**
  * 全局唤醒热键Alt+U
  * https://github.com/kwhat/jnativehook
+ *
  * @author uncle
  * @date 2019.07.31
  */
@@ -21,15 +22,15 @@ public class HotKeyUtil {
     /**
      * alt键按下
      */
-    private static boolean ALT_PRESSED = false;
+    private static boolean altPressed = false;
     /**
      * u键按下
      */
-    private static boolean U_PRESSED = false;
+    private static boolean uPressed = false;
     /**
      * 是否已经响应
      */
-    private static boolean IS_RESPONSE = false;
+    private static boolean isResponse = false;
 
     public static void bindListener() {
         LogManager.getLogManager().reset();
@@ -44,15 +45,15 @@ public class HotKeyUtil {
                 public void nativeKeyPressed(NativeKeyEvent e) {
                     switch (e.getKeyCode()) {
                         case 22:
-                            U_PRESSED = true;
+                            uPressed = true;
                             break;
                         case 56:
-                            ALT_PRESSED = true;
+                            altPressed = true;
                             break;
                         default:
                             break;
                     }
-                    if (ALT_PRESSED && U_PRESSED && !IS_RESPONSE) {//arl+U组合键一次按下只响应一次
+                    if (altPressed && uPressed && !isResponse) {//arl+U组合键一次按下只响应一次
                         Platform.runLater(() -> {
                             try {
                                 if (DataManager.currentStage.isShowing()) {
@@ -63,7 +64,7 @@ public class HotKeyUtil {
                             } catch (Exception ignored) {
                             }
                         });
-                        IS_RESPONSE = true;
+                        isResponse = true;
                     }
                 }
 
@@ -71,17 +72,18 @@ public class HotKeyUtil {
                 public void nativeKeyReleased(NativeKeyEvent e) {
                     switch (e.getKeyCode()) {
                         case 22:
-                            U_PRESSED = false;
+                            uPressed = false;
                             break;
                         case 56:
-                            ALT_PRESSED = false;
+                            altPressed = false;
                             break;
                         default:
                             break;
                     }
-                    IS_RESPONSE = false;
+                    isResponse = false;
                 }
             });
+            log.info("全局热键注册成功：alt+u 唤醒窗口");
         } catch (NativeHookException e) {
             log.error("全局热键注册失败:{}", ExceptionUtil.stacktraceToString(e));
         }

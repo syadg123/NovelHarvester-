@@ -2,6 +2,7 @@ package com.unclezs.gui.utils;
 
 import com.unclezs.model.ApplicationConfig;
 import javafx.stage.Stage;
+import lombok.experimental.UtilityClass;
 
 /**
  * 全局数据
@@ -9,13 +10,14 @@ import javafx.stage.Stage;
  * @author unclezs.com
  * @date 2019.06.21 11:32
  */
+@UtilityClass
 public class DataManager {
     /**
      * 应用配置
      */
-    public static ApplicationConfig application;
+    public ApplicationConfig application;
     /**
      * 当前显示窗口
      */
-    public static Stage currentStage;
+    public Stage currentStage;
 }

@@ -8,28 +8,34 @@
     <packaging>jar</packaging>
     <version>4.11</version>
     <name>NovelHarvester</name>
+    <url>http://github.com/unclezs/NovelHarvester</url>
+    <description>一个通用的小说下载软件，也可以用作阅读器，支持有声小说与文本小说.</description>
+    <developers>
+        <developer>
+            <id>https://blog.unclezs.com</id>
+            <name>uncle</name>
+            <url>https://github.com/unclezs</url>
+            <email>1585503310@qq.com</email>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>腾讯兔小巢</system>
+        <url>https://support.qq.com/product/169599</url>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.10</version>
-        </dependency>
-        <dependency>
-            <groupId>org.controlsfx</groupId>
-            <artifactId>controlsfx</artifactId>
-            <version>8.40.15</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jfoenix</groupId>
-            <artifactId>jfoenix</artifactId>
-            <version>8.0.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.3.2</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -40,6 +46,17 @@
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
             <version>2.3.29</version>
+        </dependency>
+        <!--UI组件-->
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>8.40.15</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>8.0.8</version>
         </dependency>
         <!-- 解析网页-->
         <dependency>
@@ -63,65 +80,98 @@
             <artifactId>mybatis-plus-core</artifactId>
             <version>3.3.1.tmp</version>
         </dependency>
+        <!--hutool-->
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>5.3.1</version>
+            <artifactId>hutool-core</artifactId>
+            <version>${hutool.version}</version>
         </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-http</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-system</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <!--编码包-->
         <dependency>
             <groupId>com.luhuiguo</groupId>
             <artifactId>chinese-utils</artifactId>
             <version>1.0</version>
         </dependency>
+        <!--语言朗读 windows-->
         <dependency>
             <groupId>net.sf.jacob-project</groupId>
             <artifactId>jacob</artifactId>
-            <version>1.19</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/jacob.jar</systemPath>
+            <version>1.14.3</version>
         </dependency>
+        <!--热键-->
         <dependency>
             <groupId>com.1stleg</groupId>
             <artifactId>jnativehook</artifactId>
             <version>2.1.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.30</version>
-            <scope>compile</scope>
-        </dependency>
+        <!--启动器用于自动拉取更新-->
         <dependency>
             <groupId>no.tornado</groupId>
             <artifactId>fxlauncher</artifactId>
             <version>1.0.22-UNCLE</version>
         </dependency>
+        <!--日志-logback-slf4j-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!--单元测试-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <properties>
+        <!--版本-->
+        <hutool.version>5.5.2</hutool.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.test.skip>true</maven.test.skip>
+
+        <!--打包属性-->
         <app.filename>Uncle小说</app.filename>
         <!--运行的主类-->
         <app.mainClass>com.unclezs.gui.app.App</app.mainClass>
         <!--FXLauncher运行后文件下载的位置-->
         <app.cacheDir>./lib</app.cacheDir>
-        <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache都行-->
+        <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache等等都行-->
         <app.url>http://uncle-novel.unclezs.com/app</app.url>
         <!--编译后的位置，这个位置在Idea里面是target下面的app目录-->
         <app.dir>${project.build.directory}/app</app.dir>
         <app.updateText>正在更新中...</app.updateText>
         <app.whatNew>
-            1.修复部分网站SSL证书错误无法解析问题
+            1.修复大于1000章节后EPUB章节生成错误问题||
+            2.修复Mac下托盘问题||
+            3.修复Mac下的窗口拖动问题
         </app.whatNew>
-        <!--是否接受版本降级-->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.test.skip>true</maven.test.skip>
     </properties>
 
     <build>
         <finalName>garbage</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
             <!--编译执行文件-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -246,14 +296,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>

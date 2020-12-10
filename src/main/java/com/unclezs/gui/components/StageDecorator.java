@@ -179,7 +179,7 @@ public class StageDecorator extends VBox {
         contentPlaceHolder.addEventHandler(MouseEvent.MOUSE_PRESSED, this::updateInitMouseValues);
         buttonsContainer.addEventHandler(MouseEvent.MOUSE_PRESSED, this::updateInitMouseValues);
         buttonsContainer.setStyle(
-                        "-fx-background-insets: 0 5 0 5 !important;"
+                "-fx-background-insets: 0 5 0 5 !important;"
         );
         // show the drag cursor on the borders
         addEventFilter(MouseEvent.MOUSE_MOVED, this::showDragCursorOnBorders);
@@ -228,13 +228,7 @@ public class StageDecorator extends VBox {
         Glyph trayIcon = new Glyph("FontAwesome", '\uf107');
         btnTray.setGraphic(trayIcon);
         btnTray.setCursor(Cursor.HAND);
-        btnTray.setOnAction(e -> {
-            try {
-                TrayUtil.tray();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        });
+        btnTray.setOnAction(e -> TrayUtil.tray());
         btnTray.setTooltip(new Tooltip("最小化到托盘(Alt+U)"));
 
         btnClose = new JFXButton();
@@ -306,6 +300,7 @@ public class StageDecorator extends VBox {
                 btnMax.setTooltip(new Tooltip("最大化"));
             }
             maximized = !maximized;
+            primaryStage.setMaximized(maximized);
         }
     }
 
@@ -430,7 +425,7 @@ public class StageDecorator extends VBox {
             return;
         }
         //Long press generates drag event!
-        if (primaryStage.isFullScreen() || mouseEvent.isStillSincePress() || primaryStage.isMaximized() || maximized) {
+        if (primaryStage.isFullScreen() || mouseEvent.isStillSincePress() || maximized) {
             return;
         }
         double newX = mouseEvent.getScreenX();

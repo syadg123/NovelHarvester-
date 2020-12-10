@@ -3,12 +3,9 @@ package com.unclezs.test;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.CharsetUtil;
-import cn.hutool.extra.ftp.Ftp;
-import cn.hutool.extra.ftp.FtpMode;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
-import cn.hutool.http.Method;
 import com.unclezs.crawl.LocalNovelLoader;
 import com.unclezs.crawl.TextNovelSpider;
 import com.unclezs.enmu.SearchKeyType;
@@ -24,19 +21,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Before;
+import org.junit.Test;
 import us.codecraft.xsoup.Xsoup;
 
-import javax.net.ssl.*;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -46,7 +37,7 @@ import java.util.stream.Collectors;
  * @date 2019.06.20 21:27
  */
 public class AppTest {
-    @BeforeAll
+    @Before
     public static void init() {
         RequestUtil.initSSL();
     }

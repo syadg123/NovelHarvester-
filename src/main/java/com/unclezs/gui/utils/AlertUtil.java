@@ -25,7 +25,7 @@ public class AlertUtil {
     public static JFXDialogLayout layout;
 
     static {
-        alert = new JFXAlert(DataManager.currentStage);
+        alert = new JFXAlert<>(DataManager.currentStage);
         alert.setOverlayClose(false);
         layout = new JFXDialogLayout();
         StackPane content = NodeUtil.createBgPane(layout);

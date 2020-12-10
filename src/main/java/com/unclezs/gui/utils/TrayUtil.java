@@ -1,6 +1,8 @@
 package com.unclezs.gui.utils;
 
 import javafx.application.Platform;
+import lombok.experimental.UtilityClass;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -14,12 +16,18 @@ import java.awt.image.BufferedImage;
  * @author uncle
  * @date 2019.07.30.
  */
+@Slf4j
+@UtilityClass
 public class TrayUtil {
-    private static SystemTray tray;
+    private static final SystemTray TRAY;
     private static TrayIcon trayIcon;
 
+    public void init() {
+        //init
+    }
+
     static {
-        tray = SystemTray.getSystemTray();
+        TRAY = SystemTray.getSystemTray();
         //设置右键菜单
         try {
             BufferedImage image = ImageIO.read(TrayUtil.class.getResourceAsStream("/images/logo/tray.png"));
@@ -30,23 +38,26 @@ public class TrayUtil {
                 public void mouseClicked(MouseEvent e) {
                     super.mouseClicked(e);
                     if (e.getButton() == MouseEvent.BUTTON1) {
-                        Platform.runLater(() -> {
-                            Platform.setImplicitExit(true);
-                            DataManager.currentStage.show();
-                            tray.remove(trayIcon);
-                        });
+                        Platform.runLater(() -> DataManager.currentStage.show());
                     }
                 }
             });
+//            MenuItem item = new MenuItem("exit");
+//            item.addActionListener(e -> {
+//            });
+//            PopupMenu popupMenu = new PopupMenu();
+//            popupMenu.add(item);
+//            trayIcon.setPopupMenu(popupMenu);
+            TRAY.add(trayIcon);
         } catch (Exception e) {
+            log.error("托盘初始化失败", e);
             e.printStackTrace();
         }
     }
 
-    public static void tray() throws Exception {
+    public static void tray() {
         Platform.setImplicitExit(false);
-        DataManager.currentStage.hide();
         DataManager.currentStage.setIconified(false);
-        tray.add(trayIcon);
+        DataManager.currentStage.hide();
     }
 }

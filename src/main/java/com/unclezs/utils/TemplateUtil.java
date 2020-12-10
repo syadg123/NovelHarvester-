@@ -1,45 +1,61 @@
 package com.unclezs.utils;
 
-import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.lang.Dict;
-import cn.hutool.extra.template.Template;
-import cn.hutool.extra.template.TemplateConfig;
-import cn.hutool.extra.template.TemplateEngine;
+import com.unclezs.constrant.Charsets;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
+import freemarker.template.TemplateExceptionHandler;
+import lombok.experimental.UtilityClass;
+import lombok.extern.slf4j.Slf4j;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Map;
 
 /**
- * 模板工具
+ * Freemarker模板工具
  *
  * @author uncle
  * @date 2020/2/26 16:25
  */
+@Slf4j
+@UtilityClass
 public class TemplateUtil {
-    private static TemplateEngine engine = cn.hutool.extra.template.TemplateUtil.createEngine(new TemplateConfig("templates", TemplateConfig.ResourceMode.CLASSPATH));
+    private static final Configuration CONFIGURATION;
 
-    public static String render(Map dict, String templateStr) {
-        //自动根据用户引入的模板引擎库的jar来自动选择使用的引擎
-        //TemplateConfig为模板引擎的选项，可选内容有字符编码、模板路径、模板加载方式等，默认通过模板字符串渲染
-        Template template = engine.getTemplate(templateStr);
-        //Dict本质上为Map，此处可用Map
-        return template.render(dict);
+    static {
+        CONFIGURATION = new Configuration(Configuration.VERSION_2_3_29);
+        try {
+            CONFIGURATION.setDirectoryForTemplateLoading(new File(TemplateUtil.class.getResource("/templates").getPath()));
+        } catch (IOException e) {
+            log.error("freemarker模块加载失败", e);
+            e.printStackTrace();
+        }
+        CONFIGURATION.setDefaultEncoding(Charsets.UTF8);
+        CONFIGURATION.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
+        //数字格式处理不用逗号分隔 1222 -> 1222
+        CONFIGURATION.setNumberFormat("0");
     }
 
-
-    public static String renderByFile(Map dict, String templateLocation) {
-        Template template = engine.getTemplate(templateLocation);
-        //Dict本质上为Map，此处可用Map
-        return template.render(dict);
+    /**
+     * 获取CONFIGURATION单例对象
+     *
+     * @return /
+     */
+    public Configuration getConfiguration() {
+        return CONFIGURATION;
     }
 
-    public static Template getTemplate(String templateLocation) {
-        return engine.getTemplate(templateLocation);
+    public void process(Map<String, Object> model, String templateLocation, File out) {
+        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(out))) {
+            Template template = CONFIGURATION.getTemplate(templateLocation);
+            template.process(model, writer);
+        } catch (IOException e) {
+            log.error("模板不存在:/templates/{}", templateLocation, e);
+        } catch (TemplateException e) {
+            log.error("Freemarker渲染异常：template:{}, model:{}", templateLocation, model, e);
+        }
     }
-
-    public static void main(String[] args) {
-        Template template = getTemplate("epub/test.ftl");
-        template.render(Dict.create().set("name","unclezs"), FileUtil.file("D:\\java\\NovelHarvester\\src\\main\\resources\\templates\\epub\\test.html"));
-    }
-
-
 }

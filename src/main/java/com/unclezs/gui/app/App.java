@@ -68,6 +68,7 @@ public class App extends Application {
         //加载设置
         ApplicationUtil.initConfig();
         ToolTipUtil.init();
+        TrayUtil.init();
     }
 
     @Override
@@ -94,6 +95,7 @@ public class App extends Application {
         //加载主题
         themePage = ResourceUtil.loadFxml(ThemeController.class);
         mainStage.getIcons().add(new Image("/images/logo/favicon.ico"));
+        root.setCustomMaximize(true);
         mainStage.setMinWidth(938);
         mainStage.setMinHeight(618);
         showAnn = new ScaleLargeTransition(content);
@@ -103,10 +105,22 @@ public class App extends Application {
         ApiUtil.userAdd();
         contentContainer.requestFocus();
         stage.setOnShowing(e -> {
+            Platform.setImplicitExit(true);
+            DataManager.currentStage.setIconified(true);
             DataManager.currentStage = mainStage;
             showAnn.play();
             contentContainer.requestFocus();
         });
+        //注册VM退出监听，保存数据
+        Runtime.getRuntime().addShutdownHook(ThreadUtil.newThread(() -> {
+            try {
+                //注销热键
+                GlobalScreen.unregisterNativeHook();
+                ApplicationUtil.storeConfig();
+            } catch (NativeHookException e) {
+                log.error("系统非正常退出：{}", e.getMessage());
+            }
+        }, "uncle exit store thread"));
     }
 
     /**
@@ -117,7 +131,8 @@ public class App extends Application {
         if (userData != null) {
             versionInfo = (UpdateInfo) userData;
             //是否更新了
-            if (versionInfo.getUpdate()) {
+            Boolean update = versionInfo.getUpdate();
+            if (Boolean.TRUE.equals(update)) {
                 ScrollPane updatePane = new ScrollPane();
                 updatePane.getStyleClass().add("update-scroll");
                 updatePane.setFitToWidth(true);
@@ -135,17 +150,15 @@ public class App extends Application {
      */
     private void closeHandler() {
         switch (DataManager.application.getSetting().getExitHandler().get()) {
-            case 0: {
+            case 0:
                 AlertUtil.confirm("请选择退出操作\n可以到设置里面设置默认操作", null, "最小化到托盘", "退出程序", this::close);
                 break;
-            }
-            case 1: {
+            case 1:
                 close(true);
                 break;
-            }
-            default: {
+            default:
                 close(false);
-            }
+
         }
     }
 
@@ -168,18 +181,11 @@ public class App extends Application {
     }
 
     /**
-     * 程序退出
+     * 程序退出 关闭UI
      */
     private void close() {
         stage.close();
-        //注销热键
-        try {
-            GlobalScreen.unregisterNativeHook();
-            ApplicationUtil.storeConfig();
-            ContentUtil.destroy();
-        } catch (NativeHookException e) {
-            log.error("系统非正常退出：{}", e.getMessage());
-        }
+        ContentUtil.destroy();
         Platform.setImplicitExit(true);
         Platform.exit();
         System.exit(0);
@@ -189,7 +195,6 @@ public class App extends Application {
      * 显示换肤设置页面
      */
     private void showThemeSetting() {
-        System.gc();
         AlertUtil.alert("换肤", "关闭", themePage);
     }
 

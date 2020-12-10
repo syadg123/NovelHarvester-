@@ -32,7 +32,7 @@
 		},
 		"bgColor":{
 			"name":"",
-			"value":"#ceebce"
+			"value":"#e6dbbf"
 		},
 		"bgImage":{
 			"name":"",
@@ -40,7 +40,7 @@
 		},
 		"fontFamily":{
 			"name":"",
-			"value":"小米兰亭"
+			"value":".AppleSystemUIFont"
 		},
 		"fontSize":{
 			"name":"",
