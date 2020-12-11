@@ -8,6 +8,7 @@ import com.unclezs.downloader.config.DownloaderState;
 import com.unclezs.model.Book;
 import com.unclezs.model.Chapter;
 import com.unclezs.utils.MSTTSSpeech;
+import com.unclezs.utils.TextUtil;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -35,7 +36,7 @@ public class TTSDownloader extends AbstractDownloader {
     public TTSDownloader(Book book, String path) {
         this.book = book;
         this.path = path;
-        this.fileName = com.unclezs.utils.FileUtil.checkExistAndRename(FileUtil.file(path, book.getName()), true).getName();
+        this.fileName = com.unclezs.utils.FileUtil.checkExistAndRename(FileUtil.file(path, TextUtil.removeInvalidSymbol(book.getName())), true).getName();
     }
 
     @Override
@@ -55,7 +56,7 @@ public class TTSDownloader extends AbstractDownloader {
             try {
                 Chapter chapter = loader.chapters().get(i);
                 String content = chapter.getName() + loader.content(i);
-                String s = String.format("%s%s/%s.mp3", path, fileName, chapter.getName());
+                String s = String.format("%s%s/%s.mp3", path, fileName, TextUtil.removeInvalidSymbol(chapter.getName()));
                 FileUtil.touch(s);
                 speech.saveToWav(content, s);
             } catch (Exception e) {

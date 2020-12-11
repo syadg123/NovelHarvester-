@@ -20,7 +20,7 @@ import java.util.BitSet;
  * @date 2020/4/22 22:53
  */
 public class FileUtil {
-    private static int BYTE_SIZE = 8;
+    private static final int BYTE_SIZE = 8;
     private static final String CODE_UTF8 = Charsets.UTF8;
     private static final String CODE_UTF8_BOM = "UTF-8_BOM";
     private static final String CODE_GBK = Charsets.GBK;

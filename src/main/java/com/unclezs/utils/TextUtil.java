@@ -1,5 +1,6 @@
 package com.unclezs.utils;
 
+import cn.hutool.core.util.ReUtil;
 import cn.hutool.core.util.StrUtil;
 
 /**
@@ -100,6 +101,16 @@ public class TextUtil {
             }
         }
         return trim(src);
+    }
+
+    /**
+     * 移除文件名称的非法字符
+     *
+     * @param str 文件名称
+     * @return /
+     */
+    public static String removeInvalidSymbol(String str) {
+        return ReUtil.replaceAll(str, "[\\\\/:*?\"<>|]", "");
     }
 
     /**

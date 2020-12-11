@@ -10,6 +10,7 @@ import com.unclezs.model.rule.SearchAudioRule;
 import com.unclezs.gui.utils.ApplicationUtil;
 import com.unclezs.gui.utils.DataManager;
 import com.unclezs.utils.RequestUtil;
+import com.unclezs.utils.TextUtil;
 import com.unclezs.utils.UrlUtil;
 import com.unclezs.utils.thead.CountableThreadPool;
 import lombok.Getter;
@@ -46,7 +47,7 @@ public class AudioDownloader extends AbstractDownloader implements Serializable 
         this.delay = delay;
         this.path = path;
         this.threadNum = threadNum;
-        this.fileName = com.unclezs.utils.FileUtil.checkExistAndRename(FileUtil.file(path, book.getTitle()), true).getName();
+        this.fileName = com.unclezs.utils.FileUtil.checkExistAndRename(FileUtil.file(path, TextUtil.removeInvalidSymbol(book.getTitle())), true).getName();
     }
 
     @Override
@@ -159,6 +160,6 @@ public class AudioDownloader extends AbstractDownloader implements Serializable 
         if (src.contains("m4a")) {
             suffix = ".m4a";
         }
-        return String.format("%s/%s.%s", saveFile.getAbsolutePath(), chapter.getTitle(), suffix);
+        return String.format("%s/%s.%s", saveFile.getAbsolutePath(), TextUtil.removeInvalidSymbol(chapter.getTitle()), suffix);
     }
 }
