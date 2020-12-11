@@ -6,7 +6,7 @@
     <groupId>com.unclezs</groupId>
     <artifactId>NovelHarvester</artifactId>
     <packaging>jar</packaging>
-    <version>4.11</version>
+    <version>4.13</version>
     <name>NovelHarvester</name>
     <url>http://github.com/unclezs/NovelHarvester</url>
     <description>一个通用的小说下载软件，也可以用作阅读器，支持有声小说与文本小说.</description>
@@ -30,6 +30,20 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
+    <repositories>
+        <repository>
+            <id>Central</id>
+            <name>Central</name>
+            <url>http://repo1.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
@@ -144,15 +158,15 @@
         <maven.test.skip>true</maven.test.skip>
 
         <!--打包属性-->
-        <app.filename>Uncle小说</app.filename>
+        <app.name>Uncle小说啊</app.name>
         <!--运行的主类-->
         <app.mainClass>com.unclezs.gui.app.App</app.mainClass>
         <!--FXLauncher运行后文件下载的位置-->
         <app.cacheDir>./lib</app.cacheDir>
-        <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache等等都行-->
-        <app.url>http://uncle-novel.unclezs.com/app</app.url>
         <!--编译后的位置，这个位置在Idea里面是target下面的app目录-->
         <app.dir>${project.build.directory}/app</app.dir>
+        <app.installerdir>${project.build.directory}/installer</app.installerdir>
+        <app.vendor>Acme Inc</app.vendor>
         <app.updateText>正在更新中...</app.updateText>
         <app.whatNew>
             1.修复大于1000章节后EPUB章节生成错误问题||
@@ -161,12 +175,56 @@
         </app.whatNew>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache等等都行-->
+                <app.url>http://uncle-novel.unclezs.com/pre-release</app.url>
+                <app.deploy.target>root@tx.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/pre-release</app.deploy.target>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>release</id>
+            <properties>
+                <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache等等都行-->
+                <app.url>http://uncle-novel.unclezs.com/app</app.url>
+                <app.deploy.target>root@tx.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/app</app.deploy.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>mac</id>
+            <properties>
+                <app.icon>${basedir}/src/main/resources/images/logo/favicon.icns</app.icon>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>windows</id>
+            <properties>
+                <app.icon>${basedir}/src/main/resources/images/logo/favicon.ico</app.icon>
+            </properties>
+        </profile>
+        <profile>
+            <id>linux</id>
+            <properties>
+                <app.icon>${basedir}/src/main/resources/images/logo/favicon.png</app.icon>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <finalName>garbage</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -183,7 +241,9 @@
             </plugin>
             <!--拷贝配置文件-->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
                 <executions>
                     <execution>
                         <id>copy-resources</id>
@@ -292,6 +352,59 @@
                                 <argument>uf</argument>
                                 <argument>fxlauncher.jar</argument>
                                 <argument>app.xml</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>installer</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <!--https://docs.oracle.com/javase/9/tools/javapackager.htm#JSWOR719-->
+                            <executable>javapackager</executable>
+                            <arguments>
+                                <argument>-deploy</argument>
+                                <argument>-native</argument>
+                                <argument>-nosign</argument>
+                                <argument>-outdir</argument>
+                                <argument>${app.installerdir}</argument>
+                                <argument>-outfile</argument>
+                                <argument>${app.name}</argument>
+                                <argument>-srcdir</argument>
+                                <argument>${app.dir}</argument>
+                                <argument>-srcfiles</argument>
+                                <argument>fxlauncher.jar</argument>
+                                <argument>-srcfiles</argument>
+                                <argument>conf</argument>
+                                <argument>-appclass</argument>
+                                <argument>fxlauncher.Launcher</argument>
+                                <argument>-name</argument>
+                                <argument>${app.name}</argument>
+                                <argument>-title</argument>
+                                <argument>${app.name}</argument>
+                                <argument>-vendor</argument>
+                                <argument>${app.vendor}</argument>
+                                <argument>-BappVersion=${project.version}</argument>
+                                <argument>-Bidentifier=${project.groupId}.${project.artifactId}</argument>
+                                <argument>-Bicon=${app.icon}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>deploy-app</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>scp</executable>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>target/app/garbage.jar</argument>
+                                <argument>target/app/app.xml</argument>
+                                <argument>target/app/fxlauncher.jar</argument>
+                                <argument>${app.deploy.target}</argument>
                             </arguments>
                         </configuration>
                     </execution>

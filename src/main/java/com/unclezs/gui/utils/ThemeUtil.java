@@ -19,6 +19,9 @@ public class ThemeUtil {
      */
     public void setCss(Dict dict, Scene scene, String templates, String out) {
         File css = FileUtil.currentDirFile(out);
+        if (!css.exists()) {
+            cn.hutool.core.io.FileUtil.touch(css);
+        }
         TemplateUtil.process(dict, templates, css);
         if (scene.getStylesheets().size() == 1) {
             scene.getStylesheets().add(1, css.toURI().toString());

@@ -1,6 +1,7 @@
 package com.unclezs.utils;
 
 import com.unclezs.constrant.Charsets;
+import com.unclezs.gui.utils.ThemeUtil;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -27,12 +28,7 @@ public class TemplateUtil {
 
     static {
         CONFIGURATION = new Configuration(Configuration.VERSION_2_3_29);
-        try {
-            CONFIGURATION.setDirectoryForTemplateLoading(new File(TemplateUtil.class.getResource("/templates").getPath()));
-        } catch (IOException e) {
-            log.error("freemarker模块加载失败", e);
-            e.printStackTrace();
-        }
+        CONFIGURATION.setClassForTemplateLoading(ThemeUtil.class, "/templates");
         CONFIGURATION.setDefaultEncoding(Charsets.UTF8);
         CONFIGURATION.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
         //数字格式处理不用逗号分隔 1222 -> 1222
