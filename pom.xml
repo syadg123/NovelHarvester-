@@ -158,7 +158,7 @@
         <maven.test.skip>true</maven.test.skip>
 
         <!--打包属性-->
-        <app.name>Uncle小说啊</app.name>
+        <app.name>Uncle小说</app.name>
         <!--运行的主类-->
         <app.mainClass>com.unclezs.gui.app.App</app.mainClass>
         <!--FXLauncher运行后文件下载的位置-->
@@ -181,7 +181,7 @@
             <properties>
                 <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache等等都行-->
                 <app.url>http://uncle-novel.unclezs.com/pre-release</app.url>
-                <app.deploy.target>root@tx.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/pre-release</app.deploy.target>
+                <app.deploy.target>root@uncle-novel.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/pre-release</app.deploy.target>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -192,7 +192,7 @@
             <properties>
                 <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache等等都行-->
                 <app.url>http://uncle-novel.unclezs.com/app</app.url>
-                <app.deploy.target>root@tx.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/app</app.deploy.target>
+                <app.deploy.target>root@uncle-novel.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/app</app.deploy.target>
             </properties>
         </profile>
         <profile>
@@ -401,6 +401,7 @@
                             <executable>scp</executable>
                             <arguments>
                                 <argument>-r</argument>
+                                <!--版本更新较大需要全部上传jar target/app/. -->
                                 <argument>target/app/garbage.jar</argument>
                                 <argument>target/app/app.xml</argument>
                                 <argument>target/app/fxlauncher.jar</argument>

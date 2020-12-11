@@ -1,2 +1,2 @@
 #编译 及 更新到云端 app打开后可以获取到更新
-mvn clean package && mvn exec:exec@deploy-app && mvn exec:exec@installer
+mvn clean package -P release,mac -U -X -DskipTests && mvn exec:exec@deploy-app -P release,mac && mvn exec:exec@installer -P release,mac
