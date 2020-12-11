@@ -7,8 +7,6 @@ target
 /*.iml
 /cache
 .idea
-/*.bat
-/*.sh
 theme
 tmp
 logs
