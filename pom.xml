@@ -367,7 +367,6 @@
                             <arguments>
                                 <argument>-deploy</argument>
                                 <argument>-native</argument>
-                                <argument>image</argument>
                                 <argument>-nosign</argument>
                                 <argument>-outdir</argument>
                                 <argument>${app.installerdir}</argument>
