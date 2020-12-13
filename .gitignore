@@ -11,4 +11,4 @@ logs
 .DS_Store
 *.log
 /images/
-/conf/
+/conf/application.json
