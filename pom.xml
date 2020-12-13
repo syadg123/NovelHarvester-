@@ -45,6 +45,36 @@
         </repository>
     </repositories>
 
+    <properties>
+        <!--版本-->
+        <hutool.version>5.5.2</hutool.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.test.skip>true</maven.test.skip>
+
+        <!--打包属性-->
+        <app.name>Uncle小说</app.name>
+        <app.icon>favicon.ico</app.icon>
+        <!--运行的主类-->
+        <app.mainClass>com.unclezs.gui.app.App</app.mainClass>
+        <!--FXLauncher运行后文件下载的位置-->
+        <app.cacheDir>./lib</app.cacheDir>
+        <!--编译后的位置，这个位置在Idea里面是target下面的app目录-->
+        <app.dir>${project.build.directory}/app</app.dir>
+        <app.installerdir>${project.build.directory}/installer</app.installerdir>
+        <app.vendor>Acme Inc</app.vendor>
+        <app.updateText>正在更新中...</app.updateText>
+        <app.whatNew>
+            1.修复大于1000章节后EPUB章节生成错误问题||
+            2.修复Mac下托盘问题||
+            3.修复Mac下的窗口拖动问题||
+            4.修复EPUB生成失败问题||
+            5.修复语音朗读不生效问题||
+            6.修复热键引起Mac卡死
+        </app.whatNew>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -139,6 +169,12 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--单元测试-->
         <dependency>
@@ -149,42 +185,14 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <!--版本-->
-        <hutool.version>5.5.2</hutool.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.test.skip>true</maven.test.skip>
-
-        <!--打包属性-->
-        <app.name>Uncle小说</app.name>
-        <!--运行的主类-->
-        <app.mainClass>com.unclezs.gui.app.App</app.mainClass>
-        <!--FXLauncher运行后文件下载的位置-->
-        <app.cacheDir>./lib</app.cacheDir>
-        <!--编译后的位置，这个位置在Idea里面是target下面的app目录-->
-        <app.dir>${project.build.directory}/app</app.dir>
-        <app.installerdir>${project.build.directory}/installer</app.installerdir>
-        <app.vendor>Acme Inc</app.vendor>
-        <app.updateText>正在更新中...</app.updateText>
-        <app.whatNew>
-            1.修复大于1000章节后EPUB章节生成错误问题||
-            2.修复Mac下托盘问题||
-            3.修复Mac下的窗口拖动问题||
-            4.修复EPUB生成失败问题||
-            5.修复语音朗读不生效问题||
-            6.修复热键引起Mac卡死
-        </app.whatNew>
-    </properties>
-
     <profiles>
         <profile>
             <id>dev</id>
             <properties>
                 <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache等等都行-->
                 <app.url>http://uncle-novel.unclezs.com/pre-release</app.url>
-                <app.deploy.target>root@uncle-novel.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/pre-release</app.deploy.target>
+                <app.deploy.target>root@uncle-novel.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/pre-release
+                </app.deploy.target>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -195,7 +203,8 @@
             <properties>
                 <!--更新文件的服务器地址，在这里可以打开下载你的更新jar包就行，tomcat和apache等等都行-->
                 <app.url>http://uncle-novel.unclezs.com/app</app.url>
-                <app.deploy.target>root@uncle-novel.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/app</app.deploy.target>
+                <app.deploy.target>root@uncle-novel.unclezs.com:/www/wwwroot/uncle-novel.unclezs.com/app
+                </app.deploy.target>
             </properties>
         </profile>
         <profile>
@@ -305,7 +314,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <excludeScope>provided</excludeScope>
+                    <excludeScope>compile</excludeScope>
                     <outputDirectory>${app.dir}</outputDirectory>
                     <stripVersion>true</stripVersion>
                 </configuration>
