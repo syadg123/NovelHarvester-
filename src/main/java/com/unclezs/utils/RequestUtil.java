@@ -173,7 +173,7 @@ public class RequestUtil {
                 res = function.apply(url);
                 break;
             } catch (Exception e) {
-                log.info("[{}]--失败重试第{}/{}次：[{}]  原因:{}", Thread.currentThread().getName(), i + 1, SpiderConfig.RETRY_COUNT, url, e.getMessage());
+                log.trace("[{}]--失败重试第{}/{}次：[{}]  原因:{}", Thread.currentThread().getName(), i + 1, SpiderConfig.RETRY_COUNT, url, e.getMessage());
                 ThreadUtil.safeSleep(SpiderConfig.RETRY_DELAY);
             }
         }
