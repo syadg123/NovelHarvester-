@@ -104,7 +104,7 @@ public class App extends Application {
         contentContainer.requestFocus();
         stage.setOnShowing(e -> {
             Platform.setImplicitExit(true);
-            DataManager.currentStage.setIconified(true);
+            DataManager.currentStage.setIconified(false);
             DataManager.currentStage = mainStage;
             showAnn.play();
             contentContainer.requestFocus();

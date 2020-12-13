@@ -257,15 +257,15 @@ public class BookShelfController implements LifeCycleFxController {
      * 打开阅读器
      */
     public void open() {
+        if (!FileUtil.exist(selectedBook.getChapterPath())) {
+            log.warn("文本小说【{}】文件不存在", selectedBook.getName());
+            ToastUtil.error("书籍不存在");
+            return;
+        }
         NovelLoader loader;
         if (selectedBook.isWeb()) {
             loader = new WebNovelLoader();
         } else {
-            if (!FileUtil.exist(selectedBook.getPath())) {
-                log.warn("文本小说【{}】文件不存在", selectedBook.getName());
-                ToastUtil.error("书籍不存在");
-                return;
-            }
             loader = new LocalNovelLoader();
         }
         loader.load(selectedBook);

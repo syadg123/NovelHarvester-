@@ -42,12 +42,24 @@ public class TrayUtil {
                     }
                 }
             });
-//            MenuItem item = new MenuItem("exit");
-//            item.addActionListener(e -> {
-//            });
-//            PopupMenu popupMenu = new PopupMenu();
-//            popupMenu.add(item);
-//            trayIcon.setPopupMenu(popupMenu);
+            MenuItem exit = new MenuItem("exit");
+            exit.addActionListener(e -> {
+                Platform.exit();
+                System.exit(0);
+            });
+            PopupMenu popupMenu = new PopupMenu();
+            trayIcon.setPopupMenu(popupMenu);
+            MenuItem show = new MenuItem("show");
+            show.addActionListener(e -> {
+                Platform.runLater(()->{
+                    Platform.setImplicitExit(true);
+                    DataManager.currentStage.setIconified(false);
+                    DataManager.currentStage.show();
+                });
+            });
+            popupMenu.add(show);
+            popupMenu.add(exit);
+            trayIcon.setPopupMenu(popupMenu);
             TRAY.add(trayIcon);
         } catch (Exception e) {
             log.error("托盘初始化失败", e);
