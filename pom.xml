@@ -6,7 +6,7 @@
     <groupId>com.unclezs</groupId>
     <artifactId>NovelHarvester</artifactId>
     <packaging>jar</packaging>
-    <version>4.13</version>
+    <version>4.14</version>
     <name>NovelHarvester</name>
     <url>http://github.com/unclezs/NovelHarvester</url>
     <description>一个通用的小说下载软件，也可以用作阅读器，支持有声小说与文本小说.</description>
@@ -171,7 +171,8 @@
         <app.whatNew>
             1.修复大于1000章节后EPUB章节生成错误问题||
             2.修复Mac下托盘问题||
-            3.修复Mac下的窗口拖动问题
+            3.修复Mac下的窗口拖动问题||
+            4.修复EPUB生成失败问题
         </app.whatNew>
     </properties>
 
