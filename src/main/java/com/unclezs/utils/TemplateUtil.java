@@ -1,5 +1,6 @@
 package com.unclezs.utils;
 
+import cn.hutool.core.io.FileUtil;
 import com.unclezs.constrant.Charsets;
 import com.unclezs.gui.utils.ThemeUtil;
 import freemarker.template.Configuration;
@@ -45,7 +46,9 @@ public class TemplateUtil {
     }
 
     public void process(Map<String, Object> model, String templateLocation, File out) {
-        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(out))) {
+        //文件不存在则创建
+        FileUtil.touch(out);
+        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(out, true))) {
             Template template = CONFIGURATION.getTemplate(templateLocation);
             template.process(model, writer);
         } catch (IOException e) {
