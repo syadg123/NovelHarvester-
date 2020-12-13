@@ -137,7 +137,7 @@
     <logger name="com.unclezs.test" level="info" additivity="false">
         <appender-ref ref="console"/>
     </logger>
-    <root level="INFO">
+    <root level="error">
         <appender-ref ref="console"/>
     </root>
 </configuration>

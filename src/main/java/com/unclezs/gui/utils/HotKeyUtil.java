@@ -1,91 +1,80 @@
 package com.unclezs.gui.utils;
 
-import cn.hutool.core.exceptions.ExceptionUtil;
+import com.tulskiy.keymaster.common.HotKey;
+import com.tulskiy.keymaster.common.HotKeyListener;
+import com.tulskiy.keymaster.common.Provider;
 import javafx.application.Platform;
+import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
-import org.jnativehook.GlobalScreen;
-import org.jnativehook.NativeHookException;
-import org.jnativehook.keyboard.NativeKeyEvent;
-import org.jnativehook.keyboard.NativeKeyListener;
 
-import java.util.logging.LogManager;
+import javax.swing.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 全局唤醒热键Alt+U
- * https://github.com/kwhat/jnativehook
+ * https://github.com/tulskiy/jkeymaster
  *
  * @author uncle
  * @date 2019.07.31
  */
 @Slf4j
+@UtilityClass
 public class HotKeyUtil {
-    /**
-     * alt键按下
-     */
-    private static boolean altPressed = false;
-    /**
-     * u键按下
-     */
-    private static boolean uPressed = false;
-    /**
-     * 是否已经响应
-     */
-    private static boolean isResponse = false;
+    //todo 增加自定义快捷键
+    private static final Map<String, HotKeyListener> KEYMAP = new HashMap<>(1);
+    private static final Provider PROVIDER = Provider.getCurrentProvider(false);
 
-    public static void bindListener() {
-        LogManager.getLogManager().reset();
-        try {
-            GlobalScreen.registerNativeHook();
-            GlobalScreen.addNativeKeyListener(new NativeKeyListener() {
-                @Override
-                public void nativeKeyTyped(NativeKeyEvent nativeKeyEvent) {
-                }
+    static {
+        KEYMAP.put("alt U", new BossKeyListener());
+    }
 
-                @Override
-                public void nativeKeyPressed(NativeKeyEvent e) {
-                    switch (e.getKeyCode()) {
-                        case 22:
-                            uPressed = true;
-                            break;
-                        case 56:
-                            altPressed = true;
-                            break;
-                        default:
-                            break;
-                    }
-                    if (altPressed && uPressed && !isResponse) {//arl+U组合键一次按下只响应一次
-                        Platform.runLater(() -> {
-                            try {
-                                if (DataManager.currentStage.isShowing()) {
-                                    TrayUtil.tray();
-                                } else {
-                                    DataManager.currentStage.show();
-                                }
-                            } catch (Exception ignored) {
-                            }
-                        });
-                        isResponse = true;
-                    }
-                }
+    /**
+     * 初始化热键
+     */
+    public void init() {
+        PROVIDER.reset();
+        for (String keyText : KEYMAP.keySet()) {
+            register(keyText, KEYMAP.get(keyText));
+        }
+    }
 
-                @Override
-                public void nativeKeyReleased(NativeKeyEvent e) {
-                    switch (e.getKeyCode()) {
-                        case 22:
-                            uPressed = false;
-                            break;
-                        case 56:
-                            altPressed = false;
-                            break;
-                        default:
-                            break;
+    /**
+     * 停用热键
+     */
+    public void unbind() {
+        PROVIDER.reset();
+        PROVIDER.stop();
+    }
+
+    /**
+     * 注册热键
+     *
+     * @param keyText  热键
+     * @param listener 回调
+     */
+    public void register(String keyText, HotKeyListener listener) {
+        PROVIDER.register(KeyStroke.getKeyStroke(keyText), listener);
+    }
+
+    /**
+     * 老板键
+     */
+    static class BossKeyListener implements HotKeyListener {
+
+        @Override
+        public void onHotKey(HotKey hotKey) {
+            Platform.runLater(() -> {
+                try {
+                    if (DataManager.currentStage.isShowing()) {
+                        TrayUtil.tray();
+                    } else {
+                        DataManager.currentStage.show();
                     }
-                    isResponse = false;
+                } catch (Exception e) {
+                    log.error("热键唤醒/隐藏窗口显示失败", e);
                 }
             });
-            log.info("全局热键注册成功：alt+u 唤醒窗口");
-        } catch (NativeHookException e) {
-            log.error("全局热键注册失败:{}", ExceptionUtil.stacktraceToString(e));
         }
     }
 }

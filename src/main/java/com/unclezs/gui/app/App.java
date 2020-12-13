@@ -26,8 +26,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
-import org.jnativehook.GlobalScreen;
-import org.jnativehook.NativeHookException;
 
 import java.io.IOException;
 
@@ -61,7 +59,7 @@ public class App extends Application {
             //加载字体图标
             Font.loadFont(App.class.getResourceAsStream("/font/fontawesome-webfont.ttf"), 14);
             //热键注册
-            ThreadUtil.execute(HotKeyUtil::bindListener);
+            HotKeyUtil.init();
             //忽略SSL
             RequestUtil.initSSL();
         });
@@ -113,13 +111,9 @@ public class App extends Application {
         });
         //注册VM退出监听，保存数据
         Runtime.getRuntime().addShutdownHook(ThreadUtil.newThread(() -> {
-            try {
-                //注销热键
-                GlobalScreen.unregisterNativeHook();
-                ApplicationUtil.storeConfig();
-            } catch (NativeHookException e) {
-                log.error("系统非正常退出：{}", e.getMessage());
-            }
+            //注销热键
+            HotKeyUtil.unbind();
+            ApplicationUtil.storeConfig();
         }, "uncle exit store thread"));
     }
 
