@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXDrawersStack?>
 <?import com.jfoenix.controls.JFXListView?>
 <?import com.jfoenix.svg.SVGGlyph?>
 <?import com.unclezs.gui.components.SearchTextField?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import org.controlsfx.glyphfont.*?>
-<?import com.jfoenix.controls.JFXDrawer?>
-<?import com.jfoenix.controls.JFXDrawersStack?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.glyphfont.Glyph?>
 <JFXDrawersStack maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity"
                  stylesheets="/css/search.css" prefHeight="477.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8"
                  xmlns:fx="http://javafx.com/fxml/1" fx:id="root"
@@ -67,34 +70,34 @@
     </JFXDrawer>
     <content>
         <VBox spacing="10">
-                <SearchTextField fx:id="search" prefHeight="30.0" prefWidth="400.0"
-                                 styleClass="search-audio-search-field"/>
-                <JFXListView fx:id="searchResultListView" VBox.vgrow="ALWAYS"  styleClass="search-result-list-view">
-                    <placeholder>
-                        <BorderPane>
-                            <center>
-                                <SVGGlyph size="128" fill="#bfbfbf" styleClass="border-color-theme"
-                                          svgPathContent="M831.7 369.4H193.6L64 602v290.3h897.2V602L831.7 369.4zM626.6 604.6c0 62.9-51 113.9-114 113.9s-114-51-114-113.9H117.5l103.8-198h582.5l103.8 198h-281zM502.2 131h39.1v140.6h-39.1zM236.855 200.802l27.647-27.647 99.419 99.418-27.648 27.648zM667.547 272.637l99.418-99.419 27.648 27.648-99.418 99.418z"/>
-                            </center>
-                        </BorderPane>
-                    </placeholder>
-                    <contextMenu>
-                        <ContextMenu>
-                            <items>
-                                <MenuItem text="查看目录" onAction="#showChapters">
-                                    <graphic>
-                                        <Glyph icon="&#xf03a;"/>
-                                    </graphic>
-                                </MenuItem>
-                                <MenuItem text="浏览器打开" onAction="#openBookLinkInBrowse">
-                                    <graphic>
-                                        <Glyph icon="&#xf268;"/>
-                                    </graphic>
-                                </MenuItem>
-                            </items>
-                        </ContextMenu>
-                    </contextMenu>
-                </JFXListView>
+            <SearchTextField fx:id="search" prefHeight="30.0" prefWidth="400.0"
+                             styleClass="search-audio-search-field"/>
+            <JFXListView fx:id="searchResultListView" VBox.vgrow="ALWAYS" styleClass="search-result-list-view">
+                <placeholder>
+                    <BorderPane>
+                        <center>
+                            <SVGGlyph size="128" fill="#bfbfbf" styleClass="border-color-theme"
+                                      svgPathContent="M831.7 369.4H193.6L64 602v290.3h897.2V602L831.7 369.4zM626.6 604.6c0 62.9-51 113.9-114 113.9s-114-51-114-113.9H117.5l103.8-198h582.5l103.8 198h-281zM502.2 131h39.1v140.6h-39.1zM236.855 200.802l27.647-27.647 99.419 99.418-27.648 27.648zM667.547 272.637l99.418-99.419 27.648 27.648-99.418 99.418z"/>
+                        </center>
+                    </BorderPane>
+                </placeholder>
+                <contextMenu>
+                    <ContextMenu>
+                        <items>
+                            <MenuItem text="查看目录" onAction="#showChapters">
+                                <graphic>
+                                    <Glyph icon="&#xf03a;"/>
+                                </graphic>
+                            </MenuItem>
+                            <MenuItem text="浏览器打开" onAction="#openBookLinkInBrowse">
+                                <graphic>
+                                    <Glyph icon="&#xf268;"/>
+                                </graphic>
+                            </MenuItem>
+                        </items>
+                    </ContextMenu>
+                </contextMenu>
+            </JFXListView>
         </VBox>
     </content>
 

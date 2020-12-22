@@ -18,12 +18,13 @@
 /*    -fx-border-color: #FFF;*/
 /*}*/
 /*滑块*/
-.scroll-bar{
+.scroll-bar {
     -fx-background-color: transparent;
 }
+
 .scroll-bar:horizontal .thumb,
 .scroll-bar:vertical .thumb {
-    -fx-background-color: derive(black,70%);
+    -fx-background-color: derive(black, 70%);
     -fx-background-insets: 4;
     -fx-background-radius: 5px;
 }

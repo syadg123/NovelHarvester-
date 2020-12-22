@@ -4,11 +4,12 @@ import javafx.application.Platform;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+
+import javax.imageio.ImageIO;
 
 /**
  * 托盘工具
@@ -51,7 +52,7 @@ public class TrayUtil {
             trayIcon.setPopupMenu(popupMenu);
             MenuItem show = new MenuItem("show");
             show.addActionListener(e -> {
-                Platform.runLater(()->{
+                Platform.runLater(() -> {
                     Platform.setImplicitExit(true);
                     DataManager.currentStage.setIconified(false);
                     DataManager.currentStage.show();

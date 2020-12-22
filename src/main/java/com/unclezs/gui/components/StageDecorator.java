@@ -23,9 +23,18 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.svg.SVGGlyph;
 import com.unclezs.gui.utils.ResourceUtil;
 import com.unclezs.gui.utils.TrayUtil;
-import javafx.animation.*;
+import javafx.animation.Animation;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
-import javafx.beans.property.*;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.geometry.BoundingBox;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -36,7 +45,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderStroke;
+import javafx.scene.layout.BorderStrokeStyle;
+import javafx.scene.layout.BorderWidths;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -79,7 +98,7 @@ public class StageDecorator extends VBox {
     private StackPane contentPlaceHolder = new StackPane();
     private HBox buttonsContainer;
     private ObjectProperty<Runnable> onCloseButtonAction = new SimpleObjectProperty<>(() ->
-            primaryStage.fireEvent(new WindowEvent(primaryStage, WindowEvent.WINDOW_CLOSE_REQUEST)));
+        primaryStage.fireEvent(new WindowEvent(primaryStage, WindowEvent.WINDOW_CLOSE_REQUEST)));
     private BooleanProperty customMaximize = new SimpleBooleanProperty(false);
     private boolean maximized = false;
     private BoundingBox originalBox;
@@ -120,7 +139,8 @@ public class StageDecorator extends VBox {
      * @param max   indicates whether to show maximize option or not
      * @param min   indicates whether to show minimize option or not
      */
-    public StageDecorator(Stage stage, Node node, boolean theme, boolean max, boolean min, boolean tray, boolean setting) {
+    public StageDecorator(Stage stage, Node node, boolean theme, boolean max, boolean min, boolean tray,
+        boolean setting) {
         primaryStage = stage;
         // Note that setting the style to TRANSPARENT is causing performance
         // degradation, as an alternative we set it to UNDECORATED instead.
@@ -143,9 +163,9 @@ public class StageDecorator extends VBox {
                     windowDecoratorAnimation.stop();
                 }
                 windowDecoratorAnimation = new Timeline(new KeyFrame(Duration.millis(320),
-                        new KeyValue(this.translateYProperty(),
-                                -buttonsContainer.getHeight(),
-                                Interpolator.EASE_BOTH)));
+                    new KeyValue(this.translateYProperty(),
+                        -buttonsContainer.getHeight(),
+                        Interpolator.EASE_BOTH)));
                 windowDecoratorAnimation.setOnFinished((finish) -> {
                     this.getChildren().remove(buttonsContainer);
                     this.setTranslateY(0);
@@ -162,14 +182,14 @@ public class StageDecorator extends VBox {
                 }
                 this.setTranslateY(-buttonsContainer.getHeight());
                 windowDecoratorAnimation = new Timeline(new KeyFrame(Duration.millis(320),
-                        new KeyValue(this.translateYProperty(),
-                                0,
-                                Interpolator.EASE_BOTH)));
+                    new KeyValue(this.translateYProperty(),
+                        0,
+                        Interpolator.EASE_BOTH)));
                 windowDecoratorAnimation.setOnFinished((finish) -> {
                     contentPlaceHolder.setBorder(new Border(new BorderStroke(Color.BLACK,
-                            BorderStrokeStyle.SOLID,
-                            CornerRadii.EMPTY,
-                            new BorderWidths(0, 10, 10, 10))));
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        new BorderWidths(0, 10, 10, 10))));
                     contentPlaceHolder.getStyleClass().add("resize-border");
                 });
                 windowDecoratorAnimation.play();
@@ -179,7 +199,7 @@ public class StageDecorator extends VBox {
         contentPlaceHolder.addEventHandler(MouseEvent.MOUSE_PRESSED, this::updateInitMouseValues);
         buttonsContainer.addEventHandler(MouseEvent.MOUSE_PRESSED, this::updateInitMouseValues);
         buttonsContainer.setStyle(
-                "-fx-background-insets: 0 5 0 5 !important;"
+            "-fx-background-insets: 0 5 0 5 !important;"
         );
         // show the drag cursor on the borders
         addEventFilter(MouseEvent.MOUSE_MOVED, this::showDragCursorOnBorders);
@@ -213,7 +233,8 @@ public class StageDecorator extends VBox {
     private void initializeButtons() {
 
         btnTheme = new JFXButton();
-        SVGGlyph themeIcon = new SVGGlyph("M772.8 96v64l163.2 161.6-91.2 91.2c-12.8-11.2-27.2-16-43.2-16-36.8 0-65.6 28.8-65.6 65.6V800c0 35.2-28.8 64-64 64H352c-35.2 0-64-28.8-64-64V462.4c0-36.8-28.8-65.6-65.6-65.6-16 0-32 6.4-43.2 16l-91.2-91.2L249.6 160h40l1.6 1.6C336 228.8 420.8 272 512 272c91.2 0 176-41.6 220.8-110.4 0-1.6 1.6-1.6 1.6-1.6h38.4V96M291.2 96H256c-22.4 0-38.4 6.4-49.6 19.2L43.2 276.8c-25.6 25.6-25.6 65.6 0 89.6l94.4 94.4c11.2 11.2 27.2 17.6 41.6 17.6s30.4-6.4 41.6-17.6h1.6c1.6 0 1.6 0 1.6 1.6V800c0 70.4 57.6 128 128 128h320c70.4 0 128-57.6 128-128V462.4c0-1.6 0-1.6 1.6-1.6h1.6c11.2 11.2 27.2 17.6 41.6 17.6 16 0 30.4-6.4 41.6-17.6l94.4-94.4c25.6-25.6 25.6-65.6 0-89.6L819.2 115.2c-12.8-12.8-28.8-19.2-46.4-19.2h-40c-22.4 0-41.6 11.2-54.4 30.4-33.6 49.6-96 81.6-168 81.6s-134.4-33.6-168-81.6C332.8 107.2 312 96 291.2 96z");
+        SVGGlyph themeIcon = new SVGGlyph(
+            "M772.8 96v64l163.2 161.6-91.2 91.2c-12.8-11.2-27.2-16-43.2-16-36.8 0-65.6 28.8-65.6 65.6V800c0 35.2-28.8 64-64 64H352c-35.2 0-64-28.8-64-64V462.4c0-36.8-28.8-65.6-65.6-65.6-16 0-32 6.4-43.2 16l-91.2-91.2L249.6 160h40l1.6 1.6C336 228.8 420.8 272 512 272c91.2 0 176-41.6 220.8-110.4 0-1.6 1.6-1.6 1.6-1.6h38.4V96M291.2 96H256c-22.4 0-38.4 6.4-49.6 19.2L43.2 276.8c-25.6 25.6-25.6 65.6 0 89.6l94.4 94.4c11.2 11.2 27.2 17.6 41.6 17.6s30.4-6.4 41.6-17.6h1.6c1.6 0 1.6 0 1.6 1.6V800c0 70.4 57.6 128 128 128h320c70.4 0 128-57.6 128-128V462.4c0-1.6 0-1.6 1.6-1.6h1.6c11.2 11.2 27.2 17.6 41.6 17.6 16 0 30.4-6.4 41.6-17.6l94.4-94.4c25.6-25.6 25.6-65.6 0-89.6L819.2 115.2c-12.8-12.8-28.8-19.2-46.4-19.2h-40c-22.4 0-41.6 11.2-54.4 30.4-33.6 49.6-96 81.6-168 81.6s-134.4-33.6-168-81.6C332.8 107.2 312 96 291.2 96z");
         btnTheme.setGraphic(themeIcon);
         btnTheme.setCursor(Cursor.HAND);
         btnTheme.setTooltip(new Tooltip("换肤"));
@@ -271,17 +292,18 @@ public class StageDecorator extends VBox {
         } else {
             if (!maximized) {
                 // store original bounds
-                originalBox = new BoundingBox(primaryStage.getX(), primaryStage.getY(), primaryStage.getWidth(), primaryStage.getHeight());
+                originalBox = new BoundingBox(primaryStage.getX(), primaryStage.getY(), primaryStage.getWidth(),
+                    primaryStage.getHeight());
                 // get the max stage bounds
                 Screen screen = Screen.getScreensForRectangle(primaryStage.getX(),
-                        primaryStage.getY(),
-                        primaryStage.getWidth(),
-                        primaryStage.getHeight()).get(0);
+                    primaryStage.getY(),
+                    primaryStage.getWidth(),
+                    primaryStage.getHeight()).get(0);
                 Rectangle2D bounds = screen.getVisualBounds();
                 BoundingBox maximizedBox = new BoundingBox(bounds.getMinX(),
-                        bounds.getMinY(),
-                        bounds.getWidth(),
-                        bounds.getHeight());
+                    bounds.getMinY(),
+                    bounds.getWidth(),
+                    bounds.getHeight());
                 // maximized the stage
                 primaryStage.setX(maximizedBox.getMinX());
                 primaryStage.setY(maximizedBox.getMinY());
@@ -304,7 +326,8 @@ public class StageDecorator extends VBox {
         }
     }
 
-    private void initializeContainers(Node node, boolean theme, boolean max, boolean min, boolean tray, boolean setting) {
+    private void initializeContainers(Node node, boolean theme, boolean max, boolean min, boolean tray,
+        boolean setting) {
         buttonsContainer = new HBox();
         buttonsContainer.getStyleClass().add("header-container");
         // BINDING

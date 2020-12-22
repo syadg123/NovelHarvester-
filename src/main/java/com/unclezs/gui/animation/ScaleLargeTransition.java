@@ -17,19 +17,19 @@ import javafx.util.Duration;
 public class ScaleLargeTransition extends CachedTransition {
     public ScaleLargeTransition(Node contentHolder) {
         super(contentHolder, new Timeline(
-                new KeyFrame(Duration.ZERO,
-                        new KeyValue(contentHolder.scaleXProperty(), 0, Interpolator.EASE_BOTH),
-                        new KeyValue(contentHolder.scaleYProperty(), 0, Interpolator.EASE_BOTH),
-                        new KeyValue(contentHolder.visibleProperty(), false, Interpolator.EASE_BOTH)
-                ),
-                new KeyFrame(Duration.millis(100),
-                        new KeyValue(contentHolder.visibleProperty(), true, Interpolator.EASE_BOTH),
-                        new KeyValue(contentHolder.opacityProperty(), 0, Interpolator.EASE_BOTH)
-                ),
-                new KeyFrame(Duration.millis(1000),
-                        new KeyValue(contentHolder.scaleXProperty(), 1, Interpolator.EASE_BOTH),
-                        new KeyValue(contentHolder.scaleYProperty(), 1, Interpolator.EASE_BOTH),
-                        new KeyValue(contentHolder.opacityProperty(), 1, Interpolator.EASE_BOTH)))
+            new KeyFrame(Duration.ZERO,
+                new KeyValue(contentHolder.scaleXProperty(), 0, Interpolator.EASE_BOTH),
+                new KeyValue(contentHolder.scaleYProperty(), 0, Interpolator.EASE_BOTH),
+                new KeyValue(contentHolder.visibleProperty(), false, Interpolator.EASE_BOTH)
+            ),
+            new KeyFrame(Duration.millis(100),
+                new KeyValue(contentHolder.visibleProperty(), true, Interpolator.EASE_BOTH),
+                new KeyValue(contentHolder.opacityProperty(), 0, Interpolator.EASE_BOTH)
+            ),
+            new KeyFrame(Duration.millis(1000),
+                new KeyValue(contentHolder.scaleXProperty(), 1, Interpolator.EASE_BOTH),
+                new KeyValue(contentHolder.scaleYProperty(), 1, Interpolator.EASE_BOTH),
+                new KeyValue(contentHolder.opacityProperty(), 1, Interpolator.EASE_BOTH)))
         );
         setCycleDuration(Duration.seconds(0.4));
         setDelay(Duration.seconds(0));

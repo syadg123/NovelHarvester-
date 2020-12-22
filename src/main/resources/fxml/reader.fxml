@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXDrawersStack?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.glyphfont.Glyph?>
 <JFXDrawersStack fx:id="root" maxHeight="Infinity" maxWidth="Infinity"
                  prefHeight="500.0" prefWidth="700.0" stylesheets="/css/reader.css"
@@ -27,7 +42,8 @@
                         </padding>
                         <HBox alignment="CENTER">
                             <Label prefWidth="70" onMouseClicked="#previous">上一章</Label>
-                            <JFXSlider fx:id="chapterSlider" styleClass="chapter-slider" HBox.hgrow="ALWAYS"  blockIncrement="1"/>
+                            <JFXSlider fx:id="chapterSlider" styleClass="chapter-slider" HBox.hgrow="ALWAYS"
+                                       blockIncrement="1"/>
                             <Label prefWidth="70" alignment="CENTER_RIGHT" onMouseClicked="#next">下一章</Label>
                         </HBox>
                         <FlowPane hgap="20" vgap="30" alignment="CENTER_LEFT">
@@ -44,7 +60,7 @@
                                 <JFXSlider fx:id="pageWidthSlider" min="50"/>
                             </HBox>
                         </FlowPane>
-                        <HBox alignment="CENTER_LEFT" >
+                        <HBox alignment="CENTER_LEFT">
                             <Label prefWidth="70">字体样式</Label>
                             <ComboBox fx:id="fonts" styleClass="font-select" maxWidth="150"/>
                         </HBox>
@@ -80,25 +96,31 @@
                         <FlowPane alignment="CENTER_LEFT">
                             <Label prefWidth="70">背景颜色</Label>
                             <FlowPane hgap="10">
-                                <JFXToggleNode style="-fx-background-color: #808A87" userData="#808A87" onMouseClicked="#handleChangeBgColor"
+                                <JFXToggleNode style="-fx-background-color: #808A87" userData="#808A87"
+                                               onMouseClicked="#handleChangeBgColor"
                                                styleClass="bg-color-picker">
                                     <toggleGroup>
                                         <ToggleGroup fx:id="colorGroup"/>
                                     </toggleGroup>
                                 </JFXToggleNode>
-                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #393D49" onMouseClicked="#handleChangeBgColor"
+                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #393D49"
+                                               onMouseClicked="#handleChangeBgColor"
                                                userData="#393D49" selectedColor="transparent"
                                                styleClass="bg-color-picker"/>
-                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #e6dbbf" onMouseClicked="#handleChangeBgColor"
+                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #e6dbbf"
+                                               onMouseClicked="#handleChangeBgColor"
                                                userData="#e6dbbf" selectedColor="transparent"
                                                styleClass="bg-color-picker"/>
-                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #F0F0F0" onMouseClicked="#handleChangeBgColor"
+                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #F0F0F0"
+                                               onMouseClicked="#handleChangeBgColor"
                                                userData="#F0F0F0"
                                                styleClass="bg-color-picker"/>
-                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #eec5cb" onMouseClicked="#handleChangeBgColor"
+                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #eec5cb"
+                                               onMouseClicked="#handleChangeBgColor"
                                                userData="#eec5cb"
                                                styleClass="bg-color-picker"/>
-                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #ffffff" onMouseClicked="#handleChangeBgColor"
+                                <JFXToggleNode toggleGroup="$colorGroup" style="-fx-background-color: #ffffff"
+                                               onMouseClicked="#handleChangeBgColor"
                                                userData="#fff"
                                                styleClass="bg-color-picker"/>
                                 <JFXButton onMouseClicked="#selectImage" styleClass="bg-color-picker"
@@ -142,7 +164,8 @@
                                 <Glyph icon="&#xf06e;"/>
                             </graphic>
                         </ToggleButton>
-                        <ToggleButton styleClass="setting-btn" text="朗读" onMouseClicked="#speak" fx:id="speakBtn" contentDisplay="TOP" HBox.hgrow="ALWAYS"
+                        <ToggleButton styleClass="setting-btn" text="朗读" onMouseClicked="#speak" fx:id="speakBtn"
+                                      contentDisplay="TOP" HBox.hgrow="ALWAYS"
                                       maxWidth="Infinity">
                             <graphic>
                                 <Glyph icon="&#xf130;"/>
@@ -156,7 +179,7 @@
     <content>
         <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="NEVER" styleClass="bg-transparent"
                     fx:id="contentScrollPane" onKeyPressed="#handleSpKeyPress" onMouseClicked="#handleSpClick">
-            <VBox fx:id="contentBox" alignment="CENTER"  styleClass="bg-transparent" maxHeight="Infinity" />
+            <VBox fx:id="contentBox" alignment="CENTER" styleClass="bg-transparent" maxHeight="Infinity"/>
             <contextMenu>
                 <ContextMenu>
                     <items>

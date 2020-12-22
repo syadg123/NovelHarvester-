@@ -4,13 +4,14 @@ import cn.hutool.core.lang.Dict;
 import com.unclezs.model.Chapter;
 import com.unclezs.utils.RequestUtil;
 import com.unclezs.utils.TextUtil;
-import com.unclezs.utils.XpathUtil;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -39,12 +40,15 @@ public class Po18 {
         Elements as = parse.select("a");
         String contentHtml = get(url, cookie);
         String title = Jsoup.parse(contentHtml).select(".book_name").text();
-        return Dict.create().set("chapters", as.stream().map(a -> new Chapter(a.text(), a.absUrl("href"))).collect(Collectors.toList())).set("title", title);
+        return Dict.create().set("chapters",
+            as.stream().map(a -> new Chapter(a.text(), a.absUrl("href"))).collect(Collectors.toList())).set("title",
+            title);
     }
 
     public static void main(String[] args) throws IOException {
         String url = "https://www.po18.tw/books/720558/articles";
-        String cookie = "_paabbcc=vihhcbtbkt254sdaa8v8mn46f5; _po18rf-tk001=1c745d088b4fcc220c645a51d0d0c4b33fb5e1ad45383aba000bd3e294b56207a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_po18rf-tk001%22%3Bi%3A1%3Bs%3A32%3A%22bZJfnrCA2AjJiIZhb7Lrfk84QlGM38f2%22%3B%7D; _ga=GA1.2.1817444373.1594970578; _gid=GA1.2.201932416.1594970578; po18Limit=6d4c449fc3268973f92df90aad9af59af0885074fe02e29be9cf3d42d091ec89a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22po18Limit%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; url=https%3A%2F%2Fwww.po18.tw; authtoken1=eGlhb2h1YTEyMTM4; authtoken2=NzEyMzNhNzJjZWRkMDFjOGFlM2YwZjRjZjljNDA4NWU%3D; authtoken3=2392904587; authtoken4=2648278218; authtoken5=1594970827; authtoken6=1; bgcolor=bg-default; word=select-m; _gat_gtag_UA_11633339_26=1";
+        String cookie =
+            "_paabbcc=vihhcbtbkt254sdaa8v8mn46f5; _po18rf-tk001=1c745d088b4fcc220c645a51d0d0c4b33fb5e1ad45383aba000bd3e294b56207a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_po18rf-tk001%22%3Bi%3A1%3Bs%3A32%3A%22bZJfnrCA2AjJiIZhb7Lrfk84QlGM38f2%22%3B%7D; _ga=GA1.2.1817444373.1594970578; _gid=GA1.2.201932416.1594970578; po18Limit=6d4c449fc3268973f92df90aad9af59af0885074fe02e29be9cf3d42d091ec89a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22po18Limit%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; url=https%3A%2F%2Fwww.po18.tw; authtoken1=eGlhb2h1YTEyMTM4; authtoken2=NzEyMzNhNzJjZWRkMDFjOGFlM2YwZjRjZjljNDA4NWU%3D; authtoken3=2392904587; authtoken4=2648278218; authtoken5=1594970827; authtoken6=1; bgcolor=bg-default; word=select-m; _gat_gtag_UA_11633339_26=1";
         System.out.println(chapters(url, cookie));
     }
 
@@ -54,6 +58,7 @@ public class Po18 {
             String[] ss = item.split("=");
             cookieMap.put(ss[0], ss[1]);
         });
-        return Jsoup.connect(url).referrer(url).userAgent(RequestUtil.USER_AGENT).cookies(cookieMap).execute().charset("UTF-8").body();
+        return Jsoup.connect(url).referrer(url).userAgent(RequestUtil.USER_AGENT).cookies(cookieMap).execute().charset(
+            "UTF-8").body();
     }
 }

@@ -12,7 +12,11 @@ import com.unclezs.model.Chapter;
 import com.unclezs.utils.JsonUtil;
 import com.unclezs.utils.MybatisUtil;
 import com.unclezs.utils.TextUtil;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -95,7 +99,8 @@ public class WebNovelLoader implements NovelLoader {
      * @return /
      */
     public boolean load(Book book, List<String> blackList, List<Chapter> chapters, AnalysisConfig rule) {
-        String path = ApplicationUtil.saveCache(String.format("%s/book.json", book.getId()), JsonUtil.toJson(new Config(chapters, blackList, rule)));
+        String path = ApplicationUtil.saveCache(String.format("%s/book.json", book.getId()),
+            JsonUtil.toJson(new Config(chapters, blackList, rule)));
         book.setChapterPath(path);
         book.setWeb(true);
         MybatisUtil.execute(BookMapper.class, mapper -> mapper.insert(book));

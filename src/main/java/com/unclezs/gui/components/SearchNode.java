@@ -1,8 +1,8 @@
 package com.unclezs.gui.components;
 
 import cn.hutool.core.util.StrUtil;
-import com.unclezs.model.NovelInfo;
 import com.unclezs.gui.utils.ImageLoader;
+import com.unclezs.model.NovelInfo;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;

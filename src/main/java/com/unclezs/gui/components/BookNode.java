@@ -25,7 +25,7 @@ import java.io.IOException;
  */
 @Getter
 public class BookNode extends VBox {
-    private  BookShelfController controller;
+    private BookShelfController controller;
     private Book book;
     private ImageView cover;
     private Label title;
@@ -45,7 +45,7 @@ public class BookNode extends VBox {
         clip.setArcWidth(10);
         cover.setClip(clip);
         title = new Label(book.getName());
-        this.getChildren().addAll(cover,title);
+        this.getChildren().addAll(cover, title);
         initStyleClass();
         this.setOnMouseClicked(this::onClick);
         this.setOnContextMenuRequested(this::handleContextMenu);

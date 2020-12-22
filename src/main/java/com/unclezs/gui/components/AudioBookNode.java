@@ -40,9 +40,9 @@ public class AudioBookNode extends HBox {
     }
 
     private void init(AudioBook info) {
-        if (StrUtil.isNotEmpty(info.getCover()) && FileUtil.exist(info.getCover())){
+        if (StrUtil.isNotEmpty(info.getCover()) && FileUtil.exist(info.getCover())) {
             cover = new ImageView(new Image("file:" + info.getCover()));
-        } else{
+        } else {
             cover = new ImageView(new Image(getClass().getResourceAsStream("/images/non_cover.png")));
         }
         record = new Label();

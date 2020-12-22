@@ -6,6 +6,7 @@
     -fx-border-width: 0 1 0 0;
     -fx-border-color: border-color;
 }
+
 .menu-btn {
     -fx-background-color: transparent;
     -fx-font-size: 13;
@@ -16,20 +17,22 @@
 
 .menu-btn:disabled {
     -fx-background-color: linear-gradient(to right, rgb(31, 212, 174), rgb(30, 205, 148));
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 1, 0, 0, 0);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 1, 0, 0, 0);
     -fx-opacity: 1;
     -fx-cursor: hand;
 }
 
 .menu-btn:hover {
-    -fx-background-color: rgba(216, 216, 216,0.3);
+    -fx-background-color: rgba(216, 216, 216, 0.3);
     -fx-effect: dropshadow(three-pass-box, #888, 1, 0, 0, 0);
     -fx-opacity: 1;
     -fx-cursor: hand;
 }
-.list-cell{
+
+.list-cell {
     -fx-background-color: transparent;
 }
+
 .menu-btn .glyph-font {
     -fx-font-size: 13;
     -fx-background-insets: 0;

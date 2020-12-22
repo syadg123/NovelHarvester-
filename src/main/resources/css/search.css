@@ -6,7 +6,7 @@
     -fx-border-width: 0;
 }
 
-.search-audio-search-field{
+.search-audio-search-field {
     -fx-padding: 15 0 0 0;
 }
 
@@ -14,15 +14,17 @@
     -fx-text-fill: red;
     -fx-font-size: 20;
 }
+
 .chapter-list {
     -fx-background-color: transparent;
     -fx-padding: 0;
     -fx-border-width: 0 0 0 1;
 }
 
-.chapter-list .list-cell:hover{
+.chapter-list .list-cell:hover {
     -fx-border-width: 1 1 1 0;
 }
-.chapter-list .list-cell:selected{
+
+.chapter-list .list-cell:selected {
     -fx-border-width: 1 1 1 0;
 }

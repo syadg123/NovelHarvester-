@@ -21,7 +21,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import org.junit.Before;
 import org.junit.Test;
 import us.codecraft.xsoup.Xsoup;
@@ -55,9 +54,10 @@ public class AppTest {
         List<SearchTextRule> rules = null;
         for (SearchTextRule rule : rules) {
             HttpRequest s = HttpUtil.createGet(rule.getSearchLink())
-                    .form(rule.getSearchKey(), keyword)
-                    .header("Referer", rule.getSearchLink())
-                    .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.162 Safari/537.36");
+                .form(rule.getSearchKey(), keyword)
+                .header("Referer", rule.getSearchLink())
+                .header("User-Agent",
+                    "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.162 Safari/537.36");
             HttpResponse execute = s.execute();
             String body = execute.body();
             Document document = Jsoup.parse(body, rule.getSearchLink());
@@ -91,7 +91,8 @@ public class AppTest {
 
     @Test
     public void testAudio() throws IOException {
-        SearchTextRule execute = MybatisUtil.execute(SearchTextRuleMapper.class, mapper -> mapper.selectById("x23qb.com"));
+        SearchTextRule execute =
+            MybatisUtil.execute(SearchTextRuleMapper.class, mapper -> mapper.selectById("x23qb.com"));
         TextNovelSpider spider = new TextNovelSpider();
         List<NovelInfo> search = spider.search("完美", execute, SearchKeyType.TITLE);
         System.out.println(search);
@@ -113,7 +114,8 @@ public class AppTest {
     @Test
     public void testTextNovel() throws IOException {
         AnalysisConfig config = new AnalysisConfig();
-        config.setCookies(new SimpleStringProperty("_ga=GA1.2.1817444373.1594970578; authtoken1=eGlhb2h1YTEyMTM4; authtoken6=1; bgcolor=bg-default; word=select-m; _paabbcc=ftq545k2em94ce3g5bfvt7dsa0; _po18rf-tk001=1f7bbff881fe2f367b9ff1f2ccfd7737f6fc63beacaa462eabb25ffc8c26e682a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_po18rf-tk001%22%3Bi%3A1%3Bs%3A32%3A%22mjXs4qJgLGJd_NnlQnJU7xBZsmIaVBzw%22%3B%7D; _gid=GA1.2.704400469.1598143190; url=https%3A%2F%2Fwww.po18.tw%2Fsite%2Falarm; authtoken2=N2NlY2IyODUwNDhiNDkxMTRkNGRhNDg4MDBmZmE0ZWI%3D; authtoken3=2392904587; authtoken4=1200103161; authtoken5=1598143247"));
+        config.setCookies(new SimpleStringProperty(
+            "_ga=GA1.2.1817444373.1594970578; authtoken1=eGlhb2h1YTEyMTM4; authtoken6=1; bgcolor=bg-default; word=select-m; _paabbcc=ftq545k2em94ce3g5bfvt7dsa0; _po18rf-tk001=1f7bbff881fe2f367b9ff1f2ccfd7737f6fc63beacaa462eabb25ffc8c26e682a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_po18rf-tk001%22%3Bi%3A1%3Bs%3A32%3A%22mjXs4qJgLGJd_NnlQnJU7xBZsmIaVBzw%22%3B%7D; _gid=GA1.2.704400469.1598143190; url=https%3A%2F%2Fwww.po18.tw%2Fsite%2Falarm; authtoken2=N2NlY2IyODUwNDhiNDkxMTRkNGRhNDg4MDBmZmE0ZWI%3D; authtoken3=2392904587; authtoken4=1200103161; authtoken5=1598143247"));
         TextNovelSpider spider = new TextNovelSpider(config);
         System.out.println(RequestUtil.get("http://myip.ipip.net/"));
         System.setProperty("proxyHost", "127.0.0.1");

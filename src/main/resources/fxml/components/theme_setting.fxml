@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
-<?import com.jfoenix.controls.JFXSlider?>
-<?import javafx.scene.layout.VBox?>
-<?import com.jfoenix.controls.JFXColorPicker?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.control.Label?>
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       spacing="15" stylesheets="/css/bootstrap.css"
@@ -19,7 +19,8 @@
         </left>
         <right>
             <HBox spacing="10">
-                <JFXColorPicker minWidth="100" prefHeight="100" fx:id="headerColorPicker" BorderPane.alignment="CENTER"/>
+                <JFXColorPicker minWidth="100" prefHeight="100" fx:id="headerColorPicker"
+                                BorderPane.alignment="CENTER"/>
                 <JFXButton text="透明" styleClass="btn,btn-default,btn-sm" onMouseClicked="#transparentHeader"
                            alignment="CENTER"/>
             </HBox>

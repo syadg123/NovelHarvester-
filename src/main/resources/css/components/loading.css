@@ -3,15 +3,15 @@
     -fx-stroke-width: 4;
 }
 
-.loading-cancel-btn{
+.loading-cancel-btn {
     -fx-alignment: center;
     -fx-text-fill: text-color;
 }
 
-.loading-box{
+.loading-box {
     -fx-max-width: 70;
     -fx-max-height: 90;
-    -fx-background-color: -fx-background ;
+    -fx-background-color: -fx-background;
     -fx-alignment: center;
     -fx-padding: 10 0 10 0;
     -fx-spacing: 15;

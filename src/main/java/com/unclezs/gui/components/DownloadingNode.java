@@ -51,9 +51,12 @@ public class DownloadingNode {
     private Long id;
     private String title;
     private Label errorNum = new Label("0");
-    private SVGGlyph startIcon = new SVGGlyph("M384 189.38l433.82 323.97L384 837.31V189.38m-28.5-92.56c-18.36 0-35.5 14.56-35.5 35.44v762.16c0 20.88 17.13 35.44 35.5 35.44 6.86 0 13.9-2.03 20.28-6.53l514.67-384.35c17.14-12.8 17.14-38.48 0-51.28L375.77 103.36c-6.37-4.5-13.41-6.54-20.27-6.54z");
-    private SVGGlyph pauseIcon = new SVGGlyph("M320 864c-17.67 0-32-14.31-32-32V192c0-17.67 14.33-32 32-32s32 14.33 32 32v640c0 17.69-14.33 32-32 32zM704 864c-17.69 0-32-14.31-32-32V192c0-17.67 14.31-32 32-32s32 14.33 32 32v640c0 17.69-14.31 32-32 32z");
-    private SVGGlyph stopIcon = new SVGGlyph("M557.25 512l265.38-265.38c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0L512 466.75 246.62 201.38c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L466.75 512 201.38 777.38c-12.5 12.5-12.5 32.75 0 45.25 6.25 6.25 14.44 9.38 22.62 9.38s16.38-3.12 22.62-9.38L512 557.25l265.38 265.38c6.25 6.25 14.44 9.38 22.62 9.38s16.38-3.12 22.62-9.38c12.5-12.5 12.5-32.75 0-45.25L557.25 512z");
+    private SVGGlyph startIcon = new SVGGlyph(
+        "M384 189.38l433.82 323.97L384 837.31V189.38m-28.5-92.56c-18.36 0-35.5 14.56-35.5 35.44v762.16c0 20.88 17.13 35.44 35.5 35.44 6.86 0 13.9-2.03 20.28-6.53l514.67-384.35c17.14-12.8 17.14-38.48 0-51.28L375.77 103.36c-6.37-4.5-13.41-6.54-20.27-6.54z");
+    private SVGGlyph pauseIcon = new SVGGlyph(
+        "M320 864c-17.67 0-32-14.31-32-32V192c0-17.67 14.33-32 32-32s32 14.33 32 32v640c0 17.69-14.33 32-32 32zM704 864c-17.69 0-32-14.31-32-32V192c0-17.67 14.31-32 32-32s32 14.33 32 32v640c0 17.69-14.31 32-32 32z");
+    private SVGGlyph stopIcon = new SVGGlyph(
+        "M557.25 512l265.38-265.38c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0L512 466.75 246.62 201.38c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L466.75 512 201.38 777.38c-12.5 12.5-12.5 32.75 0 45.25 6.25 6.25 14.44 9.38 22.62 9.38s16.38-3.12 22.62-9.38L512 557.25l265.38 265.38c6.25 6.25 14.44 9.38 22.62 9.38s16.38-3.12 22.62-9.38c12.5-12.5 12.5-32.75 0-45.25L557.25 512z");
     private JFXButton start = new JFXButton("", startIcon);
     private JFXButton pause = new JFXButton("", pauseIcon);
     private JFXButton stop = new JFXButton("", stopIcon);
@@ -91,12 +94,14 @@ public class DownloadingNode {
                 try {
                     webViewLoading = true;
                     Platform.runLater(() -> {
-                        if(downloader instanceof NovelDownloader){
-                            NovelDownloader novelDownloader= (NovelDownloader) downloader;
-                            if(StrUtil.isNotEmpty(novelDownloader.getConfig().getCookies().get())) {
+                        if (downloader instanceof NovelDownloader) {
+                            NovelDownloader novelDownloader = (NovelDownloader) downloader;
+                            if (StrUtil.isNotEmpty(novelDownloader.getConfig().getCookies().get())) {
                                 try {
                                     Map<String, List<String>> headers = new LinkedHashMap<>();
-                                    headers.put("Set-Cookie", Arrays.stream(novelDownloader.getConfig().getCookies().get().split(";")).collect(Collectors.toList()));
+                                    headers.put("Set-Cookie", Arrays.stream(
+                                        novelDownloader.getConfig().getCookies().get().split(";")).collect(
+                                        Collectors.toList()));
                                     java.net.CookieHandler.getDefault().put(URI.create(url), headers);
                                 } catch (IOException e) {
                                     e.printStackTrace();
@@ -147,8 +152,10 @@ public class DownloadingNode {
         // 移除列表
         task.setOnSucceeded(e -> {
             try {
-                ContentUtil.getController(DownloadController.class).downloadingTable.getItems().remove(DownloadingNode.this);
-                ContentUtil.getController(DownloadController.class).recordsListView.getItems().add(new DownloadRecordNode(task.getValue()));
+                ContentUtil.getController(DownloadController.class).downloadingTable.getItems().remove(
+                    DownloadingNode.this);
+                ContentUtil.getController(DownloadController.class).recordsListView.getItems().add(
+                    new DownloadRecordNode(task.getValue()));
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -245,13 +252,14 @@ public class DownloadingNode {
         progressBox.getChildren().add(0, webView);
         engine = webView.getEngine();
         engine.getLoadWorker().stateProperty().addListener(
-                (ov, oldState, newState) -> {
-                    if (newState == Worker.State.SUCCEEDED) {
-                        html = engine.executeScript("document.documentElement.outerHTML").toString();
-                        webViewLoading = false;
-                    }
-                });
-        engine.setUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.162 Safari/537.36");
+            (ov, oldState, newState) -> {
+                if (newState == Worker.State.SUCCEEDED) {
+                    html = engine.executeScript("document.documentElement.outerHTML").toString();
+                    webViewLoading = false;
+                }
+            });
+        engine.setUserAgent(
+            "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.162 Safari/537.36");
         engine.setOnError(e -> webViewLoading = false);
     }
 }

@@ -29,7 +29,12 @@ import us.codecraft.xsoup.Xsoup;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -83,7 +88,8 @@ public class AudioNovelSpider implements NovelSpider {
                 if (!nextUrl.startsWith("http") || preUrl.equals(nextUrl)) {
                     break;
                 }
-                HttpRequest req = RequestUtil.execute(nextUrl, null, "GET", rule.isClient(), null, rule.getCharset(), preUrl);
+                HttpRequest req =
+                    RequestUtil.execute(nextUrl, null, "GET", rule.isClient(), null, rule.getCharset(), preUrl);
                 html = req.execute().body();
                 preUrl = nextUrl;
             } else {
@@ -112,9 +118,12 @@ public class AudioNovelSpider implements NovelSpider {
      */
     private HttpRequest sendSearchRequest(String keyword, SearchAudioRule rule) {
         if (StrUtil.isNotEmpty(rule.getSearchKey())) {
-            return RequestUtil.execute(rule.getSearchUrl(), Dict.create().set(rule.getSearchKey(), keyword), rule.getMethod(), rule.isClient(), null, rule.getCharset());
+            return RequestUtil.execute(rule.getSearchUrl(), Dict.create().set(rule.getSearchKey(), keyword),
+                rule.getMethod(), rule.isClient(), null, rule.getCharset());
         } else {
-            return RequestUtil.execute(rule.getSearchUrl() + URLEncoder.createDefault().encode(keyword, Charset.forName(rule.getCharset())), null, rule.getMethod(), rule.isClient(), null, rule.getCharset());
+            return RequestUtil.execute(
+                rule.getSearchUrl() + URLEncoder.createDefault().encode(keyword, Charset.forName(rule.getCharset())),
+                null, rule.getMethod(), rule.isClient(), null, rule.getCharset());
         }
     }
 
@@ -130,7 +139,8 @@ public class AudioNovelSpider implements NovelSpider {
         if (url.contains("lrts")) {
             return lrtsChapters(url);
         }
-        SearchAudioRule rule = DataManager.application.getAudioRules().stream().filter(r -> r.getSite().contains(UrlUtil.getSite(url))).findFirst().orElse(null);
+        SearchAudioRule rule = DataManager.application.getAudioRules().stream().filter(
+            r -> r.getSite().contains(UrlUtil.getSite(url))).findFirst().orElse(null);
         if (rule == null) {
             return new ArrayList<>(0);
         }
@@ -156,7 +166,8 @@ public class AudioNovelSpider implements NovelSpider {
         List<AudioChapter> chapters = new ArrayList<>(100);
         String bookId = url.substring(url.lastIndexOf("/") + 1);
         Document html = RequestUtil.doc(url);
-        Integer chapterNum = Integer.valueOf(Xsoup.compile("/html/body/div[1]/div[1]/section[1]/div[2]/ul[3]/li[1]/text()").evaluate(html).get());
+        Integer chapterNum = Integer.valueOf(
+            Xsoup.compile("/html/body/div[1]/div[1]/section[1]/div[2]/ul[3]/li[1]/text()").evaluate(html).get());
         //章节总数
         for (int i = 1; i <= chapterNum; i++) {
             chapters.add(new AudioChapter("http://www.lrts.me/ajax/playlist/2/" + bookId + "/" + i, "" + i));
@@ -227,7 +238,8 @@ public class AudioNovelSpider implements NovelSpider {
      * @return /
      */
     private String ting89(String url) throws IOException {
-        String html = Jsoup.connect(url).referrer(url).userAgent(RequestUtil.USER_AGENT).execute().charset(Charsets.GB2312).body();
+        String html = Jsoup.connect(url).referrer(url).userAgent(RequestUtil.USER_AGENT).execute().charset(
+            Charsets.GB2312).body();
         return ReUtil.get("data.+?\"(.+?)&", html, 1);
     }
 
@@ -268,7 +280,8 @@ public class AudioNovelSpider implements NovelSpider {
                 String rJson = RequestUtil.get("http://www.ting56.com//player/getcode.php?id=" + datas[0]);
                 String code = JSON.parseObject(rJson).get("code").toString();
                 if ("".equals(code)) {
-                    realUrl = "http://www.tudou.com/programs/view/html5embed.action?code=" + code + "&autoPlay=true&playType=AUTO";
+                    realUrl = "http://www.tudou.com/programs/view/html5embed.action?code=" + code
+                        + "&autoPlay=true&playType=AUTO";
                 } else {
                     realUrl = "http://www.tudou.com/v/" + datas[0];
                 }
@@ -276,7 +289,8 @@ public class AudioNovelSpider implements NovelSpider {
             case "tc":
                 String[] strings = datas[0].split("/");
                 String jmUrl = strings[0] + '/' + strings[1] + "/play_" + strings[1] + "_" + strings[2] + ".htm";
-                String resJson = RequestUtil.post("http://www.ting56.com/player/tingchina.php", Dict.create().set("url", jmUrl));
+                String resJson =
+                    RequestUtil.post("http://www.ting56.com/player/tingchina.php", Dict.create().set("url", jmUrl));
                 realUrl = JSON.parseObject(resJson).getString("url").replace("t44", "t33");
                 break;
             default:
@@ -299,9 +313,10 @@ public class AudioNovelSpider implements NovelSpider {
             headers.put("xt", xt);
             headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
             Dict form = Dict.create().set("bookId", info[0])
-                    .set("isPay", 0)
-                    .set("page", info[1]);
-            String body = RequestUtil.execute("https://ting55.com/glink", form, "POST", false, headers, "utf-8", url).execute().body();
+                .set("isPay", 0)
+                .set("page", info[1]);
+            String body = RequestUtil.execute("https://ting55.com/glink", form, "POST", false, headers, "utf-8",
+                url).execute().body();
             JSONObject json = JSON.parseObject(body);
             String res = json.getString("url");
             if (StrUtil.isEmpty(res)) {
@@ -334,7 +349,8 @@ public class AudioNovelSpider implements NovelSpider {
         String host = "http://www.tingchina.com";
         String flashUrl = ReUtil.get("playurl_flash=\"(.+?)\"", RequestUtil.get(url), 1);
         if (StrUtil.isNotEmpty(flashUrl)) {
-            String html = RequestUtil.execute(host + flashUrl, null, "GET", false, null, Charsets.GB2312, url).execute().body();
+            String html =
+                RequestUtil.execute(host + flashUrl, null, "GET", false, null, Charsets.GB2312, url).execute().body();
             String query = ReUtil.get("url.3.= \"(.+?)\"", html, 1);
             if (StrUtil.isNotEmpty(query)) {
                 return "http://t44.tingchina.com" + query;
@@ -353,7 +369,8 @@ public class AudioNovelSpider implements NovelSpider {
      * @throws IOException /
      */
     public String lrts(String url) throws IOException {
-        return Xsoup.compile("//div[@class=\"section\"]/li[1]/div[1]/input[1]/@value").evaluate(RequestUtil.doc(url)).get();
+        return Xsoup.compile("//div[@class=\"section\"]/li[1]/div[1]/input[1]/@value").evaluate(
+            RequestUtil.doc(url)).get();
     }
 
     /**
@@ -370,7 +387,9 @@ public class AudioNovelSpider implements NovelSpider {
         int pageIndex = (chapterNumber - 1) % 10;
         //音频地址API
         long cur = System.currentTimeMillis();
-        String api = String.format("https://www.ting22.com/api.php?c=Json&id=%s&page=%s&pagesize=10&callback=jQuery&_=%s", query[0], page, cur);
+        String api =
+            String.format("https://www.ting22.com/api.php?c=Json&id=%s&page=%s&pagesize=10&callback=jQuery&_=%s",
+                query[0], page, cur);
         Map<String, String> headers = new HashMap<>(2);
         headers.put("sign", cur + "");
         headers.put("Referer", url);
@@ -389,7 +408,8 @@ public class AudioNovelSpider implements NovelSpider {
                 case "tc":
                     String[] data = tempUrl[0].split("/");
                     String tcApi = data[0] + "/" + data[1] + "/play_" + data[1] + "_" + data[2] + ".htm";
-                    realUrl = JSON.parseObject(RequestUtil.get("https://c.ting22.com/tingchina.php?file=" + tcApi, url)).getString("url");
+                    realUrl = JSON.parseObject(
+                        RequestUtil.get("https://c.ting22.com/tingchina.php?file=" + tcApi, url)).getString("url");
                     break;
                 // 19576598/139592587$xm
                 case "xm":

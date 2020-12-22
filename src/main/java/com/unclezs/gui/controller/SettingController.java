@@ -11,21 +11,31 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXToggleButton;
 import com.unclezs.enmu.LanguageLocale;
+import com.unclezs.gui.components.AbstractLoadingTask;
 import com.unclezs.gui.extra.FXController;
+import com.unclezs.gui.utils.AlertUtil;
+import com.unclezs.gui.utils.ApplicationUtil;
+import com.unclezs.gui.utils.DataManager;
+import com.unclezs.gui.utils.DesktopUtil;
+import com.unclezs.gui.utils.ResourceUtil;
+import com.unclezs.gui.utils.ToastUtil;
 import com.unclezs.mapper.SearchAudioRuleMapper;
 import com.unclezs.mapper.SearchTextRuleMapper;
 import com.unclezs.model.Setting;
 import com.unclezs.model.rule.Rule;
 import com.unclezs.model.rule.SearchAudioRule;
 import com.unclezs.model.rule.SearchTextRule;
-import com.unclezs.gui.components.AbstractLoadingTask;
-import com.unclezs.gui.utils.*;
 import com.unclezs.utils.FileUtil;
 import com.unclezs.utils.MybatisUtil;
 import com.unclezs.utils.RequestUtil;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TabPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.DirectoryChooser;
@@ -92,12 +102,15 @@ public class SettingController implements LifeCycleFxController {
         merge.selectedProperty().bindBidirectional(DataManager.application.getSetting().getMergeFile());
         savePathInput.textProperty().bindBidirectional(DataManager.application.getSetting().getSavePath());
         saveTypeGroup.selectToggle(saveTypeGroup.getToggles().get(DataManager.application.getSetting().getSaveType()));
-        autoImport.selectedProperty().bindBidirectional(DataManager.application.getSetting().getAutoImportClipboardLink());
-        exitHandlerGroup.selectToggle(exitHandlerGroup.getToggles().get(DataManager.application.getSetting().getExitHandler().get()));
+        autoImport.selectedProperty().bindBidirectional(
+            DataManager.application.getSetting().getAutoImportClipboardLink());
+        exitHandlerGroup.selectToggle(
+            exitHandlerGroup.getToggles().get(DataManager.application.getSetting().getExitHandler().get()));
         proxyHost.textProperty().bindBidirectional(DataManager.application.getSetting().getProxyHost());
         proxyPort.textProperty().bindBidirectional(DataManager.application.getSetting().getProxyPort());
         useProxy(DataManager.application.getSetting().getUseProxy().get());
-        threadNum.valueProperty().addListener(e -> DataManager.application.getSetting().getThreadNum().set(threadNum.getValue()));
+        threadNum.valueProperty().addListener(
+            e -> DataManager.application.getSetting().getThreadNum().set(threadNum.getValue()));
         threadNum.valueProperty().bindBidirectional(DataManager.application.getSetting().getThreadNum().asObject());
         delay.valueProperty().addListener(e -> DataManager.application.getSetting().getDelay().set(delay.getValue()));
         delay.valueProperty().bindBidirectional(DataManager.application.getSetting().getDelay().asObject());
@@ -129,7 +142,8 @@ public class SettingController implements LifeCycleFxController {
      * @param <T>       /
      * @param <R>       /
      */
-    private <T, R> void setCellFactory(TableColumn<T, R> column, String colName, StringConverter<R> converter, Consumer<TableColumn.CellEditEvent<T, R>> consumer) {
+    private <T, R> void setCellFactory(TableColumn<T, R> column, String colName, StringConverter<R> converter,
+        Consumer<TableColumn.CellEditEvent<T, R>> consumer) {
         column.setCellValueFactory(new PropertyValueFactory<>(colName));
         column.setCellFactory(TextFieldTableCell.forTableColumn(converter));
         column.setOnEditCommit(consumer::accept);
@@ -143,12 +157,14 @@ public class SettingController implements LifeCycleFxController {
      * @param baseMapper 操作数据得mapper
      * @param opCol      操作列
      */
-    private <T> void initTable(TableView<T> table, Class<T> dataClazz, Class<? extends BaseMapper<T>> baseMapper, TableColumn<T, Button> opCol) {
+    private <T> void initTable(TableView<T> table, Class<T> dataClazz, Class<? extends BaseMapper<T>> baseMapper,
+        TableColumn<T, Button> opCol) {
         Field[] fields = dataClazz.getDeclaredFields();
         for (Field field : fields) {
             field.setAccessible(true);
             String colName = field.getName();
-            TableColumn<T, ?> column = table.getColumns().stream().filter(col -> (opCol != col) && col.getUserData().equals(colName)).findFirst().orElse(null);
+            TableColumn<T, ?> column = table.getColumns().stream().filter(
+                col -> (opCol != col) && col.getUserData().equals(colName)).findFirst().orElse(null);
             StringConverter converter = new StringConverter() {
                 @Override
                 public String toString(Object object) {
@@ -234,8 +250,12 @@ public class SettingController implements LifeCycleFxController {
      * 初始化事件监听
      */
     private void initEventHandler() {
-        saveTypeGroup.selectedToggleProperty().addListener(l -> DataManager.application.getSetting().getTextNovelSaveType().set(((JFXRadioButton) saveTypeGroup.getSelectedToggle()).getText()));
-        exitHandlerGroup.selectedToggleProperty().addListener(l -> DataManager.application.getSetting().getExitHandler().set(exitHandlerGroup.getToggles().indexOf(exitHandlerGroup.getSelectedToggle())));
+        saveTypeGroup.selectedToggleProperty().addListener(
+            l -> DataManager.application.getSetting().getTextNovelSaveType().set(
+                ((JFXRadioButton) saveTypeGroup.getSelectedToggle()).getText()));
+        exitHandlerGroup.selectedToggleProperty().addListener(
+            l -> DataManager.application.getSetting().getExitHandler().set(
+                exitHandlerGroup.getToggles().indexOf(exitHandlerGroup.getSelectedToggle())));
         useProxy.setOnMouseClicked(e -> {
             boolean userProxy = !DataManager.application.getSetting().getUseProxy().get();
             DataManager.application.getSetting().getUseProxy().set(userProxy);
@@ -313,7 +333,8 @@ public class SettingController implements LifeCycleFxController {
                 try {
                     AbstractLoadingTask saveTask;
                     if (isText) {
-                        List<SearchTextRule> rules = JSON.parseArray(cn.hutool.core.io.FileUtil.readUtf8String(file), SearchTextRule.class);
+                        List<SearchTextRule> rules =
+                            JSON.parseArray(cn.hutool.core.io.FileUtil.readUtf8String(file), SearchTextRule.class);
                         List<SearchTextRule> collect = rules.stream().filter(rule -> {
                             for (SearchTextRule item : textTable.getItems()) {
                                 if (item.getSite().equals(rule.getSite())) {
@@ -333,7 +354,8 @@ public class SettingController implements LifeCycleFxController {
                             }
                         };
                     } else {
-                        List<SearchAudioRule> rules = JSON.parseArray(cn.hutool.core.io.FileUtil.readUtf8String(file), SearchAudioRule.class);
+                        List<SearchAudioRule> rules =
+                            JSON.parseArray(cn.hutool.core.io.FileUtil.readUtf8String(file), SearchAudioRule.class);
                         List<SearchAudioRule> collect = rules.stream().filter(rule -> {
                             for (SearchAudioRule item : audioTable.getItems()) {
                                 if (item.getSite().equals(rule.getSite())) {
@@ -368,7 +390,8 @@ public class SettingController implements LifeCycleFxController {
         fileChooser.setInitialFileName(fileName);
         File file = fileChooser.showSaveDialog(DataManager.currentStage);
         if (file != null) {
-            cn.hutool.core.io.FileUtil.writeUtf8String(JSON.toJSONString(isText ? textTable.getItems() : audioTable.getItems()), file);
+            cn.hutool.core.io.FileUtil.writeUtf8String(
+                JSON.toJSONString(isText ? textTable.getItems() : audioTable.getItems()), file);
             ToastUtil.success("导出成功");
         }
     }

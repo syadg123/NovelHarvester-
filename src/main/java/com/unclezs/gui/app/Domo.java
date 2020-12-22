@@ -13,7 +13,8 @@ public class Domo extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         StackPane root = new StackPane();
-        root.setStyle("-fx-background-color: rgba(255, 255, 255, 1);-fx-effect: dropshadow(gaussian, black, 50, 0, 0, 0);-fx-background-insets: 50 !important;");
+        root.setStyle(
+            "-fx-background-color: rgba(255, 255, 255, 1);-fx-effect: dropshadow(gaussian, black, 50, 0, 0, 0);-fx-background-insets: 50 !important;");
         root.getChildren().add(new StackPane());
         //设置窗体面板和大小
         Scene scene = new Scene(root, 400, 400);

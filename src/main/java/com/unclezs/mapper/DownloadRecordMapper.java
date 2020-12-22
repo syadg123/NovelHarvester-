@@ -2,7 +2,8 @@ package com.unclezs.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.unclezs.model.DownloadRecord;
-import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 下载历史Mapper

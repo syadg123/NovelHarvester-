@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?language javascript?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
 <?import com.jfoenix.svg.SVGGlyph?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.glyphfont.Glyph?>
 <BorderPane fx:id="root" stylesheets="/css/download.css" maxHeight="Infinity" maxWidth="Infinity"
             minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8"

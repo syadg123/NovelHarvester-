@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXDrawersStack?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXSpinner?>
 <?import com.jfoenix.svg.SVGGlyph?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.layout.*?>
-<?import org.controlsfx.glyphfont.Glyph?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ContextMenu?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.glyphfont.Glyph?>
 <JFXDrawersStack fx:id="root" maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity"
                  stylesheets="/css/audio_bookshelf.css"
                  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
@@ -35,7 +43,7 @@
                             </MenuItem>
                             <MenuItem text="复制音频链接" onAction="#copyAudioLink">
                                 <graphic>
-                                    <Glyph icon="&#xf0c5;" />
+                                    <Glyph icon="&#xf0c5;"/>
                                 </graphic>
                             </MenuItem>
                             <MenuItem text="检测音频失效" onAction="#checkAudioLink">
@@ -62,7 +70,7 @@
                             </MenuItem>
                             <MenuItem text="浏览器打开" onAction="#openBookLinkInBrowse">
                                 <graphic>
-                                    <Glyph icon="&#xf268;" />
+                                    <Glyph icon="&#xf268;"/>
                                 </graphic>
                             </MenuItem>
                             <MenuItem text="移除书架" onAction="#removeBook">
@@ -93,7 +101,7 @@
                                 <BorderPane.margin>
                                     <Insets left="10"/>
                                 </BorderPane.margin>
-                                <Label  fx:id="titleBox"/>
+                                <Label fx:id="titleBox"/>
                                 <HBox spacing="15">
                                     <Label fx:id="chapterBox"/>
                                     <JFXSpinner radius="3" fx:id="chapterLoading"/>
@@ -129,7 +137,7 @@
                         </center>
                         <right>
                             <HBox BorderPane.alignment="CENTER" alignment="CENTER_RIGHT" prefWidth="310">
-                                <Label  fx:id="progressText">00:00/00:00</Label>
+                                <Label fx:id="progressText">00:00/00:00</Label>
                                 <JFXButton onMouseClicked="#showCatalog" contentDisplay="GRAPHIC_ONLY">
                                     <graphic>
                                         <SVGGlyph size="20"

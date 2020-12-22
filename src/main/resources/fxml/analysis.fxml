@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?language javascript?>
-<?import com.jfoenix.controls.*?>
-<?import javafx.collections.FXCollections?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXDrawersStack?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.web.WebView?>
-<?import org.controlsfx.glyphfont.*?>
+<?import org.controlsfx.glyphfont.Glyph?>
 <JFXDrawersStack prefHeight="-Infinity" fx:id="root" prefWidth="Infinity" xmlns="http://javafx.com/javafx/8"
                  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unclezs.gui.controller.AnalysisController"
                  stylesheets="/css/analysis.css">
-    <JFXDrawer defaultDrawerSize="214" direction="RIGHT" fx:id="menu" onDrawerClosed="#saveConfig" >
+    <JFXDrawer defaultDrawerSize="214" direction="RIGHT" fx:id="menu" onDrawerClosed="#saveConfig">
         <sidePane>
             <VBox prefHeight="500" alignment="CENTER" prefWidth="214.0" spacing="10"
                   styleClass="config-box">
@@ -78,25 +89,25 @@
                            onMouseClicked="#importClipboardUrl"
                            styleClass="analysis-text-input"/>
                 <HBox styleClass="btn-group-horizontal" alignment="CENTER">
-                    <JFXButton fx:id="analysisBtn" text="解析目录" onMouseClicked="#analysisChapter" 
+                    <JFXButton fx:id="analysisBtn" text="解析目录" onMouseClicked="#analysisChapter"
                                styleClass="first,btn-sm,un-btn-default">
                         <graphic>
                             <Glyph icon="&#xf1d8;"/>
                         </graphic>
                     </JFXButton>
-                    <JFXButton fx:id="addToMark" text="加入书架" onMouseClicked="#addToBookSelf" 
+                    <JFXButton fx:id="addToMark" text="加入书架" onMouseClicked="#addToBookSelf"
                                styleClass="middle,btn-sm,un-btn-default">
                         <graphic>
                             <Glyph icon="&#xf067;"/>
                         </graphic>
                     </JFXButton>
-                    <JFXButton fx:id="downloadIt" text="下载本书" onMouseClicked="#downloadBook" 
+                    <JFXButton fx:id="downloadIt" text="下载本书" onMouseClicked="#downloadBook"
                                styleClass="middle,btn-sm,un-btn-default">
                         <graphic>
                             <Glyph icon="&#xf019;"/>
                         </graphic>
                     </JFXButton>
-                    <JFXButton fx:id="configBtn" text="解析配置" onMouseClicked="#showConfig" 
+                    <JFXButton fx:id="configBtn" text="解析配置" onMouseClicked="#showConfig"
                                styleClass="last,btn-sm,un-btn-default">
                         <graphic>
                             <Glyph icon="&#xf085;"/>

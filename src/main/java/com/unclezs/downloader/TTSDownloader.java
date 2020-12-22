@@ -36,7 +36,8 @@ public class TTSDownloader extends AbstractDownloader {
     public TTSDownloader(Book book, String path) {
         this.book = book;
         this.path = path;
-        this.fileName = com.unclezs.utils.FileUtil.checkExistAndRename(FileUtil.file(path, TextUtil.removeInvalidSymbol(book.getName())), true).getName();
+        this.fileName = com.unclezs.utils.FileUtil.checkExistAndRename(
+            FileUtil.file(path, TextUtil.removeInvalidSymbol(book.getName())), true).getName();
     }
 
     @Override
@@ -56,7 +57,8 @@ public class TTSDownloader extends AbstractDownloader {
             try {
                 Chapter chapter = loader.chapters().get(i);
                 String content = chapter.getName() + loader.content(i);
-                String s = String.format("%s%s/%s.mp3", path, fileName, TextUtil.removeInvalidSymbol(chapter.getName()));
+                String s =
+                    String.format("%s%s/%s.mp3", path, fileName, TextUtil.removeInvalidSymbol(chapter.getName()));
                 FileUtil.touch(s);
                 speech.saveToWav(content, s);
             } catch (Exception e) {

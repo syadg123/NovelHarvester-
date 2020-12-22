@@ -52,6 +52,7 @@ public class WebViewContextMenuTest extends Application {
             }
         });
     }
+
     private String getUrl(String text) {
         if (text.indexOf("://") == -1) {
             return "http://" + text;

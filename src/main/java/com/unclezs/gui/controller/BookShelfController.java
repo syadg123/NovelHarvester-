@@ -19,7 +19,13 @@ import com.unclezs.gui.app.Reader;
 import com.unclezs.gui.components.AbstractLoadingTask;
 import com.unclezs.gui.components.BookNode;
 import com.unclezs.gui.extra.FXController;
-import com.unclezs.gui.utils.*;
+import com.unclezs.gui.utils.AlertUtil;
+import com.unclezs.gui.utils.ApplicationUtil;
+import com.unclezs.gui.utils.ContentUtil;
+import com.unclezs.gui.utils.DataManager;
+import com.unclezs.gui.utils.DesktopUtil;
+import com.unclezs.gui.utils.NodeUtil;
+import com.unclezs.gui.utils.ToastUtil;
 import com.unclezs.mapper.BookMapper;
 import com.unclezs.model.Book;
 import com.unclezs.model.Chapter;
@@ -152,7 +158,8 @@ public class BookShelfController implements LifeCycleFxController {
         AbstractLoadingTask<List<BookNode>> task = new AbstractLoadingTask<List<BookNode>>() {
             @Override
             protected List<BookNode> call() {
-                return MybatisUtil.execute(BookMapper.class, m -> m.selectList(null)).stream().map(BookNode::new).collect(Collectors.toList());
+                return MybatisUtil.execute(BookMapper.class, m -> m.selectList(null)).stream().map(
+                    BookNode::new).collect(Collectors.toList());
             }
         };
         task.setSuccessHandler(e -> {
@@ -201,8 +208,8 @@ public class BookShelfController implements LifeCycleFxController {
             return Collections.emptyList();
         }
         List<Chapter> update = chapters.stream()
-                .filter(c -> !loader.getConfig().getBlackList().contains(c.getUrl()))
-                .collect(Collectors.toList());
+            .filter(c -> !loader.getConfig().getBlackList().contains(c.getUrl()))
+            .collect(Collectors.toList());
         List<Chapter> newChapters = update.subList(loader.chapters().size(), update.size());
         loader.chapters().addAll(newChapters);
         loader.store();
@@ -230,7 +237,8 @@ public class BookShelfController implements LifeCycleFxController {
                 String cover = ApplicationUtil.saveImage(path, selectedBook.getName());
                 selectedNode.getCover().setImage(new Image("file:" + cover));
                 selectedBook.setCover(cover);
-                ThreadUtil.execute(() -> MybatisUtil.execute(BookMapper.class, mapper -> mapper.updateById(selectedBook)));
+                ThreadUtil.execute(
+                    () -> MybatisUtil.execute(BookMapper.class, mapper -> mapper.updateById(selectedBook)));
             } catch (IOException ignored) {
             }
         });
@@ -312,7 +320,8 @@ public class BookShelfController implements LifeCycleFxController {
         loader.load(selectedBook);
         WebNovelLoader.Config config = loader.getConfig();
         DownloadConfig setting = new DownloadConfig(DataManager.application.getSetting());
-        NovelDownloader downloader = new NovelDownloader(loader.chapters(), setting, selectedBook.getName(), config.getRule());
+        NovelDownloader downloader =
+            new NovelDownloader(loader.chapters(), setting, selectedBook.getName(), config.getRule());
         ContentUtil.getController(DownloadController.class).addTask(downloader);
         ToastUtil.success("添加下载成功");
     }
@@ -323,7 +332,8 @@ public class BookShelfController implements LifeCycleFxController {
      * @throws IOException /
      */
     public void toAudio() throws IOException {
-        TTSDownloader downloader = new TTSDownloader(selectedBook, DataManager.application.getSetting().getSavePath().get());
+        TTSDownloader downloader =
+            new TTSDownloader(selectedBook, DataManager.application.getSetting().getSavePath().get());
         ContentUtil.getController(DownloadController.class).addTask(downloader);
         ToastUtil.success("添加文本转语音任务成功");
     }

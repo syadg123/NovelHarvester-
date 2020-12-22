@@ -55,7 +55,8 @@ public class ApplicationConfig implements Serializable {
 
     public ObservableList<SearchTextRule> getTextRules() {
         if (textRules == null) {
-            List<SearchTextRule> rules = MybatisUtil.execute(SearchTextRuleMapper.class, mapper -> mapper.selectList(Wrappers.<SearchTextRule>lambdaQuery().orderByDesc(SearchTextRule::getWeight)));
+            List<SearchTextRule> rules = MybatisUtil.execute(SearchTextRuleMapper.class, mapper -> mapper.selectList(
+                Wrappers.<SearchTextRule>lambdaQuery().orderByDesc(SearchTextRule::getWeight)));
             this.textRules = FXCollections.observableArrayList(rules);
         }
         return textRules;
@@ -63,7 +64,8 @@ public class ApplicationConfig implements Serializable {
 
     public ObservableList<SearchAudioRule> getAudioRules() {
         if (audioRules == null) {
-            List<SearchAudioRule> rules = MybatisUtil.execute(SearchAudioRuleMapper.class, mapper -> mapper.selectList(Wrappers.<SearchAudioRule>lambdaQuery().orderByDesc(SearchAudioRule::getWeight)));
+            List<SearchAudioRule> rules = MybatisUtil.execute(SearchAudioRuleMapper.class, mapper -> mapper.selectList(
+                Wrappers.<SearchAudioRule>lambdaQuery().orderByDesc(SearchAudioRule::getWeight)));
             this.audioRules = FXCollections.observableArrayList(rules);
         }
         return audioRules;

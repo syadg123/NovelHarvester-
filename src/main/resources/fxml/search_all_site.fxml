@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.web.WebView?>
-<?import javafx.geometry.Insets?>
 <?import com.jfoenix.controls.JFXButton?>
-<?import org.controlsfx.glyphfont.Glyph?>
 <?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+<?import org.controlsfx.glyphfont.Glyph?>
 <StackPane xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
            stylesheets="/css/search_all.css"

@@ -8,14 +8,14 @@ import com.alibaba.fastjson.JSONObject;
 import com.jfoenix.controls.JFXListView;
 import com.unclezs.downloader.AbstractDownloader;
 import com.unclezs.downloader.config.DownloaderState;
-import com.unclezs.mapper.DownloadRecordMapper;
-import com.unclezs.model.DownloadRecord;
 import com.unclezs.gui.animation.CenterScaleTransition;
 import com.unclezs.gui.components.DownloadRecordNode;
 import com.unclezs.gui.components.DownloadingNode;
 import com.unclezs.gui.extra.FXController;
 import com.unclezs.gui.utils.AlertUtil;
 import com.unclezs.gui.utils.ToastUtil;
+import com.unclezs.mapper.DownloadRecordMapper;
+import com.unclezs.model.DownloadRecord;
 import com.unclezs.utils.FileUtil;
 import com.unclezs.utils.JsonUtil;
 import com.unclezs.utils.MybatisUtil;
@@ -71,7 +71,8 @@ public class DownloadController implements LifeCycleFxController {
     @Override
     public void onDestroyed() {
         downloadingTable.getItems().forEach(DownloadingNode::pause);
-        List<AbstractDownloader> tasks = downloadingTable.getItems().stream().map(DownloadingNode::getDownloader).collect(Collectors.toList());
+        List<AbstractDownloader> tasks =
+            downloadingTable.getItems().stream().map(DownloadingNode::getDownloader).collect(Collectors.toList());
         String s = JsonUtil.toJson(tasks);
         File file = FileUtil.currentDirFile(TASK_TMP_PATH);
         cn.hutool.core.io.FileUtil.writeUtf8String(s, file);
@@ -118,7 +119,8 @@ public class DownloadController implements LifeCycleFxController {
                 for (int i = 0; i < json.size(); i++) {
                     JSONObject object = json.getJSONObject(i);
                     String type = object.getString("target");
-                    Class<? extends AbstractDownloader> clazz = (Class<? extends AbstractDownloader>) Class.forName(type);
+                    Class<? extends AbstractDownloader> clazz =
+                        (Class<? extends AbstractDownloader>) Class.forName(type);
                     list.add(new DownloadingNode(object.toJavaObject(clazz)));
                 }
                 return list;
@@ -139,7 +141,8 @@ public class DownloadController implements LifeCycleFxController {
         Task<List<DownloadRecordNode>> task = new Task<List<DownloadRecordNode>>() {
             @Override
             protected List<DownloadRecordNode> call() throws Exception {
-                List<DownloadRecord> records = MybatisUtil.execute(DownloadRecordMapper.class, mapper -> mapper.selectList(null));
+                List<DownloadRecord> records =
+                    MybatisUtil.execute(DownloadRecordMapper.class, mapper -> mapper.selectList(null));
                 ObservableList<DownloadRecordNode> recordList = FXCollections.observableArrayList();
                 if (!records.isEmpty()) {
                     recordList.addAll(records.stream().map(DownloadRecordNode::new).collect(Collectors.toList()));

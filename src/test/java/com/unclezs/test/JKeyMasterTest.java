@@ -4,7 +4,6 @@ import com.tulskiy.keymaster.common.HotKeyListener;
 import com.tulskiy.keymaster.common.MediaKey;
 import com.tulskiy.keymaster.common.Provider;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -12,6 +11,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.swing.*;
 
 public class JKeyMasterTest {
     public static final List<Integer> MODIFIERS = Arrays.asList(18, 17, 16, 157);
@@ -84,7 +85,7 @@ public class JKeyMasterTest {
             }
         });
         frame.setSize(500, 150);
-        frame.setLocationRelativeTo((Component)null);
+        frame.setLocationRelativeTo((Component) null);
         frame.setVisible(true);
     }
 }

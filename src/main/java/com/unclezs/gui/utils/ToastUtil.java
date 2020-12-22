@@ -156,10 +156,12 @@ public class ToastUtil {
         toast.setY(DataManager.currentStage.getY() - toast.getHeight() / 2 + height / 2);
         toast.setX(DataManager.currentStage.getX() - toast.getWidth() / 2 + width / 2);
         DataManager.currentStage.xProperty().addListener(e -> {
-            toast.setX(DataManager.currentStage.getX() - toast.getWidth() / 2  + DataManager.currentStage.getWidth() / 2);
+            toast.setX(
+                DataManager.currentStage.getX() - toast.getWidth() / 2 + DataManager.currentStage.getWidth() / 2);
         });
         DataManager.currentStage.yProperty().addListener(e -> {
-            toast.setY(DataManager.currentStage.getY() - toast.getHeight() / 2 + DataManager.currentStage.getHeight() / 2);
+            toast.setY(
+                DataManager.currentStage.getY() - toast.getHeight() / 2 + DataManager.currentStage.getHeight() / 2);
         });
     }
 

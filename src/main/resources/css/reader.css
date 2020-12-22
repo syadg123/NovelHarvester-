@@ -3,6 +3,7 @@
 .bg-transparent {
     -fx-background-color: transparent !important;
 }
+
 /*list-view*/
 .list-view {
     -fx-background-color: -fx-background !important;
@@ -113,7 +114,8 @@
     -fx-border-width: 0 0 1 0;
     -fx-border-color: text-color;
 }
-.font-select .list-cell{
+
+.font-select .list-cell {
     -fx-background-color: transparent;
 }
 

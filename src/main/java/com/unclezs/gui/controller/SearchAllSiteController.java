@@ -33,7 +33,7 @@ public class SearchAllSiteController implements LifeCycleFxController {
         webView.setContextMenuEnabled(false);
         createContextMenu(webView);
         engine.getLoadWorker().progressProperty().addListener((observable, oldValue, newValue) -> {
-            progress.setProgress(newValue.doubleValue()==0?0.1:newValue.doubleValue());
+            progress.setProgress(newValue.doubleValue() == 0 ? 0.1 : newValue.doubleValue());
             progress.setVisible(progress.getProgress() != 1);
         });
     }

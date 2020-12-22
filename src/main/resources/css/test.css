@@ -1,6 +1,7 @@
-*{
+* {
     -fx-font-family: FontAwesome;
 }
+
 .search-pane {
     -fx-alignment: center;
 }

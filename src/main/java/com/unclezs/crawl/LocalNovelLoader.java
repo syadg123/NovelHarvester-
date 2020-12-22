@@ -76,7 +76,8 @@ public class LocalNovelLoader implements NovelLoader {
             this.charset = com.unclezs.utils.FileUtil.getEncode(path, true);
             String text = FileUtil.readString(path, charset);
             this.content = text.split(regex);
-            this.chapters = ReUtil.findAll(regex, text, 1).stream().map(c -> new Chapter(c, "")).collect(Collectors.toList());
+            this.chapters =
+                ReUtil.findAll(regex, text, 1).stream().map(c -> new Chapter(c, "")).collect(Collectors.toList());
         } catch (Exception e) {
             log.error("本地书籍加载失败:{}", e.getMessage());
             return false;

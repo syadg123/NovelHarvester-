@@ -45,9 +45,9 @@ public class SearchAudioNode extends HBox {
         cover = new ImageView(image);
         src = new Label();
         src.setText("来源：" + info.getUrl());
-        Label title = new Label("书名：" + (StrUtil.isNotEmpty(info.getTitle())?info.getTitle():"未知"));
-        Label author = new Label("作者：" + (StrUtil.isNotEmpty(info.getAuthor())?info.getAuthor():"未知"));
-        Label speak = new Label("播音：" +(StrUtil.isNotEmpty(info.getSpeak())?info.getSpeak():"未知"));
+        Label title = new Label("书名：" + (StrUtil.isNotEmpty(info.getTitle()) ? info.getTitle() : "未知"));
+        Label author = new Label("作者：" + (StrUtil.isNotEmpty(info.getAuthor()) ? info.getAuthor() : "未知"));
+        Label speak = new Label("播音：" + (StrUtil.isNotEmpty(info.getSpeak()) ? info.getSpeak() : "未知"));
         this.setMaxHeight(80);
         //图片宽高
         cover.setFitWidth(55);

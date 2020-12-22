@@ -58,7 +58,8 @@ public class ApplicationUtil {
      * @throws IOException /
      */
     public static String saveImage(String url, String name) throws IOException {
-        String path = String.format("%s%s/%s_%s.png", com.unclezs.utils.FileUtil.getCurrentDir(), IMAGE_PATH, name, System.currentTimeMillis());
+        String path = String.format("%s%s/%s_%s.png", com.unclezs.utils.FileUtil.getCurrentDir(), IMAGE_PATH, name,
+            System.currentTimeMillis());
         if (UrlUtil.isHttpUrl(url)) {
             RequestUtil.download(url, path, false);
         } else {
@@ -74,7 +75,8 @@ public class ApplicationUtil {
      * @param name   文件名字
      */
     public static String saveImage(InputStream stream, String name) {
-        String path = String.format("%s%s/%s_%s.png", com.unclezs.utils.FileUtil.getCurrentDir(), IMAGE_PATH, name, System.currentTimeMillis());
+        String path = String.format("%s%s/%s_%s.png", com.unclezs.utils.FileUtil.getCurrentDir(), IMAGE_PATH, name,
+            System.currentTimeMillis());
         FileUtil.writeFromStream(stream, FileUtil.file(path));
         return path;
     }

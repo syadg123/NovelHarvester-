@@ -14,9 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.SecureRandom;
@@ -24,6 +21,10 @@ import java.security.cert.X509Certificate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
+
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.X509TrustManager;
 
 
 /**
@@ -34,8 +35,10 @@ import java.util.function.Function;
  */
 @Slf4j
 public class RequestUtil {
-    public static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36";
-    public static final String USER_AGENT_CLIENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36";
+    public static final String USER_AGENT =
+        "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36";
+    public static final String USER_AGENT_CLIENT =
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36";
 
     /**
      * 忽略SSL验证错误
@@ -44,16 +47,16 @@ public class RequestUtil {
         try {
             HttpsURLConnection.setDefaultHostnameVerifier((hostname, session) -> true);
             SSLContext context = SSLContext.getInstance("SSL");
-            context.init(null, new X509TrustManager[]{new X509TrustManager() {
+            context.init(null, new X509TrustManager[] {new X509TrustManager() {
                 @Override
                 public void checkClientTrusted(
-                        X509Certificate[] chain, String authType) {
+                    X509Certificate[] chain, String authType) {
                 }
 
                 @Override
                 public void checkServerTrusted(
-                        X509Certificate[] chain,
-                        String authType) {
+                    X509Certificate[] chain,
+                    String authType) {
                 }
 
                 @Override
@@ -90,14 +93,14 @@ public class RequestUtil {
         UrlBuilder urlBuilder = UrlBuilder.ofHttp(url, CharsetUtil.CHARSET_UTF_8);
         urlBuilder.getPath().setWithEndTag(url.endsWith(StrUtil.SLASH));
         return retryRun(link -> HttpUtil.createGet(link)
-                .setUrl(urlBuilder)
-                .header("Referer", link)
-                .header("user-agent", StrUtil.emptyToDefault(ua, USER_AGENT))
-                .addHeaders(header)
-                .cookie(cookies)
-                .setFollowRedirects(true)
-                .timeout(3000)
-                .execute().body(), url);
+            .setUrl(urlBuilder)
+            .header("Referer", link)
+            .header("user-agent", StrUtil.emptyToDefault(ua, USER_AGENT))
+            .addHeaders(header)
+            .cookie(cookies)
+            .setFollowRedirects(true)
+            .timeout(3000)
+            .execute().body(), url);
     }
 
     public static Document doc(String url) throws IOException {
@@ -112,28 +115,31 @@ public class RequestUtil {
         return execute(url, form, "POST", false, headers).execute().body();
     }
 
-    public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client, Map<String, String> headers) {
+    public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client,
+        Map<String, String> headers) {
         return HttpUtil.createRequest(Method.valueOf(method), url)
-                .header("Referer", url)
-                .header("User-Agent", client ? USER_AGENT_CLIENT : USER_AGENT)
-                .addHeaders(headers)
-                .setFollowRedirects(true)
-                .form(form);
+            .header("Referer", url)
+            .header("User-Agent", client ? USER_AGENT_CLIENT : USER_AGENT)
+            .addHeaders(headers)
+            .setFollowRedirects(true)
+            .form(form);
     }
 
-    public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client, Map<String, String> headers, String charset) {
+    public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client,
+        Map<String, String> headers, String charset) {
         return execute(url, form, method, client, headers, charset, url);
     }
 
-    public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client, Map<String, String> headers, String charset, String referer) {
+    public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client,
+        Map<String, String> headers, String charset, String referer) {
         return HttpUtil.createRequest(Method.valueOf(method), url)
-                .charset(charset)
-                .setUrl(url)
-                .header("Referer", referer)
-                .header("User-Agent", client ? USER_AGENT_CLIENT : USER_AGENT)
-                .addHeaders(headers)
-                .setFollowRedirects(true)
-                .form(form);
+            .charset(charset)
+            .setUrl(url)
+            .header("Referer", referer)
+            .header("User-Agent", client ? USER_AGENT_CLIENT : USER_AGENT)
+            .addHeaders(headers)
+            .setFollowRedirects(true)
+            .form(form);
     }
 
     /**
@@ -150,7 +156,8 @@ public class RequestUtil {
         }
         retryRun(link -> {
             final HttpResponse response;
-            response = HttpUtil.createGet(link).setFollowRedirects(true).header("User-Agent", clientUa ? USER_AGENT_CLIENT : USER_AGENT).timeout(-1).execute();
+            response = HttpUtil.createGet(link).setFollowRedirects(true).header("User-Agent",
+                clientUa ? USER_AGENT_CLIENT : USER_AGENT).timeout(-1).execute();
             if (response.isOk()) {
                 response.writeBody(targetFile);
             }
@@ -173,7 +180,8 @@ public class RequestUtil {
                 res = function.apply(url);
                 break;
             } catch (Exception e) {
-                log.trace("[{}]--失败重试第{}/{}次：[{}]  原因:{}", Thread.currentThread().getName(), i + 1, SpiderConfig.RETRY_COUNT, url, e.getMessage());
+                log.trace("[{}]--失败重试第{}/{}次：[{}]  原因:{}", Thread.currentThread().getName(), i + 1,
+                    SpiderConfig.RETRY_COUNT, url, e.getMessage());
                 ThreadUtil.safeSleep(SpiderConfig.RETRY_DELAY);
             }
         }
@@ -192,7 +200,8 @@ public class RequestUtil {
      */
     public static InputStream stream(String url) throws IOException {
         try {
-            return HttpUtil.createGet(url).setFollowRedirects(true).header("Referer", url).timeout(5000).setReadTimeout(5000).execute().bodyStream();
+            return HttpUtil.createGet(url).setFollowRedirects(true).header("Referer", url).timeout(5000).setReadTimeout(
+                5000).execute().bodyStream();
         } catch (Exception e) {
             throw new IOException(e.getMessage());
         }

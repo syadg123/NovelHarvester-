@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXToggleButton?>
 <?import com.unclezs.enmu.LanguageLocale?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 <?import org.controlsfx.glyphfont.Glyph?>
 <JFXTabPane rotateGraphic="true" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8"
             stylesheets="/css/setting.css" fx:id="root"
@@ -67,7 +80,8 @@
                        GridPane.columnIndex="0"/>
                 <TextField fx:id="proxyHost" styleClass="system-proxy-input" promptText="127.0.0.1"
                            GridPane.columnIndex="1"/>
-                <TextField fx:id="proxyPort" styleClass="system-proxy-input" promptText="1080" GridPane.columnIndex="2"/>
+                <TextField fx:id="proxyPort" styleClass="system-proxy-input" promptText="1080"
+                           GridPane.columnIndex="2"/>
                 <JFXButton onMouseClicked="#testProxy" styleClass="btn,info-btn,btn-sm" GridPane.columnIndex="3"
                            text="%proxy_test"/>
                 <JFXButton fx:id="useProxy" styleClass="btn,success-btn,btn-sm" GridPane.columnIndex="4"

@@ -119,9 +119,11 @@ public class FileUtil {
             String ext = cn.hutool.core.io.FileUtil.extName(target);
             //没有后缀的
             if (StrUtil.isBlank(ext)) {
-                return checkExistAndRename(cn.hutool.core.io.FileUtil.file(target.getParent(), String.format("%s_%s/", name, RandomUtil.randomString(3))), true);
+                return checkExistAndRename(cn.hutool.core.io.FileUtil.file(target.getParent(),
+                    String.format("%s_%s/", name, RandomUtil.randomString(3))), true);
             }
-            return checkExistAndRename(cn.hutool.core.io.FileUtil.file(target.getParent(), String.format("%s_%s.%s", name, RandomUtil.randomString(3), ext)), true);
+            return checkExistAndRename(cn.hutool.core.io.FileUtil.file(target.getParent(),
+                String.format("%s_%s.%s", name, RandomUtil.randomString(3), ext)), true);
         } else {
             return target;
         }

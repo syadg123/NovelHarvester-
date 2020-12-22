@@ -1,11 +1,14 @@
 package com.unclezs.model;
 
 import cn.hutool.core.util.ArrayUtil;
-import com.unclezs.enmu.TextNovelType;
 import com.unclezs.enmu.LanguageLocale;
+import com.unclezs.enmu.TextNovelType;
 import com.unclezs.utils.FileUtil;
 import com.unclezs.utils.JsonUtil;
-import javafx.beans.property.*;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 import lombok.Data;
 
 import java.io.Serializable;

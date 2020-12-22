@@ -18,7 +18,7 @@
 }
 
 .header-container .jfx-svg-glyph:hover {
-    -fx-background-color:header-text-color;
+    -fx-background-color: header-text-color;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 2, 0, 2, 2);
 }
 

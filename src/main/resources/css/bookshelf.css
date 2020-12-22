@@ -41,7 +41,7 @@
     -fx-background-color: #009688;
 }
 
-.update-list .list-cell{
+.update-list .list-cell {
     -fx-alignment: LEFT;
     -fx-text-alignment: LEFT;
 }

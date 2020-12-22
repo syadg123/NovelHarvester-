@@ -3,12 +3,12 @@ package com.unclezs.gui.components;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.StrUtil;
-import com.unclezs.mapper.DownloadRecordMapper;
-import com.unclezs.model.DownloadRecord;
 import com.unclezs.gui.controller.DownloadController;
 import com.unclezs.gui.utils.ContentUtil;
 import com.unclezs.gui.utils.DesktopUtil;
 import com.unclezs.gui.utils.ToastUtil;
+import com.unclezs.mapper.DownloadRecordMapper;
+import com.unclezs.model.DownloadRecord;
 import com.unclezs.utils.MybatisUtil;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -85,7 +85,8 @@ public class DownloadRecordNode extends HBox {
         remove.setOnMouseClicked(e -> {
             try {
                 ContentUtil.getController(DownloadController.class).recordsListView.getItems().remove(this);
-                ThreadUtil.execute(() -> MybatisUtil.execute(DownloadRecordMapper.class, mapper -> mapper.deleteById(record.getId())));
+                ThreadUtil.execute(
+                    () -> MybatisUtil.execute(DownloadRecordMapper.class, mapper -> mapper.deleteById(record.getId())));
             } catch (IOException ex) {
                 ex.printStackTrace();
             }

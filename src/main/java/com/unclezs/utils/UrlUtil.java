@@ -29,7 +29,7 @@ public class UrlUtil {
      * @return /
      */
     public static String getSite(String url) {
-        String host = ReUtil.get("http[s]{0,1}://(.+?)/", url+"/", 1);
+        String host = ReUtil.get("http[s]{0,1}://(.+?)/", url + "/", 1);
         String[] str = host.split("\\.");
         if (str.length == 3) {
             return str[1];
@@ -37,6 +37,7 @@ public class UrlUtil {
             return str[0];
         }
     }
+
     /**
      * 取出URL中最后一段
      * https://unclezs.com/abc.html  则得到 abc

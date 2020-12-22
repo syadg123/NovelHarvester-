@@ -61,7 +61,8 @@ public class SearchTextField extends FlowPane {
         this.rightIcon.prefHeightProperty().bind(prefHeightProperty());
         this.box.prefHeightProperty().bind(prefHeightProperty());
         this.input.prefHeightProperty().bind(prefHeightProperty());
-        this.input.prefWidthProperty().bind(prefWidthProperty().subtract(this.leftIcon.prefWidthProperty().multiply(2)));
+        this.input.prefWidthProperty().bind(
+            prefWidthProperty().subtract(this.leftIcon.prefWidthProperty().multiply(2)));
         this.input.textProperty().addListener(e -> {
             if (StrUtil.isBlank(this.input.getText())) {
                 this.rightIcon.setIcon("");

@@ -46,7 +46,8 @@ public class SearchController implements LifeCycleFxController {
         });
         search.setOnSubmit(this::search);
         search.getBox().getItems().addAll(SearchKeyType.TITLE, SearchKeyType.AUTHOR);
-        searchResultTitle.visibleProperty().bind(Bindings.createBooleanBinding(() -> searchResultList.getItems().size() != 0, searchResultList.getItems()));
+        searchResultTitle.visibleProperty().bind(
+            Bindings.createBooleanBinding(() -> searchResultList.getItems().size() != 0, searchResultList.getItems()));
     }
 
     @Override
@@ -61,11 +62,14 @@ public class SearchController implements LifeCycleFxController {
             @Override
             protected Object call() {
                 //过滤出启用的规则
-                List<SearchTextRule> rules = DataManager.application.getTextRules().stream().filter(SearchTextRule::isEnabled).collect(Collectors.toList());
+                List<SearchTextRule> rules =
+                    DataManager.application.getTextRules().stream().filter(SearchTextRule::isEnabled).collect(
+                        Collectors.toList());
                 TextNovelSpider spider = new TextNovelSpider();
                 int finishedCount = 0;
                 for (SearchTextRule rule : rules) {
-                    List<SearchNode> nodes = spider.search(keyword, rule, type).stream().map(SearchNode::new).collect(Collectors.toList());
+                    List<SearchNode> nodes =
+                        spider.search(keyword, rule, type).stream().map(SearchNode::new).collect(Collectors.toList());
                     Platform.runLater(() -> {
                         if (!isCancelled()) {
                             searchResultList.getItems().addAll(nodes);

@@ -11,10 +11,6 @@ import com.jfoenix.controls.JFXListView;
 import com.unclezs.crawl.AudioNovelSpider;
 import com.unclezs.downloader.AudioDownloader;
 import com.unclezs.enmu.SearchKeyType;
-import com.unclezs.model.AudioBook;
-import com.unclezs.model.AudioChapter;
-import com.unclezs.model.Setting;
-import com.unclezs.model.rule.SearchAudioRule;
 import com.unclezs.gui.components.AbstractLoadingTask;
 import com.unclezs.gui.components.SearchAudioNode;
 import com.unclezs.gui.components.SearchTextField;
@@ -23,6 +19,10 @@ import com.unclezs.gui.utils.ContentUtil;
 import com.unclezs.gui.utils.DataManager;
 import com.unclezs.gui.utils.DesktopUtil;
 import com.unclezs.gui.utils.ToastUtil;
+import com.unclezs.model.AudioBook;
+import com.unclezs.model.AudioChapter;
+import com.unclezs.model.Setting;
+import com.unclezs.model.rule.SearchAudioRule;
 import com.unclezs.utils.RequestUtil;
 import com.unclezs.utils.UrlUtil;
 import com.unclezs.utils.thead.RunAsyncUtil;
@@ -113,12 +113,15 @@ public class SearchAudioController implements LifeCycleFxController {
         AbstractLoadingTask task = new AbstractLoadingTask() {
             @Override
             protected Object call() {
-                List<SearchAudioRule> rules = DataManager.application.getAudioRules().stream().filter(SearchAudioRule::isEnabled).collect(Collectors.toList());
+                List<SearchAudioRule> rules =
+                    DataManager.application.getAudioRules().stream().filter(SearchAudioRule::isEnabled).collect(
+                        Collectors.toList());
                 int finishedCount = 0;
                 for (SearchAudioRule r : rules) {
                     //todo 应该抛出异常来处理
                     List<AudioBook> books = spider.search(keyword, r, type);
-                    ObservableList<SearchAudioNode> nodes = books.stream().map(SearchAudioNode::new).collect(Collectors.toCollection(FXCollections::observableArrayList));
+                    ObservableList<SearchAudioNode> nodes = books.stream().map(SearchAudioNode::new).collect(
+                        Collectors.toCollection(FXCollections::observableArrayList));
                     Platform.runLater(() -> {
                         if (!isCancelled()) {
                             searchResultListView.getItems().addAll(nodes);
@@ -199,7 +202,9 @@ public class SearchAudioController implements LifeCycleFxController {
             }
         }
         selectedBook.setChapters(chapters);
-        AudioDownloader downloader = new AudioDownloader(setting.getThreadNum().get(), setting.getDelay().get(), setting.getSavePath().get(), selectedBook);
+        AudioDownloader downloader =
+            new AudioDownloader(setting.getThreadNum().get(), setting.getDelay().get(), setting.getSavePath().get(),
+                selectedBook);
         ContentUtil.getController(DownloadController.class).addTask(downloader);
         //开启异步下载
         ToastUtil.success("添加下载成功！");

@@ -3,10 +3,11 @@
 @import "bootstrap.css";
 
 
-.root{
+.root {
     -fx-font-family: "Microsoft YaHei UI";
     /*-fx-font-weight: BOLD;*/
 }
+
 .glyph-font {
     -fx-font-family: FontAwesome !important;
 }
@@ -23,7 +24,7 @@
     -fx-border-color: #000;
 }
 
-.jfx-toggle-button *{
+.jfx-toggle-button * {
     -fx-background-insets: 0 !important;
     -fx-padding: 0 !important;
 }
