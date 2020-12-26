@@ -15,12 +15,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.geometry.Insets;
 import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
 
@@ -129,8 +124,7 @@ public class ThemeController {
      */
     private void changeTheme() {
         ThemeUtil.setCss(Dict.create().set("bgImage", DataManager.application.getAppTheme().getBgImage().get())
-                .set("bgColor",
-                    Color.TRANSPARENT.equals(color.get()) ? "transparent" : JFXNodeUtils.colorToHex(color.get()))
+                .set("bgColor", Color.TRANSPARENT.equals(color.get()) ? "transparent" : JFXNodeUtils.colorToHex(color.get()))
                 .set("headerColor", DataManager.application.getAppTheme().getHeaderColor().get())
                 .set("fontColor", DataManager.application.getAppTheme().getFontColor().get()),
             App.stage.getScene(), "css/theme.ftl", "/theme/theme.css");

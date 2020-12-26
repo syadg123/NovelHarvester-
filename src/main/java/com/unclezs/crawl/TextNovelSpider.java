@@ -1,7 +1,5 @@
 package com.unclezs.crawl;
 
-import static com.unclezs.constrant.RuleConstant.LINK_ATTR;
-
 import cn.hutool.core.collection.ListUtil;
 import cn.hutool.core.lang.Dict;
 import cn.hutool.core.util.ReUtil;
@@ -15,11 +13,7 @@ import com.unclezs.model.AnalysisConfig;
 import com.unclezs.model.Chapter;
 import com.unclezs.model.NovelInfo;
 import com.unclezs.model.rule.SearchTextRule;
-import com.unclezs.utils.CharacterUtil;
-import com.unclezs.utils.RequestUtil;
-import com.unclezs.utils.TextUtil;
-import com.unclezs.utils.UrlUtil;
-import com.unclezs.utils.XpathUtil;
+import com.unclezs.utils.*;
 import com.unclezs.utils.comparator.ChapterComparator;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,17 +30,14 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import static com.unclezs.constrant.RuleConstant.LINK_ATTR;
 
 /**
  * 文本小说爬虫

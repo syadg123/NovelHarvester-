@@ -51,6 +51,7 @@ public class TemplateUtil {
         try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(out, true))) {
             Template template = CONFIGURATION.getTemplate(templateLocation);
             template.process(model, writer);
+            writer.flush();
         } catch (IOException e) {
             log.error("模板不存在:/templates/{}", templateLocation, e);
         } catch (TemplateException e) {

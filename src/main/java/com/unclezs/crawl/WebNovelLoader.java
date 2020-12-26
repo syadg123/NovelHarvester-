@@ -12,11 +12,7 @@ import com.unclezs.model.Chapter;
 import com.unclezs.utils.JsonUtil;
 import com.unclezs.utils.MybatisUtil;
 import com.unclezs.utils.TextUtil;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;

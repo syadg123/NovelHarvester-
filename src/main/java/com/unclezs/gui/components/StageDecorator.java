@@ -23,18 +23,9 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.svg.SVGGlyph;
 import com.unclezs.gui.utils.ResourceUtil;
 import com.unclezs.gui.utils.TrayUtil;
-import javafx.animation.Animation;
-import javafx.animation.Interpolator;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.application.Platform;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 import javafx.geometry.BoundingBox;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -45,17 +36,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.BorderStrokeStyle;
-import javafx.scene.layout.BorderWidths;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -140,7 +121,7 @@ public class StageDecorator extends VBox {
      * @param min   indicates whether to show minimize option or not
      */
     public StageDecorator(Stage stage, Node node, boolean theme, boolean max, boolean min, boolean tray,
-        boolean setting) {
+                          boolean setting) {
         primaryStage = stage;
         // Note that setting the style to TRANSPARENT is causing performance
         // degradation, as an alternative we set it to UNDECORATED instead.
@@ -327,7 +308,7 @@ public class StageDecorator extends VBox {
     }
 
     private void initializeContainers(Node node, boolean theme, boolean max, boolean min, boolean tray,
-        boolean setting) {
+                                      boolean setting) {
         buttonsContainer = new HBox();
         buttonsContainer.getStyleClass().add("header-container");
         // BINDING
