@@ -78,14 +78,14 @@ public class TestStage extends Application {
         throws IOException, URISyntaxException, KeyManagementException, NoSuchAlgorithmException {
         BorderPane pane = new BorderPane();
         WebView webView = new WebView();
-        URI uri = URI.create("https://www.po18.tw/books/699327/articles/8055185");
+        URI uri = URI.create("https://vipreader.qidian.com/chapter/1735921/45491650");
         String cookie =
-            "_paabbcc=vihhcbtbkt254sdaa8v8mn46f5; _po18rf-tk001=1c745d088b4fcc220c645a51d0d0c4b33fb5e1ad45383aba000bd3e294b56207a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_po18rf-tk001%22%3Bi%3A1%3Bs%3A32%3A%22bZJfnrCA2AjJiIZhb7Lrfk84QlGM38f2%22%3B%7D; _ga=GA1.2.1817444373.1594970578; _gid=GA1.2.201932416.1594970578; po18Limit=6d4c449fc3268973f92df90aad9af59af0885074fe02e29be9cf3d42d091ec89a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22po18Limit%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; url=https%3A%2F%2Fwww.po18.tw; authtoken1=eGlhb2h1YTEyMTM4; authtoken2=NzEyMzNhNzJjZWRkMDFjOGFlM2YwZjRjZjljNDA4NWU%3D; authtoken3=2392904587; authtoken4=2648278218; authtoken5=1594970827; authtoken6=1";
+            "_yep_uuid=c395968a-17d7-e37c-88ba-94f245b64c45; e1=%7B%22pid%22%3A%22qd_P_vipread%22%2C%22eid%22%3A%22qd_G94%22%2C%22l2%22%3A4%2C%22l1%22%3A15%7D; e2=%7B%22pid%22%3A%22qd_P_vipread%22%2C%22eid%22%3A%22%22%2C%22l2%22%3A4%2C%22l1%22%3A15%7D; _csrfToken=1bVJens69OPMqvdJgsS0Bry2U1LDni7qaBuwUAlD; newstatisticUUID=1608791066_10517697; ywguid=1585503310; ywkey=ywqK8YfCTwpY; ywopenid=7387FAAE42281F44434B7CF4977CFD3E; qdrs=0%7C3%7C0%7C0%7C1; showSectionCommentGuide=1; qdgd=1; pageOps=1; e2=%7B%22pid%22%3A%22qd_P_auto_dingyue%22%2C%22eid%22%3A%22qd_M186%22%2C%22l1%22%3A2%7D; rcmClose=1; e1=%7B%22pid%22%3A%22qd_P_my_bookshelf%22%2C%22eid%22%3A%22qd_M185%22%2C%22l1%22%3A2%7D; bc=1012284323%2C3247938%2C2952453%2C1735921%2C1024617405; rcr=1735921%2C1024617405%2C1012284323%2C2952453%2C3247938%2C1024416983%2C1025224742; lrbc=1735921%7C45491650%7C1%2C1024617405%7C625270110%7C0%2C1025224742%7C622420708%7C0";
 //        AgentLoader.loadAgentClass(MyJavaAgent.class.getName(), null);
         WebEngine engine = webView.getEngine();
         Map<String, List<String>> headers = new LinkedHashMap<>();
         headers.put("Set-Cookie", Arrays.stream(cookie.split(";")).collect(Collectors.toList()));
-        java.net.CookieHandler.getDefault().put(uri, headers);
+        java.net.CookieHandler.getDefault().put(new URI("https://vipreader.qidian.com"), headers);
         engine.getLoadWorker().stateProperty().addListener(
             (ov, oldState, newState) -> {
                 if (newState == Worker.State.SUCCEEDED) {
@@ -133,7 +133,7 @@ public class TestStage extends Application {
         engine.setUserAgent(RequestUtil.USER_AGENT);
         pane.setCenter(webView);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
-        ;//底层面板
+        //底层面板
         StackPane root = new StackPane();
         root.setStyle(
             "-fx-background-color: rgba(255, 255, 255, 1);" +

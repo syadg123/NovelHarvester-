@@ -3,6 +3,7 @@ package com.unclezs.utils;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.system.SystemUtil;
+import cn.hutool.system.oshi.OshiUtil;
 import com.unclezs.constrant.Charsets;
 
 import java.io.BufferedInputStream;

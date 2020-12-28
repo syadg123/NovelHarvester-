@@ -152,7 +152,7 @@
 
 .list-view .list-cell:selected {
     -fx-background-color: selected-bg-color;
-    -fx-text-fill: selected-text-color !important;
+    -fx-text-fill: selected-text-color;
 }
 
 /*context-view*/
