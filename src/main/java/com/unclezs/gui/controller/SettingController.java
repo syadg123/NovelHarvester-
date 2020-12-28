@@ -13,12 +13,7 @@ import com.jfoenix.controls.JFXToggleButton;
 import com.unclezs.enmu.LanguageLocale;
 import com.unclezs.gui.components.AbstractLoadingTask;
 import com.unclezs.gui.extra.FXController;
-import com.unclezs.gui.utils.AlertUtil;
-import com.unclezs.gui.utils.ApplicationUtil;
-import com.unclezs.gui.utils.DataManager;
-import com.unclezs.gui.utils.DesktopUtil;
-import com.unclezs.gui.utils.ResourceUtil;
-import com.unclezs.gui.utils.ToastUtil;
+import com.unclezs.gui.utils.*;
 import com.unclezs.mapper.SearchAudioRuleMapper;
 import com.unclezs.mapper.SearchTextRuleMapper;
 import com.unclezs.model.Setting;
@@ -30,12 +25,7 @@ import com.unclezs.utils.MybatisUtil;
 import com.unclezs.utils.RequestUtil;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.DirectoryChooser;
@@ -143,7 +133,7 @@ public class SettingController implements LifeCycleFxController {
      * @param <R>       /
      */
     private <T, R> void setCellFactory(TableColumn<T, R> column, String colName, StringConverter<R> converter,
-        Consumer<TableColumn.CellEditEvent<T, R>> consumer) {
+                                       Consumer<TableColumn.CellEditEvent<T, R>> consumer) {
         column.setCellValueFactory(new PropertyValueFactory<>(colName));
         column.setCellFactory(TextFieldTableCell.forTableColumn(converter));
         column.setOnEditCommit(consumer::accept);
@@ -158,7 +148,7 @@ public class SettingController implements LifeCycleFxController {
      * @param opCol      操作列
      */
     private <T> void initTable(TableView<T> table, Class<T> dataClazz, Class<? extends BaseMapper<T>> baseMapper,
-        TableColumn<T, Button> opCol) {
+                               TableColumn<T, Button> opCol) {
         Field[] fields = dataClazz.getDeclaredFields();
         for (Field field : fields) {
             field.setAccessible(true);

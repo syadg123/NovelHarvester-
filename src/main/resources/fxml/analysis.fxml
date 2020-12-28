@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?language javascript?>
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDrawer?>
-<?import com.jfoenix.controls.JFXDrawersStack?>
-<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ContextMenu?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.web.WebView?>
-<?import org.controlsfx.glyphfont.Glyph?>
+<?import org.controlsfx.glyphfont.*?>
 <JFXDrawersStack prefHeight="-Infinity" fx:id="root" prefWidth="Infinity" xmlns="http://javafx.com/javafx/8"
                  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unclezs.gui.controller.AnalysisController"
                  stylesheets="/css/analysis.css">

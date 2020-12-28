@@ -5,8 +5,6 @@ package com.unclezs.gui.app;
  * @date 2019.07.06 10:06
  */
 
-import static cn.hutool.http.ssl.SSLSocketFactoryBuilder.SSL;
-
 import cn.hutool.core.lang.Dict;
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.http.HttpUtil;
@@ -33,6 +31,10 @@ import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -45,10 +47,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
+import static cn.hutool.http.ssl.SSLSocketFactoryBuilder.SSL;
 
 
 public class TestStage extends Application {
@@ -128,7 +127,7 @@ public class TestStage extends Application {
             }
         };
         SSLContext sc = SSLContext.getInstance(SSL);
-        sc.init(null, new TrustManager[] {trm}, null);
+        sc.init(null, new TrustManager[]{trm}, null);
         HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
         engine.setUserAgent(RequestUtil.USER_AGENT);
         pane.setCenter(webView);

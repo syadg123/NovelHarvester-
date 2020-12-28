@@ -1,10 +1,10 @@
 package com.unclezs.model;
 
-import static com.unclezs.gui.controller.ReaderController.EYE_COLOR;
-
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import lombok.Data;
+
+import static com.unclezs.gui.controller.ReaderController.EYE_COLOR;
 
 /**
  * 阅读器配置

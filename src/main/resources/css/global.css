@@ -2,10 +2,9 @@
 @import "components/table-view.css";
 @import "bootstrap.css";
 
-
 .root {
-    -fx-font-family: "Microsoft YaHei UI";
-    /*-fx-font-weight: BOLD;*/
+    -fx-font-size: 13px;
+    -fx-font-family: "Menlo", "Microsoft YaHei UI", sans-serif;
 }
 
 .glyph-font {

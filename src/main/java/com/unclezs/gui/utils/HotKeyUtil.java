@@ -7,10 +7,9 @@ import javafx.application.Platform;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.swing.*;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.swing.*;
 
 /**
  * 全局唤醒热键Alt+U

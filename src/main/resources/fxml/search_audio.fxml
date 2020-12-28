@@ -5,12 +5,10 @@
 <?import com.jfoenix.controls.JFXListView?>
 <?import com.jfoenix.svg.SVGGlyph?>
 <?import com.unclezs.gui.components.SearchTextField?>
-<?import javafx.scene.control.ContextMenu?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
-<?import org.controlsfx.glyphfont.Glyph?>
+<?import org.controlsfx.glyphfont.*?>
 <JFXDrawersStack maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity"
                  stylesheets="/css/search.css" prefHeight="477.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8"
                  xmlns:fx="http://javafx.com/fxml/1" fx:id="root"

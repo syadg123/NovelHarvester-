@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.web.WebView?>
 <?import org.controlsfx.glyphfont.Glyph?>
 <StackPane xmlns="http://javafx.com/javafx"

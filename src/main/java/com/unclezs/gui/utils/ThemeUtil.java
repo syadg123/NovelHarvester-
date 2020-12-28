@@ -21,6 +21,8 @@ public class ThemeUtil {
         File css = FileUtil.currentDirFile(out);
         if (!css.exists()) {
             cn.hutool.core.io.FileUtil.touch(css);
+        } else {
+            FileUtil.deleteForce(css);
         }
         TemplateUtil.process(dict, templates, css);
         if (scene.getStylesheets().size() == 1) {

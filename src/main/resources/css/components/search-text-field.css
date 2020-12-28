@@ -2,12 +2,13 @@
     -fx-alignment: center;
 }
 
+/*-fx-border-radius*/
 .search-left-icon {
     -fx-padding: 0 0 0 10;
     -fx-border-radius: 5 0 0 5;
     -fx-border-width: 1 0 1 1;
     -fx-background-color: transparent;
-    -fx-background-radius: -fx-border-radius;
+    -fx-background-radius: 5 0 0 5;
     -fx-alignment: center;
     -fx-font-size: 20;
     -fx-border-color: border-color;
@@ -31,7 +32,7 @@
     -fx-border-radius: 0 5 5 0;
     -fx-border-width: 1 1 1 0;
     -fx-background-color: transparent;
-    -fx-background-radius: -fx-border-radius;
+    -fx-background-radius: 0 5 5 0;
     -fx-alignment: center;
     -fx-pref-height: 35;
     -fx-pref-width: 35;

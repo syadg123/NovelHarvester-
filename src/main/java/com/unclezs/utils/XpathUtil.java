@@ -1,7 +1,5 @@
 package com.unclezs.utils;
 
-import static com.unclezs.constrant.RuleConstant.RULE_SEPARATOR;
-
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
 import com.unclezs.model.rule.Rule;
@@ -9,11 +7,9 @@ import org.jsoup.nodes.Element;
 import us.codecraft.xsoup.Xsoup;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
+import static com.unclezs.constrant.RuleConstant.RULE_SEPARATOR;
 
 
 /**
