@@ -14,9 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.SecureRandom;
@@ -24,6 +21,10 @@ import java.security.cert.X509Certificate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
+
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.X509TrustManager;
 
 
 /**
@@ -39,6 +40,10 @@ public class RequestUtil {
     public static final String USER_AGENT_CLIENT =
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36";
 
+    static {
+        initSSL();
+    }
+
     /**
      * 忽略SSL验证错误
      */
@@ -46,7 +51,7 @@ public class RequestUtil {
         try {
             HttpsURLConnection.setDefaultHostnameVerifier((hostname, session) -> true);
             SSLContext context = SSLContext.getInstance("SSL");
-            context.init(null, new X509TrustManager[]{new X509TrustManager() {
+            context.init(null, new X509TrustManager[] {new X509TrustManager() {
                 @Override
                 public void checkClientTrusted(
                     X509Certificate[] chain, String authType) {
@@ -115,7 +120,7 @@ public class RequestUtil {
     }
 
     public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client,
-                                      Map<String, String> headers) {
+        Map<String, String> headers) {
         return HttpUtil.createRequest(Method.valueOf(method), url)
             .header("Referer", url)
             .header("User-Agent", client ? USER_AGENT_CLIENT : USER_AGENT)
@@ -125,12 +130,12 @@ public class RequestUtil {
     }
 
     public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client,
-                                      Map<String, String> headers, String charset) {
+        Map<String, String> headers, String charset) {
         return execute(url, form, method, client, headers, charset, url);
     }
 
     public static HttpRequest execute(String url, Map<String, Object> form, String method, boolean client,
-                                      Map<String, String> headers, String charset, String referer) {
+        Map<String, String> headers, String charset, String referer) {
         return HttpUtil.createRequest(Method.valueOf(method), url)
             .charset(charset)
             .setUrl(url)

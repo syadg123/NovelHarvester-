@@ -60,8 +60,6 @@ public class App extends Application {
             Font.loadFont(App.class.getResourceAsStream("/font/fontawesome-webfont.ttf"), 14);
             //热键注册
             HotKeyUtil.init();
-            //忽略SSL
-            RequestUtil.initSSL();
         });
         //加载设置
         ApplicationUtil.initConfig();
