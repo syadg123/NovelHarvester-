@@ -16,7 +16,7 @@
 >
     <VBox>
         <JFXProgressBar prefHeight="5" fx:id="progress" maxWidth="Infinity" visible="false"/>
-        <WebView fx:id="webView" contextMenuEnabled="false" VBox.vgrow="ALWAYS">
+        <WebView fx:id="webView" VBox.vgrow="ALWAYS">
         </WebView>
     </VBox>
     <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#analysis" buttonType="RAISED"
