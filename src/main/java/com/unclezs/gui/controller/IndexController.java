@@ -75,6 +75,17 @@ public class IndexController implements LifeCycleFxController {
                 e.printStackTrace();
             }
         });
+        try {
+            ContentUtil.getController(SearchAllSiteController.class);
+            ContentUtil.getController(AudioBookSelfController.class);
+            ContentUtil.getController(AnalysisController.class);
+            ContentUtil.getController(DownloadController.class);
+            ContentUtil.getController(SearchController.class);
+            ContentUtil.getController(SearchAudioController.class);
+            ContentUtil.getController(SettingController.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -6,7 +6,7 @@
     <groupId>com.unclezs</groupId>
     <artifactId>NovelHarvester</artifactId>
     <packaging>jar</packaging>
-    <version>4.15</version>
+    <version>4.16</version>
     <name>NovelHarvester</name>
     <url>http://github.com/unclezs/NovelHarvester</url>
     <description>一个通用的小说下载软件，也可以用作阅读器，支持有声小说与文本小说.</description>
@@ -66,7 +66,7 @@
         <app.vendor>Acme Inc</app.vendor>
         <app.updateText>正在更新中...</app.updateText>
         <app.whatNew>
-            1.修复部分电脑显示不正常问题
+            1.一些小优化
         </app.whatNew>
     </properties>
 
