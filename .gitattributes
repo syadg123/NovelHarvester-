@@ -1,2 +1,3 @@
-* text eol=lf
-*.db eof=native
+*.db      -text
+*.bat     eof=crlf
+*         text eol=lf
