@@ -8,8 +8,6 @@ import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXDrawersStack;
 import com.jfoenix.controls.JFXSlider;
 import com.jfoenix.utils.JFXNodeUtils;
-import com.sun.javafx.scene.control.skin.ColorPickerSkin;
-import com.sun.javafx.scene.control.skin.ScrollPaneSkin;
 import com.unclezs.constrant.ChineseFont;
 import com.unclezs.crawl.NovelLoader;
 import com.unclezs.gui.app.App;
@@ -38,6 +36,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.*;
+import javafx.scene.control.skin.ColorPickerSkin;
+import javafx.scene.control.skin.ScrollPaneSkin;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -747,9 +747,9 @@ public class ReaderController {
             double x = e.getX();
             double width = contentBox.getWidth();
             if (x < CHANGE_PAGE_AREA_WIDTH * width) {
-                scrollPaneSkin.vsbPageDecrement();
+                scrollPaneSkin.getVerticalScrollBar().decrement();
             } else if (x > width - CHANGE_PAGE_AREA_WIDTH * width) {
-                scrollPaneSkin.vsbPageIncrement();
+                scrollPaneSkin.getVerticalScrollBar().increment();
             } else {
                 showSetting();
             }

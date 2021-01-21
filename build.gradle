@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'application'
+    id "org.openjfx.javafxplugin" version "0.0.9"
+}
+
+repositories {
+    mavenLocal()
+    maven { url = 'https://maven.aliyun.com/repository/central' }
+    mavenCentral()
+}
+
+dependencies {
+    // lombok
+    compileOnly "org.projectlombok:lombok:1.18.10"
+    annotationProcessor "org.projectlombok:lombok:1.18.10"
+    testCompileOnly "org.projectlombok:lombok:1.18.10"
+    testAnnotationProcessor "org.projectlombok:lombok:1.18.10"
+
+    implementation 'com.alibaba:fastjson:1.2.56'
+    implementation 'org.freemarker:freemarker:2.3.29'
+    implementation 'org.controlsfx:controlsfx:8.40.15'
+    implementation 'com.jfoenix:jfoenix:8.0.8'
+    implementation 'us.codecraft:xsoup:0.3.3'
+    implementation 'org.jsoup:jsoup:1.13.1'
+    implementation 'org.xerial:sqlite-jdbc:3.27.2.1'
+    implementation 'com.baomidou:mybatis-plus-core:3.3.1.tmp'
+    implementation 'cn.hutool:hutool-core:5.5.2'
+    implementation 'cn.hutool:hutool-http:5.5.2'
+    implementation 'cn.hutool:hutool-system:5.5.2'
+    implementation 'com.luhuiguo:chinese-utils:1.0'
+    implementation 'net.sf.jacob-project:jacob:1.19'
+    implementation 'com.github.tulskiy:jkeymaster:1.3'
+    implementation 'no.tornado:fxlauncher:1.0.22-UNCLE'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    testImplementation 'junit:junit:4.13.1'
+}
+
+group = 'com.unclezs'
+version = '4.16'
+description = 'NovelHarvester'
+java.sourceCompatibility = JavaVersion.VERSION_11
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+javafx {
+    //https://openjfx.io/javadoc/15/
+    version = "15"
+    modules = ['javafx.controls','javafx.fxml','javafx.web','javafx.media']
+}
+
+mainClassName = 'com.unclezs.gui.app.App'

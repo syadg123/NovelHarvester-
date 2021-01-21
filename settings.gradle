@@ -1,0 +1,4 @@
+rootProject.name = 'NovelHarvester'
+include 'novel-app'
+include 'jfx-components'
+

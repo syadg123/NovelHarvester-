@@ -592,30 +592,12 @@ public class StageDecorator extends VBox {
     /**
      * will change the decorator content
      *
-     * @param content
+     * @param content /
      */
     public void setContent(Node content) {
         this.contentPlaceHolder.getChildren().setAll(content);
     }
 
-    /**
-     * will set the title
-     *
-     * @param text
-     * @deprecated Use {@link StageDecorator#setTitle(java.lang.String)} instead.
-     */
-    public void setText(String text) {
-        setTitle(text);
-    }
-
-    /**
-     * will get the title
-     *
-     * @deprecated Use {@link StageDecorator#setTitle(java.lang.String)} instead.
-     */
-    public String getText() {
-        return getTitle();
-    }
 
     public String getTitle() {
         return title.get();

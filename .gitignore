@@ -3,7 +3,7 @@ target
 /*.iml
 /cache
 .idea
-theme
+theme/
 tmp
 logs
 /src/main/java/com/unclezs/utils/ApiUtil.java
@@ -12,3 +12,5 @@ logs
 *.log
 /images/
 /conf/application.json
+build/
+.gradle
